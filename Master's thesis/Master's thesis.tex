@@ -128,7 +128,7 @@
 
 \newpage
 
-\section{}
+\section{Простая модель следования за лидером}
 
 \begin{equation*}
 \ddot{x}(t) = d (\dot{x}(t-\tau)-\dot{x}(t) - \lambda).
@@ -136,10 +136,18 @@
 
 \begin{equation*}
 \begin{split}
-&\ddot{x}_1(t) = d (\dot{x}_0(t-\tau)-\dot{x}_1(t) + \lambda), \\ 
-&\ddot{x}_2(t) = d (\dot{x}_1(t-\tau)-\dot{x}_2(t) + \lambda), \\
+&\ddot{x}_1(t) = d (\dot{x}_0(t-\tau)-\dot{x}_1(t) - \lambda), \\ 
+&\ddot{x}_2(t) = d (\dot{x}_1(t-\tau)-\dot{x}_2(t) - \lambda), \\
 &\ldots \\
-&\ddot{x}_N(t) = d (\dot{x}_{N-1}(t-\tau)-\dot{x}_N(t) + \lambda).
+&\ddot{x}_N(t) = d (\dot{x}_{N-1}(t-\tau)-\dot{x}_N(t) - \lambda).
+\end{split}
+\end{equation*}
+
+\begin{equation*}
+\begin{split}
+&\ddot{u}(t) = d (\dot{u}(t-\tau)-\dot{u}(t) - \lambda), \\ 
+&\ddot{v}(t) = d (\dot{u}(t-\tau)-\dot{v}(t) - \lambda), \\
+&\ddot{w}(t) = d (\dot{v}(t-\tau)-\dot{w}(t) - \lambda).
 \end{split}
 \end{equation*}
 
