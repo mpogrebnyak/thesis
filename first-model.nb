@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     81148,       1857]
-NotebookOptionsPosition[     80484,       1835]
-NotebookOutlinePosition[     80827,       1850]
-CellTagsIndexPosition[     80784,       1847]
+NotebookDataLength[     82781,       1894]
+NotebookOptionsPosition[     81906,       1868]
+NotebookOutlinePosition[     82250,       1883]
+CellTagsIndexPosition[     82207,       1880]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -183,7 +183,8 @@ Cell[BoxData[{
                     RowBox[{"Evaluate", "[", 
                     RowBox[{
                     RowBox[{
-                    RowBox[{"u", "'"}], "[", "t", "]"}], " ", "/.", "solF"}], 
+                    RowBox[{"u", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solF"}], 
                     "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "-", 
                     RowBox[{
@@ -316,7 +317,8 @@ Cell[BoxData[{
                     RowBox[{"Evaluate", "[", 
                     RowBox[{
                     RowBox[{
-                    RowBox[{"u", "'"}], "[", "t", "]"}], " ", "/.", "solF"}], 
+                    RowBox[{"u", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solF"}], 
                     "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "-", 
                     RowBox[{
@@ -351,7 +353,8 @@ Cell[BoxData[{
                     RowBox[{"Evaluate", "[", 
                     RowBox[{
                     RowBox[{
-                    RowBox[{"v", "'"}], "[", "t", "]"}], " ", "/.", "solS"}], 
+                    RowBox[{"v", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solS"}], 
                     "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "-", 
                     RowBox[{
@@ -1163,8 +1166,8 @@ Cell[BoxData[{
    3.76019637308258*^9, 3.7601963953684244`*^9}, {3.7601965096842394`*^9, 
    3.7601965287939076`*^9}, 3.7601967905957146`*^9, {3.760196833279434*^9, 
    3.760196876680813*^9}, {3.7601971816049566`*^9, 3.7601972566374874`*^9}, {
-   3.7601974346166945`*^9, 
-   3.760197435987376*^9}},ExpressionUUID->"708037ef-fea3-45d9-87a6-\
+   3.7601974346166945`*^9, 3.760197435987376*^9}, {3.7614875100944195`*^9, 
+   3.7614875646338606`*^9}},ExpressionUUID->"708037ef-fea3-45d9-87a6-\
 ba54e236cd9a"],
 
 Cell[BoxData[
@@ -1178,14 +1181,14 @@ Cell[BoxData[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {123., 127.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13620$$ = 
-     0, $CellContext`d$13621$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36265$$ = 
+     0, $CellContext`d$36266$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13620$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13621$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36265$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36266$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1197,7 +1200,7 @@ $CellContext`solF$ =
             Derivative[
               2][$CellContext`u$][$CellContext`t$] == $CellContext`d$$ \
 ($CellContext`dx0 - Derivative[
-               1][$CellContext`u$][$CellContext`t$] - \
+               1][$CellContext`u$][$CellContext`t$ - $CellContext`\[Tau]] - \
 $CellContext`\[Lambda]$$), $CellContext`u$[
                
                Condition[$CellContext`t$, $CellContext`t$ <= 
@@ -1235,14 +1238,14 @@ $CellContext`\[Lambda]$$), $CellContext`u$[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {123., 127.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13640$$ = 
-     0, $CellContext`d$13641$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36285$$ = 
+     0, $CellContext`d$36286$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13640$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13641$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36285$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36286$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1268,8 +1271,8 @@ $CellContext`\[Lambda]$$), $CellContext`u[
                  Evaluate[
                   ReplaceAll[
                    Derivative[
-                   1][$CellContext`u][$CellContext`t$], $CellContext`solF]], 
-                 1] - Derivative[
+                   1][$CellContext`u][$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solF]], 1] - Derivative[
                1][$CellContext`v$][$CellContext`t$] - \
 $CellContext`\[Lambda]$$), $CellContext`v$[
                
@@ -1307,14 +1310,14 @@ $CellContext`tmax}]; ParametricPlot[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {123., 127.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13660$$ = 
-     0, $CellContext`d$13661$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36305$$ = 
+     0, $CellContext`d$36306$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13660$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13661$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36305$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36306$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1340,8 +1343,8 @@ $CellContext`\[Lambda]$$), $CellContext`u[
                  Evaluate[
                   ReplaceAll[
                    Derivative[
-                   1][$CellContext`u][$CellContext`t$], $CellContext`solF]], 
-                 1] - Derivative[
+                   1][$CellContext`u][$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solF]], 1] - Derivative[
                1][$CellContext`v][$CellContext`t$] - \
 $CellContext`\[Lambda]$$), $CellContext`v[
                
@@ -1356,8 +1359,8 @@ $CellContext`tmax}]; $CellContext`solT$ =
                  Evaluate[
                   ReplaceAll[
                    Derivative[
-                   1][$CellContext`v][$CellContext`t$], $CellContext`solS]], 
-                 1] - Derivative[
+                   1][$CellContext`v][$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solS]], 1] - Derivative[
                1][$CellContext`w$][$CellContext`t$] - \
 $CellContext`\[Lambda]$$), $CellContext`w$[
                
@@ -1387,8 +1390,9 @@ $CellContext`\[Lambda]$$), $CellContext`w$[
     StripOnInput->False],
    Manipulate`InterpretManipulate[1]]}]], "Output",
  CellChangeTimes->{
-  3.7601989129342923`*^9},ExpressionUUID->"7617b217-9aad-4333-8c63-\
-8836fec58287"],
+  3.7601989129342923`*^9, {3.7614874979226627`*^9, 
+   3.761487550908187*^9}},ExpressionUUID->"33f302c6-4d59-4f69-9b52-\
+a452d459aa18"],
 
 Cell[BoxData[
  RowBox[{
@@ -1401,14 +1405,14 @@ Cell[BoxData[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {123., 127.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13691$$ = 
-     0, $CellContext`d$13692$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36335$$ = 
+     0, $CellContext`d$36336$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13691$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13692$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36335$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36336$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1458,14 +1462,14 @@ $CellContext`\[Lambda]$$), $CellContext`u$[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {123., 127.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13715$$ = 
-     0, $CellContext`d$13716$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36359$$ = 
+     0, $CellContext`d$36360$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13715$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13716$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36359$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36360$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1530,14 +1534,14 @@ $CellContext`tmax}]; ParametricPlot[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {123., 127.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13785$$ = 
-     0, $CellContext`d$13786$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36433$$ = 
+     0, $CellContext`d$36434$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13785$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13786$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36433$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36434$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1610,7 +1614,9 @@ $CellContext`\[Lambda]$$), $CellContext`w$[
     StripOnInput->False],
    Manipulate`InterpretManipulate[1]]}]], "Output",
  CellChangeTimes->{
-  3.76019891294351*^9},ExpressionUUID->"b45c20f1-8f83-4ac6-aba1-e82146723bd1"],
+  3.7601989129342923`*^9, {3.7614874979226627`*^9, 
+   3.7614875519587774`*^9}},ExpressionUUID->"4ed90128-2d07-42ff-9cda-\
+a06074fe415b"],
 
 Cell[BoxData[
  RowBox[{
@@ -1623,14 +1629,14 @@ Cell[BoxData[
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {66., 71.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13958$$ = 
-     0, $CellContext`d$13959$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36614$$ = 
+     0, $CellContext`d$36615$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13958$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13959$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36614$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36615$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1678,14 +1684,14 @@ $CellContext`solF$]], {$CellContext`t$, 0, $CellContext`tmax},
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {66., 71.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$13982$$ = 
-     0, $CellContext`d$13983$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36638$$ = 
+     0, $CellContext`d$36639$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$13982$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$13983$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36638$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36639$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1749,14 +1755,14 @@ $CellContext`\[Tau]}, $CellContext`solS$]], {$CellContext`t$, $CellContext`\
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 50, 1}, {{
         Hold[$CellContext`d$$], 2}, 0, 10, 0.1}}, Typeset`size$$ = {
      360., {66., 71.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$14045$$ = 
-     0, $CellContext`d$14046$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$36701$$ = 
+     0, $CellContext`d$36702$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 2, $CellContext`\[Lambda]$$ = 10}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$14045$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$14046$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$36701$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$36702$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1829,12 +1835,39 @@ $CellContext`\[Lambda]$$), $CellContext`w$[
     StripOnInput->False],
    Manipulate`InterpretManipulate[1]]}]], "Output",
  CellChangeTimes->{
-  3.7601989132402735`*^9},ExpressionUUID->"5926ec63-a659-4bf6-b154-\
-4691bb02b276"]
+  3.7601989129342923`*^9, {3.7614874979226627`*^9, 
+   3.76148755226237*^9}},ExpressionUUID->"397c7573-1462-434e-be03-\
+378d5678657f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ihist",
+   "\"Conditions given at \\!\\(\\*RowBox[{\\\"t$37031\\\"}]\\) = \
+\\!\\(\\*RowBox[{\\\"0.`\\\"}]\\) will be interpreted as initial history \
+functions for \\!\\(\\*RowBox[{\\\"t$37031\\\", \\\"/;\\\", \
+RowBox[{\\\"t$37031\\\", \\\"\[LessEqual]\\\", \\\"0.`\\\"}]}]\\).\"",2,18,
+   836,18836143814739805612,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7614875526418667`*^9},ExpressionUUID->"0d079531-f911-4421-8614-\
+cfb885b42ce2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ihist",
+   "\"Conditions given at \\!\\(\\*RowBox[{\\\"t$41088\\\"}]\\) = \
+\\!\\(\\*RowBox[{\\\"0.`\\\"}]\\) will be interpreted as initial history \
+functions for \\!\\(\\*RowBox[{\\\"t$41088\\\", \\\"/;\\\", \
+RowBox[{\\\"t$41088\\\", \\\"\[LessEqual]\\\", \\\"0.`\\\"}]}]\\).\"",2,18,
+   837,18836143814739805612,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7614875643222733`*^9},ExpressionUUID->"302dc127-b991-4622-9d7b-\
+9c4150c5c1bb"]
 }, Open  ]]
 },
-WindowSize->{1520, 781},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1850,14 +1883,18 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 47978, 1145, 2318, "Input", "ExpressionUUID" -> \
+Cell[580, 22, 48166, 1148, 2318, "Input", "ExpressionUUID" -> \
 "708037ef-fea3-45d9-87a6-ba54e236cd9a"],
-Cell[48561, 1169, 10670, 221, 389, "Output", "ExpressionUUID" -> \
-"7617b217-9aad-4333-8c63-8836fec58287"],
-Cell[59234, 1392, 10665, 220, 389, "Output", "ExpressionUUID" -> \
-"b45c20f1-8f83-4ac6-aba1-e82146723bd1"],
-Cell[69902, 1614, 10566, 218, 277, "Output", "ExpressionUUID" -> \
-"5926ec63-a659-4bf6-b154-4691bb02b276"]
+Cell[48749, 1172, 10762, 222, 389, "Output", "ExpressionUUID" -> \
+"33f302c6-4d59-4f69-9b52-a452d459aa18"],
+Cell[59514, 1396, 10724, 222, 389, "Output", "ExpressionUUID" -> \
+"4ed90128-2d07-42ff-9cda-a06074fe415b"],
+Cell[70241, 1620, 10617, 219, 277, "Output", "ExpressionUUID" -> \
+"397c7573-1462-434e-be03-378d5678657f"],
+Cell[80861, 1841, 513, 11, 21, "Message", "ExpressionUUID" -> \
+"0d079531-f911-4421-8614-cfb885b42ce2"],
+Cell[81377, 1854, 513, 11, 21, "Message", "ExpressionUUID" -> \
+"302dc127-b991-4622-9d7b-9c4150c5c1bb"]
 }, Open  ]]
 }
 ]
