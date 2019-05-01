@@ -1,0 +1,192 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6879,        182]
+NotebookOptionsPosition[      6421,        163]
+NotebookOutlinePosition[      6765,        178]
+CellTagsIndexPosition[      6722,        175]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "solF", ",", " ", "solS", ",", " ", "solT", ",", " ", "u", ",", "  ", 
+       "v", ",", "  ", "w", ",", " ", "t"}], "}"}], ",", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"solF", " ", "=", " ", 
+       RowBox[{"NDSolve", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"u", "'"}], "[", "t", "]"}], "\[Equal]", 
+            RowBox[{"1", "*", " ", 
+             RowBox[{"(", 
+              RowBox[{"20", " ", "-", 
+               RowBox[{"u", "[", "t", "]"}], "-", "1"}], ")"}]}]}], ",", " ", 
+           RowBox[{
+            RowBox[{"u", "[", 
+             RowBox[{"t", " ", "/;", " ", 
+              RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+            "\[Equal]", " ", 
+            RowBox[{"-", "1"}]}]}], "}"}], ",", "u", ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"ParametricPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Evaluate", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"u", "[", 
+              RowBox[{"t", "-", 
+               RowBox[{"2", "*", "\[Tau]"}]}], "]"}], ",", 
+             RowBox[{"t", "-", 
+              RowBox[{"2", "*", "\[Tau]"}]}]}], "}"}], " ", "/.", " ", 
+           "solF"}], "]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", 
+          RowBox[{"2", "*", "\[Tau]"}], ",", "tmax"}], "}"}], ",", " ", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1"}], ",", "100"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "10"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"PlotLabel", "\[Rule]", "\"\<Distance\>\""}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"distance", ",", "time"}], "}"}]}], ",", 
+        RowBox[{"PlotLegends", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<first car\>\"", ",", "\"\<second car\>\"", ",", 
+           "\"\<third car\>\""}], "}"}]}]}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Lambda]", ",", "\[Lambda]Start"}], "}"}], ",", "0", ",", 
+     "30", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d", ",", "dStart"}], "}"}], ",", "0", ",", "2", ",", "0.01"}], 
+    "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7637394336630335`*^9, 
+  3.763739522161141*^9}},ExpressionUUID->"0b5b94f1-ae1f-4b3e-a043-\
+c5459c2a2838"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Lambda]$$], 10}, 0, 30, 1}, {{
+       Hold[$CellContext`d$$], 0.5}, 0, 2, 0.01}}, Typeset`size$$ = {
+    451., {38., 43.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$210121$$ = 
+    0, $CellContext`d$210122$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$210121$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$210122$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`solF, $CellContext`solS, $CellContext`solT, \
+$CellContext`u, $CellContext`v, $CellContext`w, $CellContext`t}, \
+$CellContext`solF = 
+         NDSolve[{
+           Derivative[1][$CellContext`u][$CellContext`t] == 
+            1 (20 - $CellContext`u[$CellContext`t] - 1), $CellContext`u[
+              
+              Condition[$CellContext`t, $CellContext`t <= 
+               0]] == -1}, $CellContext`u, {$CellContext`t, 
+            0, $CellContext`tmax}]; ParametricPlot[{
+           Evaluate[
+            ReplaceAll[{
+              $CellContext`u[$CellContext`t - 
+               2 $CellContext`\[Tau]], $CellContext`t - 
+              2 $CellContext`\[Tau]}, $CellContext`solF]]}, {$CellContext`t, 
+           2 $CellContext`\[Tau], $CellContext`tmax}, 
+          PlotRange -> {{-1, 100}, {0, 10}}, PlotLabel -> "Distance", 
+          AxesLabel -> {$CellContext`distance, $CellContext`time}, 
+          PlotLegends -> {"first car", "second car", "third car"}]], 
+      "Specifications" :> {{{$CellContext`\[Lambda]$$, 10}, 0, 30, 
+         1}, {{$CellContext`d$$, 0.5}, 0, 2, 0.01}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{502., {99., 105.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellOpen->False,
+ CellChangeTimes->{{3.76373941886499*^9, 
+  3.763739523012325*^9}},ExpressionUUID->"77899bc9-52a4-45d0-adfe-\
+0c26efa7aeac"]
+}, Open  ]]
+},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2872, 77, 233, "Input", "ExpressionUUID" -> \
+"0b5b94f1-ae1f-4b3e-a043-c5459c2a2838"],
+Cell[3455, 101, 2950, 59, 19, "Output", "ExpressionUUID" -> \
+"77899bc9-52a4-45d0-adfe-0c26efa7aeac",
+ CellOpen->False]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
