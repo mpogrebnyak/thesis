@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32392,        686]
-NotebookOptionsPosition[     31947,        668]
-NotebookOutlinePosition[     32291,        683]
-CellTagsIndexPosition[     32248,        680]
+NotebookDataLength[     42236,        888]
+NotebookOptionsPosition[     41669,        867]
+NotebookOutlinePosition[     42013,        882]
+CellTagsIndexPosition[     41970,        879]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -29,7 +29,7 @@ Cell[BoxData[
     RowBox[{"ee", "=", "60"}], ";", "\[IndentingNewLine]", 
     RowBox[{"x0", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
     RowBox[{"\[Tau]", " ", "=", " ", "5"}], ";", "\[IndentingNewLine]", 
-    RowBox[{"tt", "=", "15"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"tt", "=", "10"}], ";", "\[IndentingNewLine]", 
     RowBox[{"dStart", " ", "=", " ", "0.5"}], ";", "\[IndentingNewLine]", 
     RowBox[{"\[Lambda]Start", " ", "=", " ", "10"}], ";", 
     "\[IndentingNewLine]", 
@@ -65,7 +65,7 @@ Cell[BoxData[
                  RowBox[{"(", 
                   RowBox[{
                    RowBox[{"Evaluate", "[", 
-                    RowBox[{"qqq", "[", "t", "]"}], "]"}], "  ", "-", 
+                    RowBox[{"qqq", "[", "t", "]"}], "]"}], " ", " ", "-", 
                    RowBox[{"u", "[", "t", "]"}], "-", "\[Lambda]"}], 
                   ")"}]}]}], ",", " ", 
                RowBox[{
@@ -309,26 +309,26 @@ Cell[BoxData[
                RowBox[{
                 RowBox[{"{", 
                  RowBox[{
+                  RowBox[{"t", "-", 
+                   RowBox[{"2", "*", "\[Tau]"}]}], ",", 
                   RowBox[{"u", "[", 
                    RowBox[{"t", "-", 
-                    RowBox[{"2", "*", "\[Tau]"}]}], "]"}], ",", 
-                  RowBox[{"t", "-", 
-                   RowBox[{"2", "*", "\[Tau]"}]}]}], "}"}], " ", "/.", " ", 
-                "solF"}], "]"}], ",", 
+                    RowBox[{"2", "*", "\[Tau]"}]}], "]"}]}], "}"}], " ", "/.",
+                 " ", "solF"}], "]"}], ",", 
               RowBox[{"Evaluate", "[", 
                RowBox[{
                 RowBox[{"{", 
                  RowBox[{
+                  RowBox[{"t", "-", "\[Tau]"}], ",", 
                   RowBox[{"v", "[", 
-                   RowBox[{"t", "-", "\[Tau]"}], "]"}], ",", 
-                  RowBox[{"t", "-", "\[Tau]"}]}], "}"}], " ", "/.", " ", 
-                "solS"}], "]"}], ",", 
+                   RowBox[{"t", "-", "\[Tau]"}], "]"}]}], "}"}], " ", "/.", 
+                " ", "solS"}], "]"}], ",", 
               RowBox[{"Evaluate", "[", 
                RowBox[{
                 RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"w", "[", "t", "]"}], ",", "t"}], "}"}], " ", "/.", 
-                " ", "solT"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"t", ",", 
+                  RowBox[{"w", "[", "t", "]"}]}], "}"}], " ", "/.", " ", 
+                "solT"}], "]"}]}], "}"}], ",", 
             RowBox[{"{", 
              RowBox[{"t", ",", 
               RowBox[{"2", "*", "\[Tau]"}], ",", "tmax"}], "}"}], ",", " ", 
@@ -337,9 +337,9 @@ Cell[BoxData[
               RowBox[{
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"-", "50"}], ",", "300"}], "}"}], ",", 
+                 RowBox[{"-", "50"}], ",", "450"}], "}"}], ",", 
                RowBox[{"{", 
-                RowBox[{"0", ",", "40"}], "}"}]}], "}"}]}], ",", 
+                RowBox[{"0", ",", "60"}], "}"}]}], "}"}]}], ",", 
             RowBox[{"PlotLabel", "\[Rule]", "\"\<Distance\>\""}], ",", 
             RowBox[{"AxesLabel", "\[Rule]", 
              RowBox[{"{", 
@@ -461,13 +461,8 @@ Cell[BoxData[
    3.7637400617076283`*^9}, {3.7637400938973465`*^9, 
    3.7637401102701597`*^9}, {3.763740146638019*^9, 3.7637401765694265`*^9}, {
    3.763740622387603*^9, 3.7637406305531187`*^9}, {3.7637406836475873`*^9, 
-   3.7637407775053577`*^9}, {3.763740967852112*^9, 3.7637409890545144`*^9}, {
-   3.7637412638188753`*^9, 3.763741266171664*^9}, {3.76374140804543*^9, 
-   3.763741411971968*^9}, {3.763741446167456*^9, 3.7637414501067996`*^9}, {
-   3.763741821203325*^9, 3.7637418595470266`*^9}, {3.763741926819002*^9, 
-   3.7637419269088783`*^9}, {3.763743754687969*^9, 
-   3.763743765916583*^9}},ExpressionUUID->"027013a8-cec3-4835-a3c6-\
-868636f58f47"],
+   3.7637407775053577`*^9}},ExpressionUUID->"708037ef-fea3-45d9-87a6-\
+ba54e236cd9a"],
 
 Cell[BoxData[
  RowBox[{
@@ -479,15 +474,15 @@ Cell[BoxData[
      1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
         Hold[$CellContext`\[Lambda]$$], 10}, 0, 30, 1}, {{
         Hold[$CellContext`d$$], 0.5}, 0, 2, 0.01}}, Typeset`size$$ = {
-     471., {78., 83.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$15617$$ = 
-     0, $CellContext`d$15618$$ = 0}, 
+     471., {42., 46.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$5715$$ = 
+     0, $CellContext`d$5716$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10},
         "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$15617$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$15618$$, 0]}, 
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$5715$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$5716$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -504,6 +499,99 @@ $CellContext`solF$ =
 $CellContext`u$[$CellContext`t$] - $CellContext`\[Lambda]$$), $CellContext`u$[
                
                Condition[$CellContext`t$, $CellContext`t$ <= 
+                0]] == -$CellContext`\[Lambda]$$}, $CellContext`u$, \
+{$CellContext`t$, 0, $CellContext`tmax}]; $CellContext`solS$ = 
+          NDSolve[{
+            Derivative[
+              1][$CellContext`v$][$CellContext`t$] == $CellContext`d$$ (Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solF$]], 
+                 1] - $CellContext`v$[$CellContext`t$] - $CellContext`\
+\[Lambda]$$), $CellContext`v$[
+               
+               Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]]] == (-2) $CellContext`\[Lambda]$$}, $CellContext`v$, \
+{$CellContext`t$, $CellContext`\[Tau], $CellContext`tmax}]; \
+$CellContext`solT$ = 
+          NDSolve[{
+            Derivative[
+              1][$CellContext`w$][$CellContext`t$] == $CellContext`d$$ (Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solS$]], 
+                 1] - $CellContext`w$[$CellContext`t$] - $CellContext`\
+\[Lambda]$$), $CellContext`w$[
+               
+               Condition[$CellContext`t$, $CellContext`t$ <= 
+                2 $CellContext`\[Tau]]] == (-3) $CellContext`\[Lambda]$$}, \
+$CellContext`w$, {$CellContext`t$, 2 $CellContext`\[Tau], $CellContext`tmax}]; 
+         ParametricPlot[{
+            Evaluate[
+             ReplaceAll[{$CellContext`t$ - 2 $CellContext`\[Tau], 
+               $CellContext`u$[$CellContext`t$ - 
+                2 $CellContext`\[Tau]]}, $CellContext`solF$]], 
+            Evaluate[
+             ReplaceAll[{$CellContext`t$ - $CellContext`\[Tau], 
+               $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]]}, \
+$CellContext`solS$]], 
+            Evaluate[
+             ReplaceAll[{$CellContext`t$, 
+               $CellContext`w$[$CellContext`t$]}, $CellContext`solT$]]}, \
+{$CellContext`t$, 2 $CellContext`\[Tau], $CellContext`tmax}, 
+           PlotRange -> {{-50, 450}, {0, 60}}, PlotLabel -> "Distance", 
+           AxesLabel -> {$CellContext`distance, $CellContext`time}, 
+           PlotLegends -> {"first car", "second car", "third car"}]], 
+       "Specifications" :> {{{$CellContext`\[Lambda]$$, 10}, 0, 30, 
+          1}, {{$CellContext`d$$, 0.5}, 0, 2, 0.01}}, "Options" :> {}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{522., {102., 108.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]], " ", 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10, 
+     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`\[Lambda]$$], 10}, 0, 30, 1}, {{
+        Hold[$CellContext`d$$], 0.5}, 0, 2, 0.01}}, Typeset`size$$ = {
+     471., {78., 83.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$5737$$ = 
+     0, $CellContext`d$5738$$ = 0}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, 
+       "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10},
+        "ControllerVariables" :> {
+         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$5737$$, 0], 
+         Hold[$CellContext`d$$, $CellContext`d$5738$$, 0]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+       Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$, $CellContext`t$}, \
+$CellContext`solF$ = 
+          NDSolve[{
+            Derivative[
+              1][$CellContext`u$][$CellContext`t$] == $CellContext`d$$ (
+               Evaluate[
+                 $CellContext`qqq[$CellContext`t$]] - \
+$CellContext`u$[$CellContext`t$] - $CellContext`\[Lambda]$$), $CellContext`u$[
+               
+               Condition[$CellContext`t$, $CellContext`t$ <= 
+                
                 0]] == -$CellContext`\[Lambda]$$}, $CellContext`u$, \
 {$CellContext`t$, 0, $CellContext`tmax}]; $CellContext`solS$ = 
           NDSolve[{
@@ -565,106 +653,217 @@ $CellContext`solS$]],
      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
     Deployed->True,
     StripOnInput->False],
-   Manipulate`InterpretManipulate[1]], " ", 
-  TagBox[
-   StyleBox[
-    DynamicModuleBox[{$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10, 
-     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-        Hold[$CellContext`\[Lambda]$$], 10}, 0, 30, 1}, {{
-        Hold[$CellContext`d$$], 0.5}, 0, 2, 0.01}}, Typeset`size$$ = {
-     471., {40., 46.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$15639$$ = 
-     0, $CellContext`d$15640$$ = 0}, 
-     DynamicBox[Manipulate`ManipulateBoxes[
-      1, StandardForm, 
-       "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10},
-        "ControllerVariables" :> {
-         Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$15639$$, 0], 
-         Hold[$CellContext`d$$, $CellContext`d$15640$$, 0]}, 
-       "OtherVariables" :> {
-        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
-       Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+   Manipulate`InterpretManipulate[1]]}]], "Output",
+ CellOpen->False,
+ CellChangeTimes->{{3.7637378125815363`*^9, 3.7637378270825357`*^9}, 
+   3.763737960796482*^9, 3.7637381894966297`*^9, 3.7637395497713985`*^9, 
+   3.7637395978857045`*^9, 3.7637396336139555`*^9, 3.7637397194756813`*^9, 
+   3.76373977424209*^9, {3.7637398171274786`*^9, 3.763739843967467*^9}, 
+   3.763740063178712*^9, 3.7637401124564857`*^9, {3.763740151827227*^9, 
+   3.763740178869518*^9}, {3.7637406349332514`*^9, 3.7637406866502934`*^9}, {
+   3.7637407171665707`*^9, 3.763740779191228*^9}, {3.766839042822049*^9, 
+   3.7668390575715914`*^9}, 
+   3.766839154085452*^9},ExpressionUUID->"d48c0979-ae85-4b90-9fe4-\
+f13e2cdc0b6a"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`\[Lambda]$$], 10}, 0, 30, 1}, {{
+         Hold[$CellContext`d$$], 0.5}, 0, 2, 0.01}}, Typeset`size$$ = {
+      471., {78., 83.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$99016$$ = 
+      0, $CellContext`d$99017$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, 
+        "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 
+          10}, "ControllerVariables" :> {
+          Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$99016$$, 0], 
+          Hold[$CellContext`d$$, $CellContext`d$99017$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+        Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
 $CellContext`u$, $CellContext`v$, $CellContext`w$, $CellContext`t$}, \
 $CellContext`solF$ = 
-          NDSolve[{
-            Derivative[
-              1][$CellContext`u$][$CellContext`t$] == $CellContext`d$$ (
-               Evaluate[
-                 $CellContext`qqq[$CellContext`t$]] - \
+           NDSolve[{
+             Derivative[
+               1][$CellContext`u$][$CellContext`t$] == $CellContext`d$$ (
+                Evaluate[
+                  $CellContext`qqq[$CellContext`t$]] - \
 $CellContext`u$[$CellContext`t$] - $CellContext`\[Lambda]$$), $CellContext`u$[
-               Condition[$CellContext`t$, $CellContext`t$ <= 
-                0]] == -$CellContext`\[Lambda]$$}, $CellContext`u$, \
+                
+                Condition[$CellContext`t$, $CellContext`t$ <= 
+                 0]] == -$CellContext`\[Lambda]$$}, $CellContext`u$, \
 {$CellContext`t$, 0, $CellContext`tmax}]; $CellContext`solS$ = 
-          NDSolve[{
-            Derivative[
-              1][$CellContext`v$][$CellContext`t$] == $CellContext`d$$ (Part[
-                 Evaluate[
-                  ReplaceAll[
-                   $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]], \
+           NDSolve[{
+             Derivative[
+               1][$CellContext`v$][$CellContext`t$] == $CellContext`d$$ (Part[
+                  Evaluate[
+                   ReplaceAll[
+                    $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]], \
 $CellContext`solF$]], 
-                 1] - $CellContext`v$[$CellContext`t$] - $CellContext`\
+                  1] - $CellContext`v$[$CellContext`t$] - $CellContext`\
 \[Lambda]$$), $CellContext`v$[
-               
-               Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+                
+                Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
 \[Tau]]] == (-2) $CellContext`\[Lambda]$$}, $CellContext`v$, \
 {$CellContext`t$, $CellContext`\[Tau], $CellContext`tmax}]; \
 $CellContext`solT$ = 
-          NDSolve[{
-            Derivative[
-              1][$CellContext`w$][$CellContext`t$] == $CellContext`d$$ (Part[
-                 Evaluate[
-                  ReplaceAll[
-                   $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]], \
+           NDSolve[{
+             Derivative[
+               1][$CellContext`w$][$CellContext`t$] == $CellContext`d$$ (Part[
+                  Evaluate[
+                   ReplaceAll[
+                    $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]], \
 $CellContext`solS$]], 
-                 1] - $CellContext`w$[$CellContext`t$] - $CellContext`\
+                  1] - $CellContext`w$[$CellContext`t$] - $CellContext`\
 \[Lambda]$$), $CellContext`w$[
-               
-               Condition[$CellContext`t$, $CellContext`t$ <= 
-                2 $CellContext`\[Tau]]] == (-3) $CellContext`\[Lambda]$$}, \
+                
+                Condition[$CellContext`t$, $CellContext`t$ <= 
+                 2 $CellContext`\[Tau]]] == (-3) $CellContext`\[Lambda]$$}, \
 $CellContext`w$, {$CellContext`t$, 2 $CellContext`\[Tau], $CellContext`tmax}]; 
-         ParametricPlot[{
-            Evaluate[
-             ReplaceAll[{
-               $CellContext`u$[$CellContext`t$ - 
-                2 $CellContext`\[Tau]], $CellContext`t$ - 
-               2 $CellContext`\[Tau]}, $CellContext`solF$]], 
-            Evaluate[
-             ReplaceAll[{
-               $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]], \
+          ParametricPlot[{
+             Evaluate[
+              ReplaceAll[{$CellContext`t$ - 2 $CellContext`\[Tau], 
+                Derivative[
+                1][$CellContext`u$][$CellContext`t$ - 
+                 2 $CellContext`\[Tau]]}, $CellContext`solF$]], 
+             Evaluate[
+              ReplaceAll[{$CellContext`t$ - $CellContext`\[Tau], 
+                Derivative[
+                1][$CellContext`v$][$CellContext`t$ - $CellContext`\[Tau]]}, \
+$CellContext`solS$]], 
+             Evaluate[
+              ReplaceAll[{$CellContext`t$, 
+                Derivative[
+                1][$CellContext`w$][$CellContext`t$]}, $CellContext`solT$]]}, \
+{$CellContext`t$, 2 $CellContext`\[Tau], $CellContext`tmax}, 
+            PlotRange -> {{-5, 100}, {0, $CellContext`dx0 + 15}}, PlotLabel -> 
+            "Speed", AxesLabel -> {$CellContext`time, $CellContext`speed}, 
+            PlotLegends -> {"first car", "second car", "third car"}]], 
+        "Specifications" :> {{{$CellContext`\[Lambda]$$, 10}, 0, 30, 
+           1}, {{$CellContext`d$$, 0.5}, 0, 2, 0.01}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{522., {139., 145.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]], " ", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 10, 
+      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+         Hold[$CellContext`\[Lambda]$$], 10}, 0, 30, 1}, {{
+         Hold[$CellContext`d$$], 0.5}, 0, 2, 0.01}}, Typeset`size$$ = {
+      471., {53., 59.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$99036$$ = 
+      0, $CellContext`d$99037$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, 
+        "Variables" :> {$CellContext`d$$ = 0.5, $CellContext`\[Lambda]$$ = 
+          10}, "ControllerVariables" :> {
+          Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$99036$$, 0], 
+          Hold[$CellContext`d$$, $CellContext`d$99037$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> 
+        Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$, $CellContext`t$}, \
+$CellContext`solF$ = 
+           NDSolve[{
+             Derivative[
+               1][$CellContext`u$][$CellContext`t$] == $CellContext`d$$ (
+                Evaluate[
+                  $CellContext`qqq[$CellContext`t$]] - \
+$CellContext`u$[$CellContext`t$] - $CellContext`\[Lambda]$$), $CellContext`u$[
+                
+                Condition[$CellContext`t$, $CellContext`t$ <= 
+                 0]] == -$CellContext`\[Lambda]$$}, $CellContext`u$, \
+{$CellContext`t$, 0, $CellContext`tmax}]; $CellContext`solS$ = 
+           NDSolve[{
+             Derivative[
+               1][$CellContext`v$][$CellContext`t$] == $CellContext`d$$ (Part[
+                  Evaluate[
+                   ReplaceAll[
+                    $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solF$]], 
+                  1] - $CellContext`v$[$CellContext`t$] - $CellContext`\
+\[Lambda]$$), $CellContext`v$[
+                
+                Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]]] == (-2) $CellContext`\[Lambda]$$}, $CellContext`v$, \
+{$CellContext`t$, $CellContext`\[Tau], $CellContext`tmax}]; \
+$CellContext`solT$ = 
+           NDSolve[{
+             Derivative[
+               1][$CellContext`w$][$CellContext`t$] == $CellContext`d$$ (Part[
+                  Evaluate[
+                   ReplaceAll[
+                    $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]], \
+$CellContext`solS$]], 
+                  1] - $CellContext`w$[$CellContext`t$] - $CellContext`\
+\[Lambda]$$), $CellContext`w$[
+                
+                Condition[$CellContext`t$, $CellContext`t$ <= 
+                 2 $CellContext`\[Tau]]] == (-3) $CellContext`\[Lambda]$$}, \
+$CellContext`w$, {$CellContext`t$, 2 $CellContext`\[Tau], $CellContext`tmax}]; 
+          ParametricPlot[{
+             Evaluate[
+              ReplaceAll[{
+                $CellContext`u$[$CellContext`t$ - 
+                 2 $CellContext`\[Tau]], $CellContext`t$ - 
+                2 $CellContext`\[Tau]}, $CellContext`solF$]], 
+             Evaluate[
+              ReplaceAll[{
+                $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]], \
 $CellContext`t$ - $CellContext`\[Tau]}, $CellContext`solS$]], 
-            Evaluate[
-             ReplaceAll[{
-               $CellContext`w$[$CellContext`t$], $CellContext`t$}, \
+             Evaluate[
+              ReplaceAll[{
+                $CellContext`w$[$CellContext`t$], $CellContext`t$}, \
 $CellContext`solT$]]}, {$CellContext`t$, 
-            2 $CellContext`\[Tau], $CellContext`tmax}, 
-           PlotRange -> {{-50, 300}, {0, 40}}, PlotLabel -> "Distance", 
-           AxesLabel -> {$CellContext`distance, $CellContext`time}, 
-           PlotLegends -> {"first car", "second car", "third car"}]], 
-       "Specifications" :> {{{$CellContext`\[Lambda]$$, 10}, 0, 30, 
-          1}, {{$CellContext`d$$, 0.5}, 0, 2, 0.01}}, "Options" :> {}, 
-       "DefaultOptions" :> {}],
-      ImageSizeCache->{522., {101., 107.}},
-      SingleEvaluation->True],
-     Deinitialization:>None,
-     DynamicModuleValues:>{},
-     SynchronousInitialization->True,
-     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-     UnsavedVariables:>{Typeset`initDone$$},
-     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-    Deployed->True,
-    StripOnInput->False],
-   Manipulate`InterpretManipulate[1]]}]], "Output",
- CellChangeTimes->{
-  3.7637410628605585`*^9, 3.7637414135720124`*^9, 3.7637414513682566`*^9, 
-   3.76374188437984*^9, 3.7637419286796875`*^9, {3.763743756347616*^9, 
-   3.7637437670163856`*^9}},ExpressionUUID->"52d75768-3ed5-47d2-abdc-\
-db8995090bd1"]
-}, Open  ]]
+             2 $CellContext`\[Tau], $CellContext`tmax}, 
+            PlotRange -> {{-50, 250}, {0, 60}}, PlotLabel -> "Distance", 
+            AxesLabel -> {$CellContext`distance, $CellContext`time}, 
+            PlotLegends -> {"first car", "second car", "third car"}]], 
+        "Specifications" :> {{{$CellContext`\[Lambda]$$, 10}, 0, 30, 
+           1}, {{$CellContext`d$$, 0.5}, 0, 2, 0.01}}, "Options" :> {}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{522., {114., 120.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7637374527078295`*^9, 
+  3.7637375902901764`*^9}},ExpressionUUID->"3e88db02-a70e-468b-ab0c-\
+0e21cbf3ee38"]
 },
 WindowSize->{1536, 781},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -683,11 +882,14 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 21841, 447, 830, "Input", "ExpressionUUID" -> \
-"027013a8-cec3-4835-a3c6-868636f58f47"],
-Cell[22424, 471, 9507, 194, 301, "Output", "ExpressionUUID" -> \
-"52d75768-3ed5-47d2-abdc-db8995090bd1"]
-}, Open  ]]
+Cell[580, 22, 21494, 442, 830, "Input", "ExpressionUUID" -> \
+"708037ef-fea3-45d9-87a6-ba54e236cd9a"],
+Cell[22077, 466, 9898, 200, 19, "Output", "ExpressionUUID" -> \
+"d48c0979-ae85-4b90-9fe4-f13e2cdc0b6a",
+ CellOpen->False]
+}, Open  ]],
+Cell[31990, 669, 9675, 196, 390, "Input", "ExpressionUUID" -> \
+"3e88db02-a70e-468b-ab0c-0e21cbf3ee38"]
 }
 ]
 *)
