@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  21 MAY 2019 00:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  26 MAY 2019 22:36
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -1008,7 +1008,7 @@ Overfull \hbox (23.99998pt too wide) in alignment at lines 230--230
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <Images/distance_without_stop_d=0,122_tau=1.png, id=36, 346.29375pt x 202.95825
@@ -1073,54 +1073,54 @@ File: Images/speed_with_stop_d=0,122_tau=1.png Graphic file (type png)
 
 <use Images/speed_with_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/speed_with_stop_d=0,122_tau=1.png used on input
- line 317.
+ line 316.
 (pdftex.def)             Requested size: 218.51656pt x 133.7342pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] <Images/car's_start_position.png, id=57, 904.1278pt x 256.70906pt>
+[10] [11 <./Images/distance_with_stop_d=0,122_tau=1.png> <./Images/speed_with_s
+top_d=0,122_tau=1.png>]
+<Images/car's_start_position.png, id=60, 904.1278pt x 256.70906pt>
 File: Images/car's_start_position.png Graphic file (type png)
 
 <use Images/car's_start_position.png>
-Package pdftex.def Info: Images/car's_start_position.png used on input line 347
+Package pdftex.def Info: Images/car's_start_position.png used on input line 345
 .
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11 <./Images/distance_with_stop_d=0,122_tau=1.png> <./Images/speed_with_stop_d
-=0,122_tau=1.png>] [12 <./Images/car's_start_position.png>] [13] [14] [15]
-("Master's thesis.aux") ) 
+[12 <./Images/car's_start_position.png>] [13] [14] [15] ("Master's thesis.aux")
+ ) 
 Here is how much of TeX's memory you used:
- 5472 strings out of 493333
- 72674 string characters out of 3139198
- 160376 words of memory out of 3000000
- 8846 multiletter control sequences out of 15000+200000
+ 5470 strings out of 493333
+ 72609 string characters out of 3139198
+ 160348 words of memory out of 3000000
+ 8844 multiletter control sequences out of 15000+200000
  17258 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,14n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\lh\lh-t2a\dpi600\lati1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9
-\fonts\pk\ljfour\lh\lh-t2a\dpi600\lati1095.pk> <C:\Users\User\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\User\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\User\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi600\larm1200.pk> <C:\U
-sers\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/lat
-xfont/line10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
-ls/msam10.pfb>
-Output written on "Master's thesis.pdf" (15 pages, 490108 bytes).
+ <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
+x1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
+600\lati1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
+t2a\dpi600\lati1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\unknown\unknown\dpi600\larm1200.pk> <C:\Users\User\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "Master's thesis.pdf" (15 pages, 490684 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
+ 419 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
