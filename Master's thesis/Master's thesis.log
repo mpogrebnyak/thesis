@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  26 MAY 2019 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  18 SEP 2019 20:34
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -30,6 +30,9 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \belowcaptionskip=\skip42
 \bibindent=\dimen103
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\cmap\cmap.sty"
+Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks14
@@ -49,7 +52,7 @@ LaTeX Font Info:    Try loading font information for T2A+cmr on input line 105.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\cyrillic\t2acmr.fd"
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
+)<<t2a.cmap>>)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
@@ -861,20 +864,20 @@ Package tocloft Info: The document has section divisions on input line 44.
 ("Master's thesis.aux")
 \openout1 = `"Master's thesis.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -966,13 +969,13 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 46.
-LaTeX Font Info:    Try loading font information for U+msa on input line 85.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+LaTeX Info: Redefining \selectfont on input line 47.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 85.
+LaTeX Font Info:    Try loading font information for U+msb on input line 65.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -985,14 +988,14 @@ hesis.toc")
 
 
 [2] [3] [4] [5] [6]
-<Images/car_following.png, id=25, 904.1278pt x 256.70906pt>
+<Images/car_following.png, id=30, 904.1278pt x 256.70906pt>
 File: Images/car_following.png Graphic file (type png)
 
 <use Images/car_following.png>
-Package pdftex.def Info: Images/car_following.png used on input line 152.
+Package pdftex.def Info: Images/car_following.png used on input line 150.
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
 
-Overfull \hbox (5.99149pt too wide) in paragraph at lines 170--171
+Overfull \hbox (5.99149pt too wide) in paragraph at lines 168--169
 []\T2A/cmr/m/n/12 –ассмотрим диф-фе-рен-ци-аль-ное урав-не-ние, ко-то-рое опи-с
 ы-ва-ет уско-ре-ние транс-
  []
@@ -1000,10 +1003,10 @@ Overfull \hbox (5.99149pt too wide) in paragraph at lines 170--171
 [7 <./Images/car_following.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 209.
+(amsmath)                trying to recover with `aligned' on input line 207.
 
 
-Overfull \hbox (23.99998pt too wide) in alignment at lines 230--230
+Overfull \hbox (23.99998pt too wide) in alignment at lines 228--228
 [][] 
  []
 
@@ -1011,39 +1014,39 @@ Overfull \hbox (23.99998pt too wide) in alignment at lines 230--230
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<Images/distance_without_stop_d=0,122_tau=1.png, id=36, 346.29375pt x 202.95825
+<Images/distance_without_stop_d=0,122_tau=1.png, id=41, 346.29375pt x 202.95825
 pt>
 File: Images/distance_without_stop_d=0,122_tau=1.png Graphic file (type png)
  <use Images/distance_without_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/distance_without_stop_d=0,122_tau=1.png used on
- input line 240.
+ input line 238.
 (pdftex.def)             Requested size: 218.52023pt x 133.72678pt.
 
-<Images/speed_without_stop_d=0,122_tau=1.png, id=37, 343.2825pt x 198.7425pt>
+<Images/speed_without_stop_d=0,122_tau=1.png, id=42, 343.2825pt x 198.7425pt>
 File: Images/speed_without_stop_d=0,122_tau=1.png Graphic file (type png)
 
 <use Images/speed_without_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/speed_without_stop_d=0,122_tau=1.png used on in
-put line 245.
+put line 243.
 (pdftex.def)             Requested size: 218.511pt x 133.72992pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<Images/distance_without_stop_d=0,122_tau=5.png, id=38, 343.2825pt x 201.1515pt
+<Images/distance_without_stop_d=0,122_tau=5.png, id=43, 343.2825pt x 201.1515pt
 >
 File: Images/distance_without_stop_d=0,122_tau=5.png Graphic file (type png)
  <use Images/distance_without_stop_d=0,122_tau=5.png>
 Package pdftex.def Info: Images/distance_without_stop_d=0,122_tau=5.png used on
- input line 256.
+ input line 254.
 (pdftex.def)             Requested size: 218.511pt x 133.7303pt.
 
-<Images/speed_without_stop_d=0,122_tau=5.png, id=39, 342.68025pt x 198.14024pt>
+<Images/speed_without_stop_d=0,122_tau=5.png, id=44, 342.68025pt x 198.14024pt>
 File: Images/speed_without_stop_d=0,122_tau=5.png Graphic file (type png)
 <use Images/speed_without_stop_d=0,122_tau=5.png>
 Package pdftex.def Info: Images/speed_without_stop_d=0,122_tau=5.png used on in
-put line 261.
+put line 259.
 (pdftex.def)             Requested size: 218.51982pt x 133.73283pt.
 
 
@@ -1054,26 +1057,26 @@ ut_stop_d=0,122_tau=1.png> <./Images/distance_without_stop_d=0,122_tau=5.png> <
 ./Images/speed_without_stop_d=0,122_tau=5.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 280.
+(amsmath)                trying to recover with `aligned' on input line 278.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 300.
+(amsmath)                trying to recover with `aligned' on input line 298.
 
 
-<Images/distance_with_stop_d=0,122_tau=1.png, id=51, 343.88475pt x 233.07076pt>
+<Images/distance_with_stop_d=0,122_tau=1.png, id=56, 343.88475pt x 233.07076pt>
 File: Images/distance_with_stop_d=0,122_tau=1.png Graphic file (type png)
 <use Images/distance_with_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/distance_with_stop_d=0,122_tau=1.png used on in
-put line 311.
+put line 309.
 (pdftex.def)             Requested size: 218.51656pt x 133.73012pt.
 
-<Images/speed_with_stop_d=0,122_tau=1.png, id=52, 343.88475pt x 196.93575pt>
+<Images/speed_with_stop_d=0,122_tau=1.png, id=57, 343.88475pt x 196.93575pt>
 File: Images/speed_with_stop_d=0,122_tau=1.png Graphic file (type png)
 
 <use Images/speed_with_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/speed_with_stop_d=0,122_tau=1.png used on input
- line 316.
+ line 314.
 (pdftex.def)             Requested size: 218.51656pt x 133.7342pt.
 
 
@@ -1081,11 +1084,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10] [11 <./Images/distance_with_stop_d=0,122_tau=1.png> <./Images/speed_with_s
 top_d=0,122_tau=1.png>]
-<Images/car's_start_position.png, id=60, 904.1278pt x 256.70906pt>
+<Images/car's_start_position.png, id=65, 904.1278pt x 256.70906pt>
 File: Images/car's_start_position.png Graphic file (type png)
 
 <use Images/car's_start_position.png>
-Package pdftex.def Info: Images/car's_start_position.png used on input line 345
+Package pdftex.def Info: Images/car's_start_position.png used on input line 343
 .
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
 
@@ -1095,10 +1098,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [12 <./Images/car's_start_position.png>] [13] [14] [15] ("Master's thesis.aux")
  ) 
 Here is how much of TeX's memory you used:
- 5470 strings out of 493333
- 72609 string characters out of 3139198
- 160348 words of memory out of 3000000
- 8844 multiletter control sequences out of 15000+200000
+ 5522 strings out of 493333
+ 73350 string characters out of 3139198
+ 160681 words of memory out of 3000000
+ 8859 multiletter control sequences out of 15000+200000
  17258 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,14n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1118,9 +1121,9 @@ e1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Master's thesis.pdf" (15 pages, 490684 bytes).
+Output written on "Master's thesis.pdf" (15 pages, 492058 bytes).
 PDF statistics:
- 419 PDF objects out of 1000 (max. 8388607)
+ 424 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
