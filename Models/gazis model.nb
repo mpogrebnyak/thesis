@@ -1,0 +1,2366 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    102461,       2358]
+NotebookOptionsPosition[     93140,       2170]
+NotebookOutlinePosition[     93484,       2185]
+CellTagsIndexPosition[     93441,       2182]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"speed", " ", "=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "e", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"dx0", "=", "60"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"x0", " ", "=", " ", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[Tau]", " ", "=", " ", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tt", "=", "100"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dStart", " ", "=", " ", "0.5"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[Lambda]Start", " ", "=", " ", "5"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"tmax", " ", "=", "150"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"a", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"q", " ", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"qq", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"T", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"b", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"s", "=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["V", "max"], " ", "=", "40"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"lam", " ", "=", "10"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"l", "=", "1.1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"m", "=", "0"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"qqq", "[", "t_", "]"}], " ", ":=", " ", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"t", " ", "<=", " ", "tt"}], ",", " ", 
+        RowBox[{"dx0", " ", "*", "t"}], ",", 
+        RowBox[{"dx0", "*", "tt"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "solF", ",", " ", "solS", ",", " ", "solT", ",", " ", "u", ",", 
+           "  ", "v", ",", "  ", "w", ",", " ", "t"}], "}"}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"solF", " ", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{"a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"u", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], "/", 
+                    SubscriptBox["V", "max"]}], ")"}]}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solS", " ", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"v", "''"}], "[", "t", "]"}], "\[Equal]", 
+                RowBox[{"a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"lam", "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"v", "'"}], "[", "t", "]"}], ")"}], "^", "m"}], 
+                    ")"}]}], ")"}], "/", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{"u", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solF"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"v", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}], "^", "l"}], 
+                    ")"}]}], ")"}], "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"u", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solF"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                   RowBox[{
+                    RowBox[{"v", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}]}]}], 
+               "\[IndentingNewLine]", ",", " ", 
+               RowBox[{
+                RowBox[{"v", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "\[Tau]"}]}], " ", "]"}], 
+                " ", "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"v", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "\[Tau]"}]}], " ", "]"}], 
+                " ", "\[Equal]", " ", "0"}]}], "}"}], ",", "v", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "\[Tau]", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"solT", " ", "=", "  ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"w", "''"}], "[", "t", "]"}], "\[Equal]", 
+                RowBox[{"a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"lam", "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"w", "'"}], "[", "t", "]"}], ")"}], "^", "m"}], 
+                    ")"}]}], ")"}], "/", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{"v", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solS"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"w", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}], "^", "l"}], 
+                    ")"}]}], ")"}], "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"v", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solS"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                   RowBox[{
+                    RowBox[{"w", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}]}]}], 
+               "\[IndentingNewLine]", ",", " ", 
+               RowBox[{
+                RowBox[{"w", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", 
+                   RowBox[{"2", "*", "\[Tau]"}]}]}], " ", "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "2"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"w", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", 
+                   RowBox[{"2", "*", "\[Tau]"}]}]}], " ", "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "w", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", 
+               RowBox[{"2", "*", "\[Tau]"}], ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"sol4", " ", "=", "  ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"p", "''"}], "[", "t", "]"}], "\[Equal]", 
+                RowBox[{"a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"lam", "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"p", "'"}], "[", "t", "]"}], ")"}], "^", "m"}], 
+                    ")"}]}], ")"}], "/", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{"w", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solT"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"p", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}], "^", "l"}], 
+                    ")"}]}], ")"}], "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"w", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "solT"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                   RowBox[{
+                    RowBox[{"p", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}]}]}], 
+               "\[IndentingNewLine]", ",", " ", 
+               RowBox[{
+                RowBox[{"p", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", 
+                   RowBox[{"3", "*", "\[Tau]"}]}]}], " ", "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "3"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"p", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", 
+                   RowBox[{"3", "*", "\[Tau]"}]}]}], " ", "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "p", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", 
+               RowBox[{"3", "*", "\[Tau]"}], ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"sol5", " ", "=", "  ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"z", "''"}], "[", "t", "]"}], "\[Equal]", 
+                RowBox[{"a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"lam", "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"z", "'"}], "[", "t", "]"}], ")"}], "^", "m"}], 
+                    ")"}]}], ")"}], "/", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{"p", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "sol4"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"z", "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}], "^", "l"}], 
+                    ")"}]}], ")"}], "*", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Evaluate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"p", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}], " ", "/.", "sol4"}], 
+                    "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                   RowBox[{
+                    RowBox[{"z", "'"}], "[", 
+                    RowBox[{"t", "-", "\[Tau]"}], "]"}]}], ")"}]}]}], 
+               "\[IndentingNewLine]", ",", " ", 
+               RowBox[{
+                RowBox[{"z", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", 
+                   RowBox[{"4", "*", "\[Tau]"}]}]}], " ", "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "4"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"z", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", 
+                   RowBox[{"4", "*", "\[Tau]"}]}]}], " ", "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "z", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", 
+               RowBox[{"4", "*", "\[Tau]"}], ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"ParametricPlot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"t", "-", 
+                   RowBox[{"4", "*", "\[Tau]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"u", "'"}], "[", 
+                   RowBox[{"t", "-", 
+                    RowBox[{"4", "*", "\[Tau]"}]}], "]"}]}], "}"}], " ", "/.",
+                 " ", "solF"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"t", "-", 
+                   RowBox[{"3", "*", "\[Tau]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"v", "'"}], "[", 
+                   RowBox[{"t", "-", 
+                    RowBox[{"3", "*", "\[Tau]"}]}], "]"}]}], "}"}], " ", "/.",
+                 " ", "solS"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"t", "-", 
+                   RowBox[{"2", "*", "\[Tau]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"w", "'"}], "[", 
+                   RowBox[{"t", "-", 
+                    RowBox[{"2", "*", "\[Tau]"}]}], "]"}]}], "}"}], " ", "/.",
+                 " ", "solT"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"t", "-", 
+                   RowBox[{"1", "*", "\[Tau]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"p", "'"}], "[", 
+                   RowBox[{"t", "-", 
+                    RowBox[{"1", "*", "\[Tau]"}]}], "]"}]}], "}"}], " ", "/.",
+                 " ", "sol4"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"t", "-", 
+                   RowBox[{"0", "*", "\[Tau]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"z", "'"}], "[", 
+                   RowBox[{"t", "-", 
+                    RowBox[{"0", "*", "\[Tau]"}]}], "]"}]}], "}"}], " ", "/.",
+                 " ", "sol5"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", 
+              RowBox[{"4", "*", "\[Tau]"}], ",", "tmax"}], "}"}], ",", " ", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "5"}], ",", "100"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"dx0", "+", "15"}]}], "}"}]}], "}"}]}], ",", 
+            RowBox[{
+            "PlotLabel", "\[Rule]", 
+             "\"\<\:0413\:0440\:0430\:0444\:0438\:043a \:0441\:043a\:043e\
+\:0440\:043e\:0441\:0442\:0438\>\""}], ",", 
+            RowBox[{"AxesLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\:0432\:0440\:0435\:043c\:044f", ",", 
+               "\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:044c"}], "}"}]}], 
+            ",", 
+            RowBox[{"PlotLegends", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\:043c\:0430\:0448\:0438\:043d\:0430 \:21161\>\"", ",", 
+               "\"\<\:043c\:0430\:0448\:0438\:043d\:0430 \:21162\>\"", ",", 
+               "\"\<\:043c\:0430\:0448\:0438\:043d\:0430 \:21163\>\"", ",", 
+               "\"\<\:043c\:0430\:0448\:0438\:043d\:0430 \:21164\>\"", ",", 
+               "\"\<\:043c\:0430\:0448\:0438\:043d\:0430 \:21165\>\""}], 
+              "}"}]}]}], "]"}]}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\[Lambda]", ",", "\[Lambda]Start"}], "}"}], ",", "0", ",", 
+         "30", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"m", ",", "1"}], "}"}], ",", "0", ",", "3", ",", "1"}], 
+        "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"l", ",", "1"}], "}"}], ",", "0", ",", "3", ",", "1"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a", ",", "1"}], "}"}], ",", "1", ",", "10", ",", "1"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\[Tau]", ",", "1"}], "}"}], ",", "1", ",", "10", ",", 
+         "1"}], "}"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"lam", ",", "1"}], "}"}], ",", "1", ",", "10", ",", "1"}], 
+        "}"}]}], "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7812669455913343`*^9, 3.781266984350503*^9, {3.78126702792693*^9, 
+   3.7812670661816287`*^9}, {3.7812671270981207`*^9, 
+   3.7812671408961844`*^9}, {3.781267187487626*^9, 3.7812671907967367`*^9}, {
+   3.781267373356572*^9, 3.7812674249960346`*^9}, {3.7812674573202014`*^9, 
+   3.78126745776202*^9}, {3.7812675785887537`*^9, 3.781267584915324*^9}, {
+   3.7812676185818324`*^9, 3.781267654208268*^9}, {3.781268552128445*^9, 
+   3.781268591823944*^9}, {3.781268632476723*^9, 3.781268807078996*^9}, {
+   3.781268846184628*^9, 3.7812688462843213`*^9}, {3.7812688854517555`*^9, 
+   3.781268888494346*^9}, {3.7812689953987455`*^9, 3.7812690567131157`*^9}, {
+   3.7812692316771455`*^9, 3.781269231772929*^9}, 3.7812697099061007`*^9, {
+   3.7812708899191923`*^9, 3.7812709075400734`*^9}, {3.7812749795782433`*^9, 
+   3.7812749900695257`*^9}, {3.7812751275698175`*^9, 
+   3.7812751646696463`*^9}, {3.7812751980333815`*^9, 3.78127523227481*^9}, {
+   3.7812752922075777`*^9, 3.781275321306758*^9}, {3.7812756771780415`*^9, 
+   3.7812757592375946`*^9}, {3.7818790137305255`*^9, 
+   3.7818792989922404`*^9}, {3.781879489177678*^9, 3.781879495491228*^9}, {
+   3.7818795377936063`*^9, 3.78187958929211*^9}, {3.781879696430447*^9, 
+   3.7818797394923296`*^9}, {3.781879825851348*^9, 3.781880191553583*^9}, {
+   3.781880277566602*^9, 3.7818803064722676`*^9}, {3.781880415112949*^9, 
+   3.78188041729611*^9}},ExpressionUUID->"26e9d8c5-86f2-479c-808b-\
+e5913e9f655c"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`l$$ = 
+    1, $CellContext`lam$$ = 1, $CellContext`m$$ = 
+    1, $CellContext`\[Lambda]$$ = 5, $CellContext`\[Tau]$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Lambda]$$], 5}, 0, 30, 1}, {{
+       Hold[$CellContext`m$$], 1}, 0, 3, 1}, {{
+       Hold[$CellContext`l$$], 1}, 0, 3, 1}, {{
+       Hold[$CellContext`a$$], 1}, 1, 10, 1}, {{
+       Hold[$CellContext`\[Tau]$$], 1}, 1, 10, 1}, {{
+       Hold[$CellContext`lam$$], 1}, 1, 10, 1}}, Typeset`size$$ = {
+    479., {135., 140.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$96258$$ = 
+    0, $CellContext`m$96259$$ = 0, $CellContext`l$96260$$ = 
+    0, $CellContext`a$96261$$ = 0, $CellContext`\[Tau]$96262$$ = 
+    0, $CellContext`lam$96263$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1, $CellContext`l$$ = 
+        1, $CellContext`lam$$ = 1, $CellContext`m$$ = 
+        1, $CellContext`\[Lambda]$$ = 5, $CellContext`\[Tau]$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$96258$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$96259$$, 0], 
+        Hold[$CellContext`l$$, $CellContext`l$96260$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$96261$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$96262$$, 0], 
+        Hold[$CellContext`lam$$, $CellContext`lam$96263$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$, $CellContext`t$}, \
+$CellContext`solF$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u$][$CellContext`t$] == $CellContext`a$$ (1 - 
+              Derivative[
+               1][$CellContext`u$][$CellContext`t$ - $CellContext`\[Tau]$$]/
+              Subscript[$CellContext`V, $CellContext`max]), $CellContext`u$[
+              Condition[$CellContext`t$, $CellContext`t$ <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u$][
+              Condition[$CellContext`t$, $CellContext`t$ <= 0]] == 
+            0}, $CellContext`u$, {$CellContext`t$, 
+            0, $CellContext`tmax}]; $CellContext`solS$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`v$][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`v$][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solF$]], 
+                 1] - $CellContext`v$[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`u$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solF$]], 1] - Derivative[
+              1][$CellContext`v$][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`v$[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]$$]] == -$CellContext`\[Lambda]$$, Derivative[1][$CellContext`v$][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]$$]] == 
+            0}, $CellContext`v$, {$CellContext`t$, $CellContext`\[Tau]$$, \
+$CellContext`tmax}]; $CellContext`solT$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`w$][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`w$][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solS$]], 
+                 1] - $CellContext`w$[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`v$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solS$]], 1] - Derivative[
+              1][$CellContext`w$][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`w$[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               2 $CellContext`\[Tau]$$]] == (-2) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`w$][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               2 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`w$, {$CellContext`t$, 
+            2 $CellContext`\[Tau]$$, $CellContext`tmax}]; $CellContext`sol4 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`p][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`p][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`w$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solT$]], 
+                 1] - $CellContext`p[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`w$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solT$]], 1] - Derivative[
+              1][$CellContext`p][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`p[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               3 $CellContext`\[Tau]$$]] == (-3) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`p][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               3 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`p, {$CellContext`t$, 
+            3 $CellContext`\[Tau]$$, $CellContext`tmax}]; $CellContext`sol5 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`z][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`z][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`p[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`sol4]], 
+                 1] - $CellContext`z[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`p][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`sol4]], 1] - Derivative[
+              1][$CellContext`z][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`z[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               4 $CellContext`\[Tau]$$]] == (-4) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`z][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               4 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`z, {$CellContext`t$, 
+            4 $CellContext`\[Tau]$$, $CellContext`tmax}]; ParametricPlot[{
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 4 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`u$][$CellContext`t$ - 
+               4 $CellContext`\[Tau]$$]}, $CellContext`solF$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 3 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`v$][$CellContext`t$ - 
+               3 $CellContext`\[Tau]$$]}, $CellContext`solS$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 2 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`w$][$CellContext`t$ - 
+               2 $CellContext`\[Tau]$$]}, $CellContext`solT$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 1 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`p][$CellContext`t$ - 
+               1 $CellContext`\[Tau]$$]}, $CellContext`sol4]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 0 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`z][$CellContext`t$ - 
+               0 $CellContext`\[Tau]$$]}, $CellContext`sol5]]}, \
+{$CellContext`t$, 4 $CellContext`\[Tau]$$, $CellContext`tmax}, 
+          PlotRange -> {{-5, 100}, {0, $CellContext`dx0 + 15}}, PlotLabel -> 
+          "\:0413\:0440\:0430\:0444\:0438\:043a \
+\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:0438", 
+          AxesLabel -> {$CellContext`\:0432\:0440\:0435\:043c\:044f, \
+$CellContext`\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:044c}, 
+          PlotLegends -> {
+           "\:043c\:0430\:0448\:0438\:043d\:0430 \:21161", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21162", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21163", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21164", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21165"}]], 
+      "Specifications" :> {{{$CellContext`\[Lambda]$$, 5}, 0, 30, 
+         1}, {{$CellContext`m$$, 1}, 0, 3, 1}, {{$CellContext`l$$, 1}, 0, 3, 
+         1}, {{$CellContext`a$$, 1}, 1, 10, 1}, {{$CellContext`\[Tau]$$, 1}, 
+         1, 10, 1}, {{$CellContext`lam$$, 1}, 1, 10, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{530., {252., 258.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.781266947502185*^9, 3.7812670684017277`*^9, 3.781267143292776*^9, 
+   3.781267191834964*^9, 3.781267314662509*^9, 3.781267459349739*^9, 
+   3.7812688157158327`*^9, 3.781268858552026*^9, 3.7812688897006445`*^9, {
+   3.7812689971029415`*^9, 3.781269022926381*^9}, 3.781269058673926*^9, 
+   3.781269233039503*^9, 3.781269712871273*^9, {3.7812708990996428`*^9, 
+   3.7812709083838177`*^9}, 3.7812749914368663`*^9, 3.7812751655672026`*^9, {
+   3.7812752231781397`*^9, 3.781275233741889*^9}, {3.7812752936686707`*^9, 
+   3.7812753272229033`*^9}, 3.7812757280998645`*^9, 3.7818789973178*^9, 
+   3.781879190403206*^9, 3.78187930083914*^9, 3.7818794027635765`*^9, 
+   3.7818794903394833`*^9, {3.7818795607878513`*^9, 3.781879590768516*^9}, 
+   3.7818797406452417`*^9, {3.7818798271638393`*^9, 3.781879897410019*^9}, {
+   3.7818799343332396`*^9, 3.781879959420153*^9}, {3.781880021931983*^9, 
+   3.781880102142495*^9}, {3.7818801719948907`*^9, 3.781880192821234*^9}, 
+   3.781880250549829*^9, {3.7818802976498594`*^9, 3.7818803071614313`*^9}, {
+   3.781880363366129*^9, 3.7818804184949055`*^9}, 
+   3.7818804687375455`*^9},ExpressionUUID->"1849b73b-946a-44d1-8a60-\
+b8667a3ebff5"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 2, $CellContext`l$$ = 
+    1, $CellContext`lam$$ = 8, $CellContext`m$$ = 
+    0, $CellContext`\[Lambda]$$ = 5, $CellContext`\[Tau]$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Lambda]$$], 5}, 0, 30, 1}, {{
+       Hold[$CellContext`m$$], 1}, 0, 3, 1}, {{
+       Hold[$CellContext`l$$], 1}, 0, 3, 1}, {{
+       Hold[$CellContext`a$$], 1}, 1, 10, 1}, {{
+       Hold[$CellContext`\[Tau]$$], 1}, 1, 10, 1}, {{
+       Hold[$CellContext`lam$$], 1}, 1, 10, 1}}, Typeset`size$$ = {
+    479., {135., 140.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$66102$$ = 
+    0, $CellContext`m$66103$$ = 0, $CellContext`l$66104$$ = 
+    0, $CellContext`a$66105$$ = 0, $CellContext`\[Tau]$66106$$ = 
+    0, $CellContext`lam$66107$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1, $CellContext`l$$ = 
+        1, $CellContext`lam$$ = 1, $CellContext`m$$ = 
+        1, $CellContext`\[Lambda]$$ = 5, $CellContext`\[Tau]$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$66102$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$66103$$, 0], 
+        Hold[$CellContext`l$$, $CellContext`l$66104$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$66105$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$66106$$, 0], 
+        Hold[$CellContext`lam$$, $CellContext`lam$66107$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$, $CellContext`t$}, \
+$CellContext`solF$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u$][$CellContext`t$] == $CellContext`a$$ (1 - 
+              Derivative[
+               1][$CellContext`u$][$CellContext`t$ - $CellContext`\[Tau]$$]/
+              Subscript[$CellContext`V, $CellContext`max]), $CellContext`u$[
+              Condition[$CellContext`t$, $CellContext`t$ <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u$][
+              Condition[$CellContext`t$, $CellContext`t$ <= 0]] == 
+            0}, $CellContext`u$, {$CellContext`t$, 
+            0, $CellContext`tmax}]; $CellContext`solS$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`v$][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`v$][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solF$]], 
+                 1] - $CellContext`v$[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`u$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solF$]], 1] - Derivative[
+              1][$CellContext`v$][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`v$[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]$$]] == -$CellContext`\[Lambda]$$, Derivative[1][$CellContext`v$][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]$$]] == 
+            0}, $CellContext`v$, {$CellContext`t$, $CellContext`\[Tau]$$, \
+$CellContext`tmax}]; $CellContext`solT$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`w$][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`w$][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solS$]], 
+                 1] - $CellContext`w$[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`v$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solS$]], 1] - Derivative[
+              1][$CellContext`w$][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`w$[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               2 $CellContext`\[Tau]$$]] == (-2) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`w$][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               2 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`w$, {$CellContext`t$, 
+            2 $CellContext`\[Tau]$$, $CellContext`tmax}]; $CellContext`sol4 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`p][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`p][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`w$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solT$]], 
+                 1] - $CellContext`p[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`w$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solT$]], 1] - Derivative[
+              1][$CellContext`p][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`p[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               3 $CellContext`\[Tau]$$]] == (-3) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`p][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               3 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`p, {$CellContext`t$, 
+            3 $CellContext`\[Tau]$$, $CellContext`tmax}]; $CellContext`sol5 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`z][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`z][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`p[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`sol4]], 
+                 1] - $CellContext`z[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`p][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`sol4]], 1] - Derivative[
+              1][$CellContext`z][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`z[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               4 $CellContext`\[Tau]$$]] == (-4) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`z][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               4 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`z, {$CellContext`t$, 
+            4 $CellContext`\[Tau]$$, $CellContext`tmax}]; ParametricPlot[{
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 4 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`u$][$CellContext`t$ - 
+               4 $CellContext`\[Tau]$$]}, $CellContext`solF$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 3 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`v$][$CellContext`t$ - 
+               3 $CellContext`\[Tau]$$]}, $CellContext`solS$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 2 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`w$][$CellContext`t$ - 
+               2 $CellContext`\[Tau]$$]}, $CellContext`solT$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 1 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`p][$CellContext`t$ - 
+               1 $CellContext`\[Tau]$$]}, $CellContext`sol4]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 0 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`z][$CellContext`t$ - 
+               0 $CellContext`\[Tau]$$]}, $CellContext`sol5]]}, \
+{$CellContext`t$, 4 $CellContext`\[Tau]$$, $CellContext`tmax}, 
+          PlotRange -> {{-5, 100}, {0, $CellContext`dx0 + 15}}, PlotLabel -> 
+          "\:0413\:0440\:0430\:0444\:0438\:043a \
+\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:0438", 
+          AxesLabel -> {$CellContext`\:0432\:0440\:0435\:043c\:044f, \
+$CellContext`\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:044c}, 
+          PlotLegends -> {
+           "\:043c\:0430\:0448\:0438\:043d\:0430 \:21161", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21162", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21163", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21164", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21165"}]], 
+      "Specifications" :> {{{$CellContext`\[Lambda]$$, 5}, 0, 30, 
+         1}, {{$CellContext`m$$, 1}, 0, 3, 1}, {{$CellContext`l$$, 1}, 0, 3, 
+         1}, {{$CellContext`a$$, 1}, 1, 10, 1}, {{$CellContext`\[Tau]$$, 1}, 
+         1, 10, 1}, {{$CellContext`lam$$, 1}, 1, 10, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{530., {291., 297.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.781266947502185*^9, 3.7812670684017277`*^9, 3.781267143292776*^9, 
+   3.781267191834964*^9, 3.781267314662509*^9, 3.781267459349739*^9, 
+   3.7812688157158327`*^9, 3.781268858552026*^9, 3.7812688897006445`*^9, {
+   3.7812689971029415`*^9, 3.781269022926381*^9}, 3.781269058673926*^9, 
+   3.781269233039503*^9, 3.781269712871273*^9, {3.7812708990996428`*^9, 
+   3.7812709083838177`*^9}, 3.7812749914368663`*^9, 3.7812751655672026`*^9, {
+   3.7812752231781397`*^9, 3.781275233741889*^9}, {3.7812752936686707`*^9, 
+   3.7812753272229033`*^9}, 3.7812757280998645`*^9, 3.7818789973178*^9, 
+   3.781879190403206*^9, 3.78187930083914*^9, 3.7818794027635765`*^9, 
+   3.7818794903394833`*^9, {3.7818795607878513`*^9, 3.781879590768516*^9}, 
+   3.7818797406452417`*^9, {3.7818798271638393`*^9, 3.781879897410019*^9}, {
+   3.7818799343332396`*^9, 3.781879959420153*^9}, {3.781880021931983*^9, 
+   3.781880102142495*^9}, {3.7818801719948907`*^9, 3.781880192821234*^9}, 
+   3.781880250549829*^9, {3.7818802976498594`*^9, 3.7818803071614313`*^9}, {
+   3.781880363366129*^9, 
+   3.7818804184949055`*^9}},ExpressionUUID->"7efe9e94-25fc-4333-aaa5-\
+9651fe39e4e4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$88165\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"9.912614392818094`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,777,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880450185195*^9},ExpressionUUID->"ff73da49-1976-417e-b864-\
+0e1fc42b5c3e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$93323\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,784,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804579643555`*^9},ExpressionUUID->"82eff190-1782-4746-8cdf-\
+815ebeab44f4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,785,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804580660896`*^9},ExpressionUUID->"cddb9851-01c4-4e51-9388-\
+0422c657d084"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,786,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880458163824*^9},ExpressionUUID->"8a56d1e8-b005-49e5-bf91-\
+e51058fcfc52"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,787,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804582495947`*^9},ExpressionUUID->"1675830b-57f8-4178-be3e-\
+678962d8ec38"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,788,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804583393526`*^9},ExpressionUUID->"576b760e-b581-4329-9826-\
+fa999390b16f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$93323\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,789,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804583732605`*^9},ExpressionUUID->"611c8fcb-e5ea-456b-b846-\
+1c5b0da53cfe"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$94072\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,790,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804588200665`*^9},ExpressionUUID->"31449634-468a-40f7-a368-\
+ed2b44b15b27"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,791,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804590185375`*^9},ExpressionUUID->"9008b32e-7f5f-42da-a0cb-\
+da06098bb1c6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,792,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804590454645`*^9},ExpressionUUID->"f9ac9a58-c1b1-436a-a9b9-\
+303675064b5d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,793,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880459084359*^9},ExpressionUUID->"313b4e3f-df6c-4671-8e96-\
+7b0b3d0e4cee"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,794,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880459169134*^9},ExpressionUUID->"736f5420-f4c4-4240-a7b5-\
+43103cd037af"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$94072\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,795,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804592130156`*^9},ExpressionUUID->"8891293e-bd84-4aab-aa68-\
+9013074464d0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$94509\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,796,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804604467177`*^9},ExpressionUUID->"bfcc0456-e696-4bdb-bcb2-\
+73bcb6a1144d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,797,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880460653166*^9},ExpressionUUID->"ba69eb78-d78a-4686-8543-\
+88218676742c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,798,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880460682087*^9},ExpressionUUID->"e13dd6ae-73e0-4f2c-a3ca-\
+e562cc1790f3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,799,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804607120094`*^9},ExpressionUUID->"b4fe88be-50ed-4804-b47e-\
+95a2fd56656d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,800,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880460806755*^9},ExpressionUUID->"029bd592-4a64-499b-8db9-\
+d785768ba3f8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$94509\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,801,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804608366747`*^9},ExpressionUUID->"62684058-e253-4dca-8a8a-\
+10a7ef4860dd"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$94913\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,802,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804616594725`*^9},ExpressionUUID->"ee1e4aaa-7690-4985-a5c5-\
+ef93bfb510d5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,803,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804617771583`*^9},ExpressionUUID->"8e30d7a7-7256-45d1-b9dc-\
+de69ba9478f7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,804,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804618968377`*^9},ExpressionUUID->"b0b25606-bd9e-449a-ba62-\
+fdfe248207b1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,805,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.78188046200854*^9},ExpressionUUID->"4e46427f-0aee-4aec-8295-7f4765818483"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,806,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880462112274*^9},ExpressionUUID->"c3a1c1bb-2883-4d5d-8e57-\
+cfa15fc93f14"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$94913\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,807,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804621581397`*^9},ExpressionUUID->"8b226bda-9053-423d-8ee3-\
+a0ee25892671"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$95293\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,808,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804629799423`*^9},ExpressionUUID->"f15066dc-db8f-488d-8477-\
+39794da4cee5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,809,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804630846653`*^9},ExpressionUUID->"840bcfa7-e2c8-4e8f-ac28-\
+0c01392e9c9d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,810,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804631724296`*^9},ExpressionUUID->"ec90da4d-3d1d-4eb6-814c-\
+39e79bd73a6d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,811,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880463254219*^9},ExpressionUUID->"63574063-7bcd-42ce-ae07-\
+f198b10849c2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,812,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880463324022*^9},ExpressionUUID->"1d8d231b-8c96-439e-808e-\
+6c3ef64b7ff1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$95293\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,813,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804633698997`*^9},ExpressionUUID->"fd23e894-add6-4374-87ee-\
+99c0f14538a6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$95674\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,814,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804642076592`*^9},ExpressionUUID->"8901d9ce-020a-474e-a3ce-\
+31845b094736"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,815,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804643482842`*^9},ExpressionUUID->"fe304f0a-b37c-4706-92b2-\
+a533565eebed"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,816,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804644589863`*^9},ExpressionUUID->"af609ff0-b97e-4be0-873b-\
+18f0c88e9066"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,817,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880464572685*^9},ExpressionUUID->"ea57b6a9-d59d-4e16-b41c-\
+901b7babb9f4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,818,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880464631526*^9},ExpressionUUID->"639f9efb-8c7b-410b-bf95-\
+c1f47710fab9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$95674\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,819,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.78188046466844*^9},ExpressionUUID->"a31fd259-24e5-4f80-a7bc-818ec3e44c59"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$96054\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,820,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880465461306*^9},ExpressionUUID->"fdf2bca8-3212-4676-8894-\
+ff386517699c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,821,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804655620375`*^9},ExpressionUUID->"71484862-7fa2-4857-ba96-\
+96c9b53716a4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,822,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880465655786*^9},ExpressionUUID->"236161aa-ae2c-4684-8edb-\
+b59aa5ed0609"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,33,823,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804657634974`*^9},ExpressionUUID->"3acf8ca9-15fc-4a17-8021-\
+a69440431302"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,33,824,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804658682175`*^9},ExpressionUUID->"12805c82-6679-4ca2-9bd5-\
+d265638fd614"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$96054\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,33,825,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880465907116*^9},ExpressionUUID->"7dec349a-b278-46ef-a976-\
+5a6611c584f3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$96484\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,826,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880468991866*^9},ExpressionUUID->"c81e3c24-e1ba-4727-9e83-\
+4349e3bcd661"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,827,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880469110547*^9},ExpressionUUID->"c4286fa9-8eb1-4035-810b-\
+7d39e471d1d6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,828,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804692242427`*^9},ExpressionUUID->"817eb861-4413-4b72-9ac8-\
+1d8f9913cc24"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,829,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804693389378`*^9},ExpressionUUID->"9813eb6d-1381-4c01-b172-\
+41ddff4d8295"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,34,830,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.78188046946859*^9},ExpressionUUID->"72ceb04a-bebb-44ce-9a33-6d9d4d74d454"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$96484\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,831,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880469546381*^9},ExpressionUUID->"1fe9ce20-865c-45c5-ba9b-\
+98a4b15e9fc0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$96871\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,832,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804702026653`*^9},ExpressionUUID->"2db7595e-b954-45d5-9532-\
+5ea5411b9fa4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,833,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880470283411*^9},ExpressionUUID->"23205e6c-9dbc-4c0c-9308-\
+07117f47c0ae"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,834,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804703841476`*^9},ExpressionUUID->"d5c9a091-7bc5-49bc-896b-\
+fca09a81cce7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,835,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880470461933*^9},ExpressionUUID->"371f28c9-f694-41bc-823a-\
+a1ba65edec54"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,34,836,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804705417213`*^9},ExpressionUUID->"ed4767b9-aeeb-4258-911e-\
+27528800eb4b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$96871\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,837,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880470582611*^9},ExpressionUUID->"44f29e6c-7cc7-4793-8aac-\
+d3e687f1618f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$97539\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,838,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804713346*^9},ExpressionUUID->"f4dd8ba5-fdab-4bb1-bbf6-94d70bca4bb1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,839,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804714273586`*^9},ExpressionUUID->"5eeed4ab-044b-4f34-9a44-\
+4b2fe4450ae2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,840,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880471587925*^9},ExpressionUUID->"69d7f97c-aa4a-465c-b58c-\
+bcbb0971ab3d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,841,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.78188047167171*^9},ExpressionUUID->"4af2b995-48a2-4de9-89d5-01c4e0cf17a0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,34,842,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804717514844`*^9},ExpressionUUID->"5a76459e-1bc7-4475-b693-\
+4939f0e78997"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$97539\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,843,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804718013525`*^9},ExpressionUUID->"39682a6a-f022-4767-8681-\
+2a403e4e52dd"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$97919\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"7.024049748921075`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,844,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804724875164`*^9},ExpressionUUID->"a056047d-1929-4fd1-b9ac-\
+4073b72f3ca2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,845,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804725603285`*^9},ExpressionUUID->"af860a37-38ae-40f0-a321-\
+1de5621e3187"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,846,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804726500826`*^9},ExpressionUUID->"ab0ff4d3-1b09-4837-94a5-\
+a9226df1a38b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InterpolatingFunction","dmval",
+   "\"Input value \\!\\(\\*RowBox[{\\\"{\\\", \\\"7.024049797638792`\\\", \
+\\\"}\\\"}]\\) lies outside the range of data in the interpolating function. \
+Extrapolation will be used.\"",2,34,847,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804727258787`*^9},ExpressionUUID->"ac07b488-cdcd-404f-a579-\
+d525cff5344d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InterpolatingFunction\\\
+\", \\\"::\\\", \\\"dmval\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,34,848,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880472798684*^9},ExpressionUUID->"22366456-7586-42f1-9be4-\
+e71d240bf9bd"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ndsz",
+   "\"At \\!\\(\\*RowBox[{\\\"t$97919\\\"}]\\) == \
+\\!\\(\\*RowBox[{\\\"8.024049746906753`\\\"}]\\), step size is effectively \
+zero; singularity or stiff system suspected.\"",2,34,849,18969784162122562422,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804728305993`*^9},ExpressionUUID->"6b4a04fe-03ef-4fa0-a49c-\
+91336efa738e"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`l$$ = 
+    2, $CellContext`lam$$ = 6, $CellContext`m$$ = 
+    0., $CellContext`\[Lambda]$$ = 5, $CellContext`\[Tau]$$ = 1, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Lambda]$$], 5}, 0, 30, 1}, {{
+       Hold[$CellContext`m$$], 1}, 0, 3, 0.1}, {{
+       Hold[$CellContext`l$$], 1}, 0, 3, 0.1}, {{
+       Hold[$CellContext`a$$], 1}, 1, 10, 1}, {{
+       Hold[$CellContext`\[Tau]$$], 1}, 1, 10, 1}, {{
+       Hold[$CellContext`lam$$], 1}, 1, 10, 1}}, Typeset`size$$ = {
+    479., {135., 140.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$59673$$ = 
+    0, $CellContext`m$59674$$ = 0, $CellContext`l$59675$$ = 
+    0, $CellContext`a$59676$$ = 0, $CellContext`\[Tau]$59677$$ = 
+    0, $CellContext`lam$59678$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1, $CellContext`l$$ = 
+        1, $CellContext`lam$$ = 1, $CellContext`m$$ = 
+        1, $CellContext`\[Lambda]$$ = 5, $CellContext`\[Tau]$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$59673$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$59674$$, 0], 
+        Hold[$CellContext`l$$, $CellContext`l$59675$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$59676$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$59677$$, 0], 
+        Hold[$CellContext`lam$$, $CellContext`lam$59678$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$, $CellContext`t$}, \
+$CellContext`solF$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u$][$CellContext`t$] == $CellContext`a$$ (1 - 
+              Derivative[
+               1][$CellContext`u$][$CellContext`t$ - $CellContext`\[Tau]$$]/
+              Subscript[$CellContext`V, $CellContext`max]), $CellContext`u$[
+              Condition[$CellContext`t$, $CellContext`t$ <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u$][
+              Condition[$CellContext`t$, $CellContext`t$ <= 0]] == 
+            0}, $CellContext`u$, {$CellContext`t$, 
+            0, $CellContext`tmax}]; $CellContext`solS$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`v$][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`v$][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`u$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solF$]], 
+                 1] - $CellContext`v$[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`u$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solF$]], 1] - Derivative[
+              1][$CellContext`v$][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`v$[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]$$]] == -$CellContext`\[Lambda]$$, Derivative[1][$CellContext`v$][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= $CellContext`\
+\[Tau]$$]] == 
+            0}, $CellContext`v$, {$CellContext`t$, $CellContext`\[Tau]$$, \
+$CellContext`tmax}]; $CellContext`solT$ = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`w$][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`w$][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`v$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solS$]], 
+                 1] - $CellContext`w$[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`v$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solS$]], 1] - Derivative[
+              1][$CellContext`w$][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`w$[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               2 $CellContext`\[Tau]$$]] == (-2) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`w$][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               2 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`w$, {$CellContext`t$, 
+            2 $CellContext`\[Tau]$$, $CellContext`tmax}]; $CellContext`sol4 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`p][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`p][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`w$[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`solT$]], 
+                 1] - $CellContext`p[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`w$][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`solT$]], 1] - Derivative[
+              1][$CellContext`p][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`p[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               3 $CellContext`\[Tau]$$]] == (-3) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`p][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               3 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`p, {$CellContext`t$, 
+            3 $CellContext`\[Tau]$$, $CellContext`tmax}]; $CellContext`sol5 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`z][$CellContext`t$] == $CellContext`a$$ \
+(($CellContext`lam$$ 
+               Derivative[
+                 1][$CellContext`z][$CellContext`t$]^$CellContext`m$$)/(Part[
+                 Evaluate[
+                  ReplaceAll[
+                   $CellContext`p[$CellContext`t$ - $CellContext`\[Tau]$$], \
+$CellContext`sol4]], 
+                 1] - $CellContext`z[$CellContext`t$ - \
+$CellContext`\[Tau]$$])^$CellContext`l$$) (Part[
+                Evaluate[
+                 ReplaceAll[
+                  Derivative[
+                  1][$CellContext`p][$CellContext`t$ - \
+$CellContext`\[Tau]$$], $CellContext`sol4]], 1] - Derivative[
+              1][$CellContext`z][$CellContext`t$ - $CellContext`\[Tau]$$]), \
+$CellContext`z[
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               4 $CellContext`\[Tau]$$]] == (-4) $CellContext`\[Lambda]$$, 
+            Derivative[1][$CellContext`z][
+              
+              Condition[$CellContext`t$, $CellContext`t$ <= 
+               4 $CellContext`\[Tau]$$]] == 
+            0}, $CellContext`z, {$CellContext`t$, 
+            4 $CellContext`\[Tau]$$, $CellContext`tmax}]; ParametricPlot[{
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 4 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`u$][$CellContext`t$ - 
+               4 $CellContext`\[Tau]$$]}, $CellContext`solF$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 3 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`v$][$CellContext`t$ - 
+               3 $CellContext`\[Tau]$$]}, $CellContext`solS$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 2 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`w$][$CellContext`t$ - 
+               2 $CellContext`\[Tau]$$]}, $CellContext`solT$]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 1 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`p][$CellContext`t$ - 
+               1 $CellContext`\[Tau]$$]}, $CellContext`sol4]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t$ - 0 $CellContext`\[Tau]$$, 
+              Derivative[
+              1][$CellContext`z][$CellContext`t$ - 
+               0 $CellContext`\[Tau]$$]}, $CellContext`sol5]]}, \
+{$CellContext`t$, 4 $CellContext`\[Tau]$$, $CellContext`tmax}, 
+          PlotRange -> {{-5, 100}, {0, $CellContext`dx0 + 15}}, PlotLabel -> 
+          "\:0413\:0440\:0430\:0444\:0438\:043a \
+\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:0438", 
+          AxesLabel -> {$CellContext`\:0432\:0440\:0435\:043c\:044f, \
+$CellContext`\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:044c}, 
+          PlotLegends -> {
+           "\:043c\:0430\:0448\:0438\:043d\:0430 \:21161", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21162", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21163", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21164", 
+            "\:043c\:0430\:0448\:0438\:043d\:0430 \:21165"}]], 
+      "Specifications" :> {{{$CellContext`\[Lambda]$$, 5}, 0, 30, 
+         1}, {{$CellContext`m$$, 1}, 0, 3, 0.1}, {{$CellContext`l$$, 1}, 0, 3,
+          0.1}, {{$CellContext`a$$, 1}, 1, 10, 
+         1}, {{$CellContext`\[Tau]$$, 1}, 1, 10, 1}, {{$CellContext`lam$$, 1},
+          1, 10, 1}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{530., {278., 284.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{
+  3.781266947502185*^9, 3.7812670684017277`*^9, 3.781267143292776*^9, 
+   3.781267191834964*^9, 3.781267314662509*^9, 3.781267459349739*^9, 
+   3.7812688157158327`*^9, 3.781268858552026*^9, 3.7812688897006445`*^9, {
+   3.7812689971029415`*^9, 3.781269022926381*^9}, 3.781269058673926*^9, 
+   3.781269233039503*^9, 3.781269712871273*^9, {3.7812708990996428`*^9, 
+   3.7812709083838177`*^9}, 3.7812749914368663`*^9, 3.7812751655672026`*^9, {
+   3.7812752231781397`*^9, 3.781275233741889*^9}, {3.7812752936686707`*^9, 
+   3.7812753272229033`*^9}, 3.7812757280998645`*^9, 3.7818789973178*^9, 
+   3.781879190403206*^9, 3.78187930083914*^9, 3.7818794027635765`*^9, 
+   3.7818794903394833`*^9, {3.7818795607878513`*^9, 3.781879590768516*^9}, 
+   3.7818797406452417`*^9, {3.7818798271638393`*^9, 3.781879897410019*^9}, {
+   3.7818799343332396`*^9, 3.781879959420153*^9}, {3.781880021931983*^9, 
+   3.781880102142495*^9}, {3.7818801719948907`*^9, 3.781880192821234*^9}, 
+   3.781880250549829*^9, {3.7818802976498594`*^9, 3.7818803071614313`*^9}, {
+   3.781880363366129*^9, 
+   3.781880408777681*^9}},ExpressionUUID->"1af73f34-c7c6-4117-bc0d-\
+9274d0fe52f3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","nbnum1",
+   "\"The function value \\!\\(\\*RowBox[{RowBox[{\\\"-\\\", RowBox[{\\\"Im\\\
+\", \\\"[\\\", \\\"v$62292$62319\\\", \\\"]\\\"}]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}]\\) is not True or False when the arguments are \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"1.`\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"5.`\\\"}], \\\",\\\", \\\"0.`\\\", \\\",\\\", \
+\\\"0.`\\\", \\\",\\\", \\\"0.`\\\"}], \\\"}\\\"}]\\).\"",2,32,676,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880394503852*^9},ExpressionUUID->"9da02185-8057-4cfa-b682-\
+5f5b8b4c4fa1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","nbnum1",
+   "\"The function value \\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"0.`\\\", \\\"\
+\[VeryThinSpace]\\\"}], \\\"-\\\", RowBox[{\\\"Re\\\", \\\"[\\\", \
+\\\"v$62292$62319\\\", \\\"]\\\"}]}], \\\"\[LessEqual]\\\", \\\"0\\\"}]\\) is \
+not True or False when the arguments are \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\
+\\\"1.`\\\", \\\",\\\", RowBox[{\\\"-\\\", \\\"5.`\\\"}], \\\",\\\", \
+\\\"0.`\\\", \\\",\\\", \\\"0.`\\\", \\\",\\\", \\\"0.`\\\"}], \
+\\\"}\\\"}]\\).\"",2,32,677,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818803945337725`*^9},ExpressionUUID->"3958f9a8-02e3-44d1-ac1a-\
+e1231a04f7cf"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ecboo",
+   "\"The value of event condition function at \\!\\(\\*RowBox[{\\\"t$62292\\\
+\"}]\\) = \\!\\(\\*RowBox[{\\\"1.`\\\"}]\\) was not True or False. The event \
+will be considered inactive.\"",2,32,678,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880394559736*^9},ExpressionUUID->"fd5c4c46-02b5-46fa-9a16-\
+1b4db2d56d67"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","nbnum1",
+   "\"The function value \\!\\(\\*RowBox[{RowBox[{\\\"2.8097899007279966`*^-8\
+\\\", \\\"-\\\", RowBox[{\\\"Re\\\", \\\"[\\\", \\\"v$62292$62319\\\", \
+\\\"]\\\"}]}], \\\"\[LessEqual]\\\", \\\"0\\\"}]\\) is not True or False when \
+the arguments are \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"1.0002052969763804`\
+\\\", \\\",\\\", RowBox[{\\\"-\\\", \\\"4.99999999999827`\\\"}], \\\",\\\", \
+\\\"8.429369654812558`*^-9\\\", \\\",\\\", \\\"8.429369654812558`*^-9\\\", \\\
+\",\\\", \\\"0.000041059395045340835`\\\"}], \\\"}\\\"}]\\).\"",2,32,679,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818803945836368`*^9},ExpressionUUID->"bf521d20-517d-4099-b833-\
+9a55b4b96b9f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NDSolve\\\", \
+\\\"::\\\", \\\"nbnum1\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,32,680,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818803946115646`*^9},ExpressionUUID->"68b93f85-d1ad-4977-9e1e-\
+3885d282f46c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ecboo",
+   "\"The value of event condition function at \\!\\(\\*RowBox[{\\\"t$62292\\\
+\"}]\\) = \\!\\(\\*RowBox[{\\\"1.0002052969763804`\\\"}]\\) was not True or \
+False. The event will be considered inactive.\"",2,32,681,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880394635502*^9},ExpressionUUID->"abde0dab-f469-4420-9fbd-\
+80611a70f10d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ecboo",
+   "\"The value of event condition function at \\!\\(\\*RowBox[{\\\"t$62292\\\
+\"}]\\) = \\!\\(\\*RowBox[{\\\"1.0004105939527606`\\\"}]\\) was not True or \
+False. The event will be considered inactive.\"",2,32,682,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880394657439*^9},ExpressionUUID->"a1c3163b-a69c-48ad-873b-\
+a10252e2ebe3"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NDSolve\\\", \
+\\\"::\\\", \\\"ecboo\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,32,683,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.78188039468038*^9},ExpressionUUID->"97bcabf0-9b5e-4498-8cb9-182f7897b1db"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","nbnum1",
+   "\"The function value \\!\\(\\*RowBox[{RowBox[{\\\"-\\\", RowBox[{\\\"Im\\\
+\", \\\"[\\\", \\\"v$65116$65143\\\", \\\"]\\\"}]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}]\\) is not True or False when the arguments are \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"1.`\\\", \\\",\\\", \
+RowBox[{\\\"-\\\", \\\"5.`\\\"}], \\\",\\\", \\\"0.`\\\", \\\",\\\", \
+\\\"0.`\\\", \\\",\\\", \\\"0.`\\\"}], \\\"}\\\"}]\\).\"",2,32,764,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880403399062*^9},ExpressionUUID->"b1ead30f-97d5-49b0-9376-\
+6c9cde074d98"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","nbnum1",
+   "\"The function value \\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"0.`\\\", \\\"\
+\[VeryThinSpace]\\\"}], \\\"-\\\", RowBox[{\\\"Re\\\", \\\"[\\\", \
+\\\"v$65116$65143\\\", \\\"]\\\"}]}], \\\"\[LessEqual]\\\", \\\"0\\\"}]\\) is \
+not True or False when the arguments are \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\
+\\\"1.`\\\", \\\",\\\", RowBox[{\\\"-\\\", \\\"5.`\\\"}], \\\",\\\", \
+\\\"0.`\\\", \\\",\\\", \\\"0.`\\\", \\\",\\\", \\\"0.`\\\"}], \
+\\\"}\\\"}]\\).\"",2,32,765,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880403444939*^9},ExpressionUUID->"a9a69e5b-9022-45be-ade3-\
+2f629c205bb2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ecboo",
+   "\"The value of event condition function at \\!\\(\\*RowBox[{\\\"t$65116\\\
+\"}]\\) = \\!\\(\\*RowBox[{\\\"1.`\\\"}]\\) was not True or False. The event \
+will be considered inactive.\"",2,32,766,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804034718676`*^9},ExpressionUUID->"4e82fc8b-5caa-4935-8313-\
+f3f4985e3d8f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","nbnum1",
+   "\"The function value \\!\\(\\*RowBox[{RowBox[{\\\"1.4242136503702035`*^-8\
+\\\", \\\"-\\\", RowBox[{\\\"Re\\\", \\\"[\\\", \\\"v$65116$65143\\\", \
+\\\"]\\\"}]}], \\\"\[LessEqual]\\\", \\\"0\\\"}]\\) is not True or False when \
+the arguments are \\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"1.0001313266460143`\
+\\\", \\\",\\\", RowBox[{\\\"-\\\", \\\"4.999999999997282`\\\"}], \\\",\\\", \
+\\\"2.0696025485108547`*^-8\\\", \\\",\\\", \\\"2.0696025485108544`*^-8\\\", \
+\\\",\\\", \\\"0.00015759197476831912`\\\"}], \\\"}\\\"}]\\).\"",2,32,767,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804035147533`*^9},ExpressionUUID->"660a6709-710e-4ff0-b71d-\
+db1d8c96acbe"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NDSolve\\\", \
+\\\"::\\\", \\\"nbnum1\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,32,768,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.781880403544673*^9},ExpressionUUID->"1e7ef191-a8d8-4e57-b8e0-\
+6c4cda56532f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ecboo",
+   "\"The value of event condition function at \\!\\(\\*RowBox[{\\\"t$65116\\\
+\"}]\\) = \\!\\(\\*RowBox[{\\\"1.0001313266460143`\\\"}]\\) was not True or \
+False. The event will be considered inactive.\"",2,32,769,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.78188040357559*^9},ExpressionUUID->"73eee4d4-1afb-46d7-bf65-7a5344ad5510"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NDSolve","ecboo",
+   "\"The value of event condition function at \\!\\(\\*RowBox[{\\\"t$65116\\\
+\"}]\\) = \\!\\(\\*RowBox[{\\\"1.0002626532920287`\\\"}]\\) was not True or \
+False. The event will be considered inactive.\"",2,32,770,
+   18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804036065073`*^9},ExpressionUUID->"59642e5f-bd3b-4ca6-b8e3-\
+30ac7eb809cb"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NDSolve\\\", \
+\\\"::\\\", \\\"ecboo\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,32,771,18969784162122562422,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7818804036354294`*^9},ExpressionUUID->"8025e77a-cba0-4a19-838a-\
+82cb39a91843"]
+}, Open  ]]
+},
+WindowSize->{1536, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 20661, 478, 1026, "Input", "ExpressionUUID" -> \
+"26e9d8c5-86f2-479c-808b-e5913e9f655c"],
+Cell[21244, 502, 11619, 234, 527, "Output", "ExpressionUUID" -> \
+"1849b73b-946a-44d1-8a60-b8667a3ebff5"],
+Cell[32866, 738, 11595, 234, 605, "Output", "ExpressionUUID" -> \
+"7efe9e94-25fc-4333-aaa5-9651fe39e4e4"],
+Cell[44464, 974, 412, 10, 21, "Message", "ExpressionUUID" -> \
+"ff73da49-1976-417e-b864-0e1fc42b5c3e"],
+Cell[44879, 986, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"82eff190-1782-4746-8cdf-815ebeab44f4"],
+Cell[45296, 998, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"cddb9851-01c4-4e51-9388-0422c657d084"],
+Cell[45733, 1009, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"8a56d1e8-b005-49e5-bf91-e51058fcfc52"],
+Cell[46168, 1020, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"1675830b-57f8-4178-be3e-678962d8ec38"],
+Cell[46605, 1031, 418, 9, 21, "Message", "ExpressionUUID" -> \
+"576b760e-b581-4329-9826-fa999390b16f"],
+Cell[47026, 1042, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"611c8fcb-e5ea-456b-b846-1c5b0da53cfe"],
+Cell[47443, 1054, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"31449634-468a-40f7-a368-ed2b44b15b27"],
+Cell[47860, 1066, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"9008b32e-7f5f-42da-a0cb-da06098bb1c6"],
+Cell[48297, 1077, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"f9ac9a58-c1b1-436a-a9b9-303675064b5d"],
+Cell[48734, 1088, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"313b4e3f-df6c-4671-8e96-7b0b3d0e4cee"],
+Cell[49169, 1099, 416, 9, 21, "Message", "ExpressionUUID" -> \
+"736f5420-f4c4-4240-a7b5-43103cd037af"],
+Cell[49588, 1110, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"8891293e-bd84-4aab-aa68-9013074464d0"],
+Cell[50005, 1122, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"bfcc0456-e696-4bdb-bcb2-73bcb6a1144d"],
+Cell[50422, 1134, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"ba69eb78-d78a-4686-8543-88218676742c"],
+Cell[50857, 1145, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"e13dd6ae-73e0-4f2c-a3ca-e562cc1790f3"],
+Cell[51292, 1156, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"b4fe88be-50ed-4804-b47e-95a2fd56656d"],
+Cell[51729, 1167, 416, 9, 21, "Message", "ExpressionUUID" -> \
+"029bd592-4a64-499b-8db9-d785768ba3f8"],
+Cell[52148, 1178, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"62684058-e253-4dca-8a8a-10a7ef4860dd"],
+Cell[52565, 1190, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"ee1e4aaa-7690-4985-a5c5-ef93bfb510d5"],
+Cell[52982, 1202, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"8e30d7a7-7256-45d1-b9dc-de69ba9478f7"],
+Cell[53419, 1213, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"b0b25606-bd9e-449a-ba62-fdfe248207b1"],
+Cell[53856, 1224, 429, 8, 23, "Message", "ExpressionUUID" -> \
+"4e46427f-0aee-4aec-8295-7f4765818483"],
+Cell[54288, 1234, 416, 9, 21, "Message", "ExpressionUUID" -> \
+"c3a1c1bb-2883-4d5d-8e57-cfa15fc93f14"],
+Cell[54707, 1245, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"8b226bda-9053-423d-8ee3-a0ee25892671"],
+Cell[55124, 1257, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"f15066dc-db8f-488d-8477-39794da4cee5"],
+Cell[55541, 1269, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"840bcfa7-e2c8-4e8f-ac28-0c01392e9c9d"],
+Cell[55978, 1280, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"ec90da4d-3d1d-4eb6-814c-39e79bd73a6d"],
+Cell[56415, 1291, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"63574063-7bcd-42ce-ae07-f198b10849c2"],
+Cell[56850, 1302, 416, 9, 21, "Message", "ExpressionUUID" -> \
+"1d8d231b-8c96-439e-808e-6c3ef64b7ff1"],
+Cell[57269, 1313, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"fd23e894-add6-4374-87ee-99c0f14538a6"],
+Cell[57686, 1325, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"8901d9ce-020a-474e-a3ce-31845b094736"],
+Cell[58103, 1337, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"fe304f0a-b37c-4706-92b2-a533565eebed"],
+Cell[58540, 1348, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"af609ff0-b97e-4be0-873b-18f0c88e9066"],
+Cell[58977, 1359, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"ea57b6a9-d59d-4e16-b41c-901b7babb9f4"],
+Cell[59412, 1370, 416, 9, 21, "Message", "ExpressionUUID" -> \
+"639f9efb-8c7b-410b-bf95-c1f47710fab9"],
+Cell[59831, 1381, 409, 9, 21, "Message", "ExpressionUUID" -> \
+"a31fd259-24e5-4f80-a7bc-818ec3e44c59"],
+Cell[60243, 1392, 412, 10, 21, "Message", "ExpressionUUID" -> \
+"fdf2bca8-3212-4676-8894-ff386517699c"],
+Cell[60658, 1404, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"71484862-7fa2-4857-ba96-96c9b53716a4"],
+Cell[61095, 1415, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"236161aa-ae2c-4684-8edb-b59aa5ed0609"],
+Cell[61530, 1426, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"3acf8ca9-15fc-4a17-8021-a69440431302"],
+Cell[61967, 1437, 418, 9, 21, "Message", "ExpressionUUID" -> \
+"12805c82-6679-4ca2-9bd5-d265638fd614"],
+Cell[62388, 1448, 412, 10, 21, "Message", "ExpressionUUID" -> \
+"7dec349a-b278-46ef-a976-5a6611c584f3"],
+Cell[62803, 1460, 412, 10, 21, "Message", "ExpressionUUID" -> \
+"c81e3c24-e1ba-4727-9e83-4349e3bcd661"],
+Cell[63218, 1472, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"c4286fa9-8eb1-4035-810b-7d39e471d1d6"],
+Cell[63653, 1483, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"817eb861-4413-4b72-9ac8-1d8f9913cc24"],
+Cell[64090, 1494, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"9813eb6d-1381-4c01-b172-41ddff4d8295"],
+Cell[64527, 1505, 413, 8, 21, "Message", "ExpressionUUID" -> \
+"72ceb04a-bebb-44ce-9a33-6d9d4d74d454"],
+Cell[64943, 1515, 412, 10, 21, "Message", "ExpressionUUID" -> \
+"1fe9ce20-865c-45c5-ba9b-98a4b15e9fc0"],
+Cell[65358, 1527, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"2db7595e-b954-45d5-9532-5ea5411b9fa4"],
+Cell[65775, 1539, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"23205e6c-9dbc-4c0c-9308-07117f47c0ae"],
+Cell[66210, 1550, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"d5c9a091-7bc5-49bc-896b-fca09a81cce7"],
+Cell[66647, 1561, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"371f28c9-f694-41bc-823a-a1ba65edec54"],
+Cell[67082, 1572, 418, 9, 21, "Message", "ExpressionUUID" -> \
+"ed4767b9-aeeb-4258-911e-27528800eb4b"],
+Cell[67503, 1583, 412, 10, 21, "Message", "ExpressionUUID" -> \
+"44f29e6c-7cc7-4793-8aac-d3e687f1618f"],
+Cell[67918, 1595, 408, 9, 21, "Message", "ExpressionUUID" -> \
+"f4dd8ba5-fdab-4bb1-bbf6-94d70bca4bb1"],
+Cell[68329, 1606, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"5eeed4ab-044b-4f34-9a44-4b2fe4450ae2"],
+Cell[68766, 1617, 432, 9, 23, "Message", "ExpressionUUID" -> \
+"69d7f97c-aa4a-465c-b58c-bcbb0971ab3d"],
+Cell[69201, 1628, 429, 8, 23, "Message", "ExpressionUUID" -> \
+"4af2b995-48a2-4de9-89d5-01c4e0cf17a0"],
+Cell[69633, 1638, 418, 9, 21, "Message", "ExpressionUUID" -> \
+"5a76459e-1bc7-4475-b693-4939f0e78997"],
+Cell[70054, 1649, 414, 10, 21, "Message", "ExpressionUUID" -> \
+"39682a6a-f022-4767-8681-2a403e4e52dd"],
+Cell[70471, 1661, 414, 10, 23, "Message", "ExpressionUUID" -> \
+"a056047d-1929-4fd1-b9ac-4073b72f3ca2"],
+Cell[70888, 1673, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"af860a37-38ae-40f0-a321-1de5621e3187"],
+Cell[71325, 1684, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"ab0ff4d3-1b09-4837-94a5-a9226df1a38b"],
+Cell[71762, 1695, 434, 9, 23, "Message", "ExpressionUUID" -> \
+"ac07b488-cdcd-404f-a579-d525cff5344d"],
+Cell[72199, 1706, 416, 9, 23, "Message", "ExpressionUUID" -> \
+"22366456-7586-42f1-9be4-e71d240bf9bd"],
+Cell[72618, 1717, 414, 10, 23, "Message", "ExpressionUUID" -> \
+"6b4a04fe-03ef-4fa0-a49c-91336efa738e"],
+Cell[73035, 1729, 11605, 234, 579, "Output", "ExpressionUUID" -> \
+"1af73f34-c7c6-4117-bc0d-9274d0fe52f3"],
+Cell[84643, 1965, 641, 13, 23, "Message", "ExpressionUUID" -> \
+"9da02185-8057-4cfa-b682-5f5b8b4c4fa1"],
+Cell[85287, 1980, 694, 13, 23, "Message", "ExpressionUUID" -> \
+"3958f9a8-02e3-44d1-ac1a-e1231a04f7cf"],
+Cell[85984, 1995, 422, 9, 21, "Message", "ExpressionUUID" -> \
+"fd5c4c46-02b5-46fa-9a16-1b4db2d56d67"],
+Cell[86409, 2006, 771, 14, 30, "Message", "ExpressionUUID" -> \
+"bf521d20-517d-4099-b833-9a55b4b96b9f"],
+Cell[87183, 2022, 405, 9, 21, "Message", "ExpressionUUID" -> \
+"68b93f85-d1ad-4977-9e1e-3885d282f46c"],
+Cell[87591, 2033, 442, 10, 21, "Message", "ExpressionUUID" -> \
+"abde0dab-f469-4420-9fbd-80611a70f10d"],
+Cell[88036, 2045, 442, 10, 21, "Message", "ExpressionUUID" -> \
+"a1c3163b-a69c-48ad-873b-a10252e2ebe3"],
+Cell[88481, 2057, 399, 8, 21, "Message", "ExpressionUUID" -> \
+"97bcabf0-9b5e-4498-8cb9-182f7897b1db"],
+Cell[88883, 2067, 641, 13, 23, "Message", "ExpressionUUID" -> \
+"b1ead30f-97d5-49b0-9376-6c9cde074d98"],
+Cell[89527, 2082, 692, 13, 23, "Message", "ExpressionUUID" -> \
+"a9a69e5b-9022-45be-ade3-2f629c205bb2"],
+Cell[90222, 2097, 424, 9, 21, "Message", "ExpressionUUID" -> \
+"4e82fc8b-5caa-4935-8313-f3f4985e3d8f"],
+Cell[90649, 2108, 773, 14, 30, "Message", "ExpressionUUID" -> \
+"660a6709-710e-4ff0-b71d-db1d8c96acbe"],
+Cell[91425, 2124, 403, 9, 21, "Message", "ExpressionUUID" -> \
+"1e7ef191-a8d8-4e57-b8e0-6c4cda56532f"],
+Cell[91831, 2135, 439, 9, 21, "Message", "ExpressionUUID" -> \
+"73eee4d4-1afb-46d7-bf65-7a5344ad5510"],
+Cell[92273, 2146, 444, 10, 21, "Message", "ExpressionUUID" -> \
+"59642e5f-bd3b-4ca6-b8e3-30ac7eb809cb"],
+Cell[92720, 2158, 404, 9, 21, "Message", "ExpressionUUID" -> \
+"8025e77a-cba0-4a19-838a-82cb39a91843"]
+}, Open  ]]
+}
+]
+*)
+

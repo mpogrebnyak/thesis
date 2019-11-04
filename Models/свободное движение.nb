@@ -1,0 +1,153 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4121,        143]
+NotebookOptionsPosition[      3581,        123]
+NotebookOutlinePosition[      3925,        138]
+CellTagsIndexPosition[      3882,        135]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"u", "''"}], "[", "t", "]"}], "\[Equal]", 
+      RowBox[{"a", "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"u", "'"}], "[", "t", "]"}], "/", "v"}], ")"}], "^", 
+           "1"}], "/", "2"}]}], ")"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"u", "[", "0", "]"}], "\[Equal]", 
+      RowBox[{"-", "0"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"u", "'"}], "[", "0", "]"}], "\[Equal]", "0"}]}], "}"}], ",", 
+   RowBox[{"u", "[", "t", "]"}], ",", "t"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", "t_", "]"}], " ", ":=", 
+  FractionBox[
+   RowBox[{"2", " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"a", " ", "t"}], 
+       RowBox[{"2", " ", "v"}]]}]], " ", "v", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"a", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{"a", " ", "t"}], 
+         RowBox[{"2", " ", "v"}]]], " ", "t"}], "+", 
+      RowBox[{"2", " ", "v"}], "-", 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        FractionBox[
+         RowBox[{"a", " ", "t"}], 
+         RowBox[{"2", " ", "v"}]]], " ", "v"}]}], ")"}]}], 
+   "a"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "'"}], "[", "t", "]"}]}], "Input",ExpressionUUID->"0204aacc-\
+6ad2-483c-8f9f-aefae14d7d61"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"u", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{"2", " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+       FractionBox["t", 
+        RowBox[{"2", " ", "v"}]]}]], " ", "v", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox["t", 
+          RowBox[{"2", " ", "v"}]]], " ", "t"}], "+", 
+       RowBox[{"2", " ", "v"}], "-", 
+       RowBox[{"2", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox["t", 
+          RowBox[{"2", " ", "v"}]]], " ", "v"}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.7818786900514307`*^9},ExpressionUUID->"56d3bf21-aac3-4d66-8388-\
+0f315b7631a1"],
+
+Cell[BoxData[
+ RowBox[{"t", "-", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"-", 
+     FractionBox["t", 
+      RowBox[{"2", " ", "v"}]]}]], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox["t", 
+        RowBox[{"2", " ", "v"}]]], " ", "t"}], "+", 
+     RowBox[{"2", " ", "v"}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox["t", 
+        RowBox[{"2", " ", "v"}]]], " ", "v"}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{
+  3.7818786900564175`*^9},ExpressionUUID->"92dc001f-b860-4762-9281-\
+cc5240a1b459"]
+}, Open  ]]
+},
+WindowSize->{775, 657},
+WindowMargins->{{372, Automatic}, {Automatic, 54}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1585, 50, 146, "Input", "ExpressionUUID" -> \
+"0204aacc-6ad2-483c-8f9f-aefae14d7d61"],
+Cell[2168, 74, 766, 24, 55, "Output", "ExpressionUUID" -> \
+"56d3bf21-aac3-4d66-8388-0f315b7631a1"],
+Cell[2937, 100, 628, 20, 55, "Output", "ExpressionUUID" -> \
+"92dc001f-b860-4762-9281-cc5240a1b459"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
