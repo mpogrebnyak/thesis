@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  3 NOV 2019 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  17 JAN 2020 21:05
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -992,21 +992,95 @@ hesis.toc")
 File: Images/car_following.png Graphic file (type png)
 
 <use Images/car_following.png>
-Package pdftex.def Info: Images/car_following.png used on input line 150.
+Package pdftex.def Info: Images/car_following.png used on input line 159.
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
+ [7 <./Images/car_following.png>]
 
-Overfull \hbox (5.99149pt too wide) in paragraph at lines 168--169
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 189.
+
+<Images/free_drive_speed.png, id=38, 398.08725pt x 222.23026pt>
+File: Images/free_drive_speed.png Graphic file (type png)
+
+<use Images/free_drive_speed.png>
+Package pdftex.def Info: Images/free_drive_speed.png used on input line 203.
+(pdftex.def)             Requested size: 218.51738pt x 133.72913pt.
+
+<Images/free_drive_distance.png, id=39, 398.08725pt x 241.50224pt>
+File: Images/free_drive_distance.png Graphic file (type png)
+
+<use Images/free_drive_distance.png>
+Package pdftex.def Info: Images/free_drive_distance.png used on input line 208.
+
+(pdftex.def)             Requested size: 218.51738pt x 133.72577pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 223.
+
+
+Overfull \hbox (1.79419pt too wide) in paragraph at lines 225--227
+\T2A/cmr/m/n/12 ско-ро-стью $\OML/cmm/m/it/12 v[]$\T2A/cmr/m/n/12 , на-чаль-ной
+ ско-ро-стью $\OML/cmm/m/it/12 v[]$\T2A/cmr/m/n/12 , на-чаль-ным по-ло-же-ни-ем
+ транс-порт-но-го сред-
+ []
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 236.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 244.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 256.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 265.
+
+
+Overfull \hbox (23.99998pt too wide) in alignment at lines 285--285
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Images/test12.png, id=49, 398.08725pt x 222.23026pt>
+File: Images/test12.png Graphic file (type png)
+ <use Images/test12.png>
+Package pdftex.def Info: Images/test12.png used on input line 293.
+(pdftex.def)             Requested size: 218.51738pt x 133.72913pt.
+
+<Images/test22.png, id=50, 398.08725pt x 241.50224pt>
+File: Images/test22.png Graphic file (type png)
+ <use Images/test22.png>
+Package pdftex.def Info: Images/test22.png used on input line 298.
+(pdftex.def)             Requested size: 218.51738pt x 133.72577pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./Images/free_drive_speed.png> <./Images/free_drive_distance.png>]
+Overfull \hbox (5.99149pt too wide) in paragraph at lines 326--327
 []\T2A/cmr/m/n/12 Рассмотрим диф-фе-рен-ци-аль-ное урав-не-ние, ко-то-рое опи-с
 ы-ва-ет уско-ре-ние транс-
  []
 
-[7 <./Images/car_following.png>]
+[10 <./Images/test12.png> <./Images/test22.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 207.
+(amsmath)                trying to recover with `aligned' on input line 365.
 
 
-Overfull \hbox (23.99998pt too wide) in alignment at lines 228--228
+Overfull \hbox (23.99998pt too wide) in alignment at lines 386--386
 [][] 
  []
 
@@ -1014,97 +1088,105 @@ Overfull \hbox (23.99998pt too wide) in alignment at lines 228--228
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<Images/distance_without_stop_d=0,122_tau=1.png, id=41, 346.29375pt x 202.95825
+<Images/distance_without_stop_d=0,122_tau=1.png, id=58, 346.29375pt x 202.95825
 pt>
 File: Images/distance_without_stop_d=0,122_tau=1.png Graphic file (type png)
  <use Images/distance_without_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/distance_without_stop_d=0,122_tau=1.png used on
- input line 238.
+ input line 396.
 (pdftex.def)             Requested size: 218.52023pt x 133.72678pt.
 
-<Images/speed_without_stop_d=0,122_tau=1.png, id=42, 343.2825pt x 198.7425pt>
+<Images/speed_without_stop_d=0,122_tau=1.png, id=59, 343.2825pt x 198.7425pt>
 File: Images/speed_without_stop_d=0,122_tau=1.png Graphic file (type png)
 
 <use Images/speed_without_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/speed_without_stop_d=0,122_tau=1.png used on in
-put line 243.
+put line 401.
 (pdftex.def)             Requested size: 218.511pt x 133.72992pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<Images/distance_without_stop_d=0,122_tau=5.png, id=43, 343.2825pt x 201.1515pt
+<Images/distance_without_stop_d=0,122_tau=5.png, id=60, 343.2825pt x 201.1515pt
 >
 File: Images/distance_without_stop_d=0,122_tau=5.png Graphic file (type png)
  <use Images/distance_without_stop_d=0,122_tau=5.png>
 Package pdftex.def Info: Images/distance_without_stop_d=0,122_tau=5.png used on
- input line 254.
+ input line 412.
 (pdftex.def)             Requested size: 218.511pt x 133.7303pt.
 
-<Images/speed_without_stop_d=0,122_tau=5.png, id=44, 342.68025pt x 198.14024pt>
+<Images/speed_without_stop_d=0,122_tau=5.png, id=61, 342.68025pt x 198.14024pt>
 File: Images/speed_without_stop_d=0,122_tau=5.png Graphic file (type png)
 <use Images/speed_without_stop_d=0,122_tau=5.png>
 Package pdftex.def Info: Images/speed_without_stop_d=0,122_tau=5.png used on in
-put line 259.
+put line 417.
 (pdftex.def)             Requested size: 218.51982pt x 133.73283pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] [9 <./Images/distance_without_stop_d=0,122_tau=1.png> <./Images/speed_witho
-ut_stop_d=0,122_tau=1.png> <./Images/distance_without_stop_d=0,122_tau=5.png> <
-./Images/speed_without_stop_d=0,122_tau=5.png>]
+[11] [12 <./Images/distance_without_stop_d=0,122_tau=1.png> <./Images/speed_wit
+hout_stop_d=0,122_tau=1.png> <./Images/distance_without_stop_d=0,122_tau=5.png>
+ <./Images/speed_without_stop_d=0,122_tau=5.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 278.
+(amsmath)                trying to recover with `aligned' on input line 436.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 298.
+(amsmath)                trying to recover with `aligned' on input line 456.
 
 
-<Images/distance_with_stop_d=0,122_tau=1.png, id=56, 343.88475pt x 233.07076pt>
+<Images/distance_with_stop_d=0,122_tau=1.png, id=69, 343.88475pt x 233.07076pt>
 File: Images/distance_with_stop_d=0,122_tau=1.png Graphic file (type png)
 <use Images/distance_with_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/distance_with_stop_d=0,122_tau=1.png used on in
-put line 309.
+put line 467.
 (pdftex.def)             Requested size: 218.51656pt x 133.73012pt.
 
-<Images/speed_with_stop_d=0,122_tau=1.png, id=57, 343.88475pt x 196.93575pt>
+<Images/speed_with_stop_d=0,122_tau=1.png, id=70, 343.88475pt x 196.93575pt>
 File: Images/speed_with_stop_d=0,122_tau=1.png Graphic file (type png)
 
 <use Images/speed_with_stop_d=0,122_tau=1.png>
 Package pdftex.def Info: Images/speed_with_stop_d=0,122_tau=1.png used on input
- line 314.
+ line 472.
 (pdftex.def)             Requested size: 218.51656pt x 133.7342pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] [11 <./Images/distance_with_stop_d=0,122_tau=1.png> <./Images/speed_with_s
-top_d=0,122_tau=1.png>]
-<Images/car's_start_position.png, id=65, 904.1278pt x 256.70906pt>
+[13]
+Overfull \hbox (23.99998pt too wide) in alignment at lines 502--502
+[][] 
+ []
+
+[14 <./Images/distance_with_stop_d=0,122_tau=1.png> <./Images/speed_with_stop_d
+=0,122_tau=1.png>]
+<Images/car's_start_position.png, id=79, 904.1278pt x 256.70906pt>
 File: Images/car's_start_position.png Graphic file (type png)
 
 <use Images/car's_start_position.png>
-Package pdftex.def Info: Images/car's_start_position.png used on input line 343
+Package pdftex.def Info: Images/car's_start_position.png used on input line 523
 .
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[12 <./Images/car's_start_position.png>] [13] [14] [15] ("Master's thesis.aux")
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./Images/car's_start_position.png>] [16] [17] [18] ("Master's thesis.aux")
  ) 
 Here is how much of TeX's memory you used:
- 5522 strings out of 493333
- 73350 string characters out of 3139198
- 160681 words of memory out of 3000000
- 8859 multiletter control sequences out of 15000+200000
+ 5553 strings out of 493333
+ 74128 string characters out of 3139198
+ 160789 words of memory out of 3000000
+ 8886 multiletter control sequences out of 15000+200000
  17258 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,14n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,19n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
 x1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
 600\lati1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
@@ -1121,9 +1203,9 @@ e1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Master's thesis.pdf" (15 pages, 492031 bytes).
+Output written on "Master's thesis.pdf" (18 pages, 607892 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
+ 469 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

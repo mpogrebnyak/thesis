@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    112447,       2498]
-NotebookOptionsPosition[    111782,       2476]
-NotebookOutlinePosition[    112126,       2491]
-CellTagsIndexPosition[    112083,       2488]
+NotebookDataLength[    109521,       2452]
+NotebookOptionsPosition[    108856,       2430]
+NotebookOutlinePosition[    109200,       2445]
+CellTagsIndexPosition[    109157,       2442]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,15 +47,7 @@ Cell[BoxData[{
      RowBox[{
       SubscriptBox[
        RowBox[{"\[Sigma]", " "}], "1"], "=", "1"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"qqq", "[", "t_", "]"}], " ", ":=", " ", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"t", " ", "<=", " ", "tt"}], ",", " ", 
-        RowBox[{"dx0", " ", "*", "t"}], ",", 
-        RowBox[{"dx0", "*", "tt"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"Module", "[", 
@@ -1693,8 +1685,10 @@ Cell[BoxData[{
    3.7818008588212957`*^9, 3.7818009088290486`*^9}, {3.7818020234375944`*^9, 
    3.78180202447781*^9}, {3.7818023732201967`*^9, 3.7818023733767776`*^9}, {
    3.781802411711261*^9, 3.7818024119326677`*^9}, {3.781805423899234*^9, 
-   3.781805426819651*^9}, {3.7818054590297594`*^9, 
-   3.7818054632318487`*^9}},ExpressionUUID->"26e9d8c5-86f2-479c-808b-\
+   3.781805426819651*^9}, {3.7818054590297594`*^9, 3.7818054632318487`*^9}, {
+   3.783439797994937*^9, 3.783439849434379*^9}, 3.7834407252419014`*^9, 
+   3.7834407680414467`*^9, {3.7834408570126133`*^9, 
+   3.783440857374651*^9}},ExpressionUUID->"26e9d8c5-86f2-479c-808b-\
 e5913e9f655c"],
 
 Cell[BoxData[
@@ -1702,16 +1696,15 @@ Cell[BoxData[
   StyleBox[
    DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`b$$ = 
     1, $CellContext`T$$ = 1, $CellContext`\[Lambda]$$ = 
-    5, $CellContext`\[Tau]$$ = 0, $CellContext`$269$$ = 
-    1, $CellContext`$270$$ = 1, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+    5, $CellContext`\[Tau]$$ = 0, $CellContext`$10$$ = 1, $CellContext`$9$$ = 
+    1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`\[Lambda]$$], 5}, 0, 30, 1}, {{
-       Hold[$CellContext`$269$$], 1, 
+       Hold[$CellContext`$9$$], 1, 
        RawBoxes[
         SubscriptBox["\[Sigma]", "0"]]}, 1, 10, 1}, {{
-       Hold[$CellContext`$270$$], 1, 
+       Hold[$CellContext`$10$$], 1, 
        RawBoxes[
         SubscriptBox["\[Sigma]", "1"]]}, 1, 10, 1}, {{
        Hold[$CellContext`a$$], 1}, 0, 10, 0.1}, {{
@@ -1719,23 +1712,23 @@ Cell[BoxData[
        Hold[$CellContext`T$$], 1}, 1, 10, 1}, {{
        Hold[$CellContext`\[Tau]$$], 0}, 0, 10, 1}}, Typeset`size$$ = {
     619., {133., 138.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$525440$$ = 
-    0, $CellContext`$269$525441$$ = 0, $CellContext`$270$525442$$ = 
-    0, $CellContext`a$525443$$ = 0, $CellContext`b$525444$$ = 
-    0, $CellContext`T$525445$$ = 0, $CellContext`\[Tau]$525446$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$5108$$ = 
+    0, $CellContext`$9$5109$$ = 0, $CellContext`$10$5110$$ = 
+    0, $CellContext`a$5111$$ = 0, $CellContext`b$5112$$ = 
+    0, $CellContext`T$5113$$ = 0, $CellContext`\[Tau]$5114$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
         1, $CellContext`T$$ = 1, $CellContext`\[Lambda]$$ = 
-        5, $CellContext`\[Tau]$$ = 0, $CellContext`$269$$ = 
-        1, $CellContext`$270$$ = 1}, "ControllerVariables" :> {
-        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$525440$$, 0], 
-        Hold[$CellContext`$269$$, $CellContext`$269$525441$$, 0], 
-        Hold[$CellContext`$270$$, $CellContext`$270$525442$$, 0], 
-        Hold[$CellContext`a$$, $CellContext`a$525443$$, 0], 
-        Hold[$CellContext`b$$, $CellContext`b$525444$$, 0], 
-        Hold[$CellContext`T$$, $CellContext`T$525445$$, 0], 
-        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$525446$$, 0]}, 
+        5, $CellContext`\[Tau]$$ = 0, $CellContext`$10$$ = 
+        1, $CellContext`$9$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$5108$$, 0], 
+        Hold[$CellContext`$9$$, $CellContext`$9$5109$$, 0], 
+        Hold[$CellContext`$10$$, $CellContext`$10$5110$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$5111$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$5112$$, 0], 
+        Hold[$CellContext`T$$, $CellContext`T$5113$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$5114$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1760,7 +1753,7 @@ $CellContext`u$[
              2][$CellContext`v$][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`v$][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$269$$ + $CellContext`$270$$ 
+$CellContext`a$$ (($CellContext`$9$$ + $CellContext`$10$$ 
                  Sqrt[Derivative[1][$CellContext`v$][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -1791,7 +1784,7 @@ $CellContext`tmax}]; $CellContext`solT$ =
              2][$CellContext`w$][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`w$][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$269$$ + $CellContext`$270$$ 
+$CellContext`a$$ (($CellContext`$9$$ + $CellContext`$10$$ 
                  Sqrt[Derivative[1][$CellContext`w$][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -1822,8 +1815,9 @@ $CellContext`solS$]],
            Derivative[
              2][$CellContext`p][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`p][$CellContext`t$]/
+                
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$269$$ + $CellContext`$270$$ 
+$CellContext`a$$ (($CellContext`$9$$ + $CellContext`$10$$ 
                  Sqrt[Derivative[1][$CellContext`p][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -1854,7 +1848,7 @@ $CellContext`solT$]], 1] - $CellContext`p[$CellContext`t$]))^2, $CellContext`p[
              2][$CellContext`z][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`z][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$269$$ + $CellContext`$270$$ 
+$CellContext`a$$ (($CellContext`$9$$ + $CellContext`$10$$ 
                  Sqrt[Derivative[1][$CellContext`z][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -1864,7 +1858,6 @@ $CellContext`T$$
                     Evaluate[
                     ReplaceAll[
                     Derivative[
-                    
                     1][$CellContext`p][$CellContext`t$ - \
 $CellContext`\[Tau]$$], $CellContext`sol4]], 1]))/(2 
                  Sqrt[$CellContext`a$$ $CellContext`b$$]))/(Part[
@@ -1909,7 +1902,6 @@ $CellContext`sol4]], 1] - $CellContext`z[$CellContext`t$]))^2, $CellContext`z[
 {$CellContext`t$, 4 $CellContext`\[Tau]$$, $CellContext`tmax}, 
           PlotRange -> {{-5, 100}, {
             0, Subscript[$CellContext`V, $CellContext`max] + 10}}, PlotLabel -> 
-          
           "\:0413\:0440\:0430\:0444\:0438\:043a \
 \:0441\:043a\:043e\:0440\:043e\:0441\:0442\:0438", 
           AxesLabel -> {$CellContext`\:0432\:0440\:0435\:043c\:044f, \
@@ -1921,16 +1913,16 @@ $CellContext`\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:044c},
             "\:043c\:0430\:0448\:0438\:043d\:0430 \:21164", 
             "\:043c\:0430\:0448\:0438\:043d\:0430 \:21165"}, ImageSize -> 
           500]], "Specifications" :> {{{$CellContext`\[Lambda]$$, 5}, 0, 30, 
-         1}, {{$CellContext`$269$$, 1, 
+         1}, {{$CellContext`$9$$, 1, 
           RawBoxes[
            SubscriptBox["\[Sigma]", "0"]]}, 1, 10, 
-         1}, {{$CellContext`$270$$, 1, 
+         1}, {{$CellContext`$10$$, 1, 
           RawBoxes[
            SubscriptBox["\[Sigma]", "1"]]}, 1, 10, 1}, {{$CellContext`a$$, 1},
           0, 10, 0.1}, {{$CellContext`b$$, 1}, 1, 10, 
          1}, {{$CellContext`T$$, 1}, 1, 10, 1}, {{$CellContext`\[Tau]$$, 0}, 
          0, 10, 1}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{670., {264., 270.}},
+     ImageSizeCache->{670., {290., 296.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1941,61 +1933,48 @@ $CellContext`\:0441\:043a\:043e\:0440\:043e\:0441\:0442\:044c},
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.781266947502185*^9, 3.7812670684017277`*^9, 3.781267143292776*^9, 
-   3.781267191834964*^9, 3.781785122390213*^9, 3.781786705450054*^9, 
-   3.7817867985033307`*^9, 3.7817868731247606`*^9, 3.7817872150501266`*^9, 
-   3.7817873091815667`*^9, 3.7817874397530127`*^9, 3.7817875112824955`*^9, 
-   3.7817876415698643`*^9, 3.78178772841262*^9, 3.7817877881397943`*^9, 
-   3.7817879376083856`*^9, {3.781788034529478*^9, 3.7817880913634176`*^9}, {
-   3.7817882272054524`*^9, 3.7817882334187584`*^9}, 3.7817990722850943`*^9, 
-   3.7817991490313363`*^9, 3.7817992093174706`*^9, {3.7817993628170767`*^9, 
-   3.7817993921625934`*^9}, 3.7817994622039003`*^9, 3.781800563150513*^9, 
-   3.781800678997492*^9, 3.781800711781644*^9, {3.78180077560306*^9, 
-   3.7818007923686156`*^9}, 3.781802428900293*^9, 3.781802825830241*^9, {
-   3.7818054012260504`*^9, 3.781805427501856*^9}, 
-   3.7818054639978995`*^9},ExpressionUUID->"ad0bd627-9ff5-4fa7-8fb9-\
-daeb7c8590c8"],
+ CellChangeTimes->{3.7834408079169064`*^9, 
+  3.783440860234001*^9},ExpressionUUID->"3b81823f-6e5c-482c-b0d9-\
+f97012f8d8ec"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`a$$ = 3., $CellContext`b$$ = 
+   DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`b$$ = 
     1, $CellContext`T$$ = 1, $CellContext`\[Lambda]$$ = 
-    5, $CellContext`\[Tau]$$ = 0, $CellContext`$271$$ = 
-    1, $CellContext`$272$$ = 1, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+    5, $CellContext`\[Tau]$$ = 0, $CellContext`$11$$ = 1, $CellContext`$12$$ =
+     1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`\[Lambda]$$], 5}, 0, 30, 1}, {{
-       Hold[$CellContext`$271$$], 1, 
+       Hold[$CellContext`$11$$], 1, 
        RawBoxes[
         SubscriptBox["\[Sigma]", "0"]]}, 1, 10, 1}, {{
-       Hold[$CellContext`$272$$], 1, 
+       Hold[$CellContext`$12$$], 1, 
        RawBoxes[
         SubscriptBox["\[Sigma]", "1"]]}, 1, 10, 1}, {{
        Hold[$CellContext`a$$], 1}, 0, 10, 0.1}, {{
        Hold[$CellContext`b$$], 1}, 1, 10, 1}, {{
        Hold[$CellContext`T$$], 1}, 1, 10, 1}, {{
        Hold[$CellContext`\[Tau]$$], 0}, 0, 10, 1}}, Typeset`size$$ = {
-    619., {154., 159.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$525496$$ = 
-    0, $CellContext`$271$525497$$ = 0, $CellContext`$272$525498$$ = 
-    0, $CellContext`a$525499$$ = 0, $CellContext`b$525500$$ = 
-    0, $CellContext`T$525501$$ = 0, $CellContext`\[Tau]$525502$$ = 0}, 
+    619., {110., 115.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$5164$$ = 
+    0, $CellContext`$11$5165$$ = 0, $CellContext`$12$5166$$ = 
+    0, $CellContext`a$5167$$ = 0, $CellContext`b$5168$$ = 
+    0, $CellContext`T$5169$$ = 0, $CellContext`\[Tau]$5170$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
         1, $CellContext`T$$ = 1, $CellContext`\[Lambda]$$ = 
-        5, $CellContext`\[Tau]$$ = 0, $CellContext`$271$$ = 
-        1, $CellContext`$272$$ = 1}, "ControllerVariables" :> {
-        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$525496$$, 0], 
-        Hold[$CellContext`$271$$, $CellContext`$271$525497$$, 0], 
-        Hold[$CellContext`$272$$, $CellContext`$272$525498$$, 0], 
-        Hold[$CellContext`a$$, $CellContext`a$525499$$, 0], 
-        Hold[$CellContext`b$$, $CellContext`b$525500$$, 0], 
-        Hold[$CellContext`T$$, $CellContext`T$525501$$, 0], 
-        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$525502$$, 0]}, 
+        5, $CellContext`\[Tau]$$ = 0, $CellContext`$11$$ = 
+        1, $CellContext`$12$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$5164$$, 0], 
+        Hold[$CellContext`$11$$, $CellContext`$11$5165$$, 0], 
+        Hold[$CellContext`$12$$, $CellContext`$12$5166$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$5167$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$5168$$, 0], 
+        Hold[$CellContext`T$$, $CellContext`T$5169$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$5170$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -2020,7 +1999,7 @@ $CellContext`u$[
              2][$CellContext`v$][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`v$][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$271$$ + $CellContext`$272$$ 
+$CellContext`a$$ (($CellContext`$11$$ + $CellContext`$12$$ 
                  Sqrt[Derivative[1][$CellContext`v$][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2051,7 +2030,7 @@ $CellContext`tmax}]; $CellContext`solT$ =
              2][$CellContext`w$][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`w$][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$271$$ + $CellContext`$272$$ 
+$CellContext`a$$ (($CellContext`$11$$ + $CellContext`$12$$ 
                  Sqrt[Derivative[1][$CellContext`w$][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2082,8 +2061,9 @@ $CellContext`solS$]],
            Derivative[
              2][$CellContext`p][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`p][$CellContext`t$]/
+                
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$271$$ + $CellContext`$272$$ 
+$CellContext`a$$ (($CellContext`$11$$ + $CellContext`$12$$ 
                  Sqrt[Derivative[1][$CellContext`p][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2114,7 +2094,7 @@ $CellContext`solT$]], 1] - $CellContext`p[$CellContext`t$]))^2, $CellContext`p[
              2][$CellContext`z][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`z][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$271$$ + $CellContext`$272$$ 
+$CellContext`a$$ (($CellContext`$11$$ + $CellContext`$12$$ 
                  Sqrt[Derivative[1][$CellContext`z][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2124,7 +2104,6 @@ $CellContext`T$$
                     Evaluate[
                     ReplaceAll[
                     Derivative[
-                    
                     1][$CellContext`p][$CellContext`t$ - \
 $CellContext`\[Tau]$$], $CellContext`sol4]], 1]))/(2 
                  Sqrt[$CellContext`a$$ $CellContext`b$$]))/(Part[
@@ -2168,9 +2147,9 @@ $CellContext`sol4]], 1] - $CellContext`z[$CellContext`t$]))^2, $CellContext`z[
                0 $CellContext`\[Tau]$$]}, $CellContext`sol5]]}, \
 {$CellContext`t$, 4 $CellContext`\[Tau]$$, $CellContext`tmax}, 
           PlotRange -> {{0, 10}, {0, $CellContext`a$$ + 3}}, PlotLabel -> 
-          
           "\:0413\:0440\:0430\:0444\:0438\:043a \
 \:0443\:0441\:043a\:043e\:0440\:0435\:043d\:0438\:044f", 
+          
           AxesLabel -> {$CellContext`\:0432\:0440\:0435\:043c\:044f, \
 $CellContext`\:0443\:0441\:043a\:043e\:0440\:0435\:043d\:0438\:0435}, 
           PlotLegends -> {
@@ -2180,16 +2159,16 @@ $CellContext`\:0443\:0441\:043a\:043e\:0440\:0435\:043d\:0438\:0435},
             "\:043c\:0430\:0448\:0438\:043d\:0430 \:21164", 
             "\:043c\:0430\:0448\:0438\:043d\:0430 \:21165"}, ImageSize -> 
           500]], "Specifications" :> {{{$CellContext`\[Lambda]$$, 5}, 0, 30, 
-         1}, {{$CellContext`$271$$, 1, 
+         1}, {{$CellContext`$11$$, 1, 
           RawBoxes[
            SubscriptBox["\[Sigma]", "0"]]}, 1, 10, 
-         1}, {{$CellContext`$272$$, 1, 
+         1}, {{$CellContext`$12$$, 1, 
           RawBoxes[
            SubscriptBox["\[Sigma]", "1"]]}, 1, 10, 1}, {{$CellContext`a$$, 1},
           0, 10, 0.1}, {{$CellContext`b$$, 1}, 1, 10, 
          1}, {{$CellContext`T$$, 1}, 1, 10, 1}, {{$CellContext`\[Tau]$$, 0}, 
          0, 10, 1}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{670., {285., 291.}},
+     ImageSizeCache->{670., {241., 247.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2200,37 +2179,24 @@ $CellContext`\:0443\:0441\:043a\:043e\:0440\:0435\:043d\:0438\:0435},
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.781266947502185*^9, 3.7812670684017277`*^9, 3.781267143292776*^9, 
-   3.781267191834964*^9, 3.781785122390213*^9, 3.781786705450054*^9, 
-   3.7817867985033307`*^9, 3.7817868731247606`*^9, 3.7817872150501266`*^9, 
-   3.7817873091815667`*^9, 3.7817874397530127`*^9, 3.7817875112824955`*^9, 
-   3.7817876415698643`*^9, 3.78178772841262*^9, 3.7817877881397943`*^9, 
-   3.7817879376083856`*^9, {3.781788034529478*^9, 3.7817880913634176`*^9}, {
-   3.7817882272054524`*^9, 3.7817882334187584`*^9}, 3.7817990722850943`*^9, 
-   3.7817991490313363`*^9, 3.7817992093174706`*^9, {3.7817993628170767`*^9, 
-   3.7817993921625934`*^9}, 3.7817994622039003`*^9, 3.781800563150513*^9, 
-   3.781800678997492*^9, 3.781800711781644*^9, {3.78180077560306*^9, 
-   3.7818007923686156`*^9}, 3.781802428900293*^9, 3.781802825830241*^9, {
-   3.7818054012260504`*^9, 3.781805427501856*^9}, 
-   3.7818054644456987`*^9},ExpressionUUID->"c7baef60-8f49-47ef-8e73-\
-22a781a79c70"],
+ CellChangeTimes->{3.7834408079169064`*^9, 
+  3.783440860607998*^9},ExpressionUUID->"97d531e4-b972-473a-bd77-\
+b83e1a03c7b3"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`b$$ = 
     1, $CellContext`T$$ = 1, $CellContext`\[Lambda]$$ = 
-    5, $CellContext`\[Tau]$$ = 0, $CellContext`$273$$ = 
-    1, $CellContext`$274$$ = 1, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+    5, $CellContext`\[Tau]$$ = 0, $CellContext`$14$$ = 1, $CellContext`$15$$ =
+     1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`\[Lambda]$$], 5}, 0, 30, 1}, {{
-       Hold[$CellContext`$273$$], 1, 
+       Hold[$CellContext`$14$$], 1, 
        RawBoxes[
         SubscriptBox["\[Sigma]", "0"]]}, 1, 10, 1}, {{
-       Hold[$CellContext`$274$$], 1, 
+       Hold[$CellContext`$15$$], 1, 
        RawBoxes[
         SubscriptBox["\[Sigma]", "1"]]}, 1, 10, 1}, {{
        Hold[$CellContext`a$$], 1}, 0, 10, 0.1}, {{
@@ -2238,23 +2204,23 @@ Cell[BoxData[
        Hold[$CellContext`T$$], 1}, 1, 10, 1}, {{
        Hold[$CellContext`\[Tau]$$], 0}, 0, 10, 1}}, Typeset`size$$ = {
     619., {85., 91.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$525791$$ = 
-    0, $CellContext`$273$525792$$ = 0, $CellContext`$274$525793$$ = 
-    0, $CellContext`a$525794$$ = 0, $CellContext`b$525795$$ = 
-    0, $CellContext`T$525796$$ = 0, $CellContext`\[Tau]$525797$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$5459$$ = 
+    0, $CellContext`$14$5460$$ = 0, $CellContext`$15$5461$$ = 
+    0, $CellContext`a$5462$$ = 0, $CellContext`b$5463$$ = 
+    0, $CellContext`T$5464$$ = 0, $CellContext`\[Tau]$5465$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
         1, $CellContext`T$$ = 1, $CellContext`\[Lambda]$$ = 
-        5, $CellContext`\[Tau]$$ = 0, $CellContext`$273$$ = 
-        1, $CellContext`$274$$ = 1}, "ControllerVariables" :> {
-        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$525791$$, 0], 
-        Hold[$CellContext`$273$$, $CellContext`$273$525792$$, 0], 
-        Hold[$CellContext`$274$$, $CellContext`$274$525793$$, 0], 
-        Hold[$CellContext`a$$, $CellContext`a$525794$$, 0], 
-        Hold[$CellContext`b$$, $CellContext`b$525795$$, 0], 
-        Hold[$CellContext`T$$, $CellContext`T$525796$$, 0], 
-        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$525797$$, 0]}, 
+        5, $CellContext`\[Tau]$$ = 0, $CellContext`$14$$ = 
+        1, $CellContext`$15$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$5459$$, 0], 
+        Hold[$CellContext`$14$$, $CellContext`$14$5460$$, 0], 
+        Hold[$CellContext`$15$$, $CellContext`$15$5461$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$5462$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$5463$$, 0], 
+        Hold[$CellContext`T$$, $CellContext`T$5464$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$5465$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -2279,7 +2245,7 @@ $CellContext`u$[
              2][$CellContext`v$][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`v$][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$273$$ + $CellContext`$274$$ 
+$CellContext`a$$ (($CellContext`$14$$ + $CellContext`$15$$ 
                  Sqrt[Derivative[1][$CellContext`v$][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2310,7 +2276,7 @@ $CellContext`tmax}]; $CellContext`solT$ =
              2][$CellContext`w$][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`w$][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$273$$ + $CellContext`$274$$ 
+$CellContext`a$$ (($CellContext`$14$$ + $CellContext`$15$$ 
                  Sqrt[Derivative[1][$CellContext`w$][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2341,8 +2307,9 @@ $CellContext`solS$]],
            Derivative[
              2][$CellContext`p][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`p][$CellContext`t$]/
+                
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$273$$ + $CellContext`$274$$ 
+$CellContext`a$$ (($CellContext`$14$$ + $CellContext`$15$$ 
                  Sqrt[Derivative[1][$CellContext`p][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2373,7 +2340,7 @@ $CellContext`solT$]], 1] - $CellContext`p[$CellContext`t$]))^2, $CellContext`p[
              2][$CellContext`z][$CellContext`t$] == $CellContext`a$$ (
                1 - (Derivative[1][$CellContext`z][$CellContext`t$]/
                 Subscript[$CellContext`V, $CellContext`max])^$CellContext`s) - \
-$CellContext`a$$ (($CellContext`$273$$ + $CellContext`$274$$ 
+$CellContext`a$$ (($CellContext`$14$$ + $CellContext`$15$$ 
                  Sqrt[Derivative[1][$CellContext`z][$CellContext`t$]/
                    Subscript[$CellContext`V, $CellContext`max]] + \
 $CellContext`T$$ 
@@ -2383,7 +2350,6 @@ $CellContext`T$$
                     Evaluate[
                     ReplaceAll[
                     Derivative[
-                    
                     1][$CellContext`p][$CellContext`t$ - \
 $CellContext`\[Tau]$$], $CellContext`sol4]], 1]))/(2 
                  Sqrt[$CellContext`a$$ $CellContext`b$$]))/(Part[
@@ -2437,10 +2403,10 @@ $CellContext`sol4]], 1] - $CellContext`z[$CellContext`t$]))^2, $CellContext`z[
             "\:043c\:0430\:0448\:0438\:043d\:0430 \:21164", 
             "\:043c\:0430\:0448\:0438\:043d\:0430 \:21165"}, ImageSize -> 
           500]], "Specifications" :> {{{$CellContext`\[Lambda]$$, 5}, 0, 30, 
-         1}, {{$CellContext`$273$$, 1, 
+         1}, {{$CellContext`$14$$, 1, 
           RawBoxes[
            SubscriptBox["\[Sigma]", "0"]]}, 1, 10, 
-         1}, {{$CellContext`$274$$, 1, 
+         1}, {{$CellContext`$15$$, 1, 
           RawBoxes[
            SubscriptBox["\[Sigma]", "1"]]}, 1, 10, 1}, {{$CellContext`a$$, 1},
           0, 10, 0.1}, {{$CellContext`b$$, 1}, 1, 10, 
@@ -2457,21 +2423,9 @@ $CellContext`sol4]], 1] - $CellContext`z[$CellContext`t$]))^2, $CellContext`z[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.781266947502185*^9, 3.7812670684017277`*^9, 3.781267143292776*^9, 
-   3.781267191834964*^9, 3.781785122390213*^9, 3.781786705450054*^9, 
-   3.7817867985033307`*^9, 3.7817868731247606`*^9, 3.7817872150501266`*^9, 
-   3.7817873091815667`*^9, 3.7817874397530127`*^9, 3.7817875112824955`*^9, 
-   3.7817876415698643`*^9, 3.78178772841262*^9, 3.7817877881397943`*^9, 
-   3.7817879376083856`*^9, {3.781788034529478*^9, 3.7817880913634176`*^9}, {
-   3.7817882272054524`*^9, 3.7817882334187584`*^9}, 3.7817990722850943`*^9, 
-   3.7817991490313363`*^9, 3.7817992093174706`*^9, {3.7817993628170767`*^9, 
-   3.7817993921625934`*^9}, 3.7817994622039003`*^9, 3.781800563150513*^9, 
-   3.781800678997492*^9, 3.781800711781644*^9, {3.78180077560306*^9, 
-   3.7818007923686156`*^9}, 3.781802428900293*^9, 3.781802825830241*^9, {
-   3.7818054012260504`*^9, 3.781805427501856*^9}, 
-   3.781805464822691*^9},ExpressionUUID->"c5a0f83e-9704-4e74-8fbc-\
-fc44316cc158"]
+ CellChangeTimes->{3.7834408079169064`*^9, 
+  3.7834408609022512`*^9},ExpressionUUID->"7e694ccc-4640-4a52-bf0c-\
+6d2bb3f4d1e1"]
 }, Open  ]]
 },
 WindowSize->{1536, 781},
@@ -2491,14 +2445,14 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 70929, 1675, 3783, "Input", "ExpressionUUID" -> \
+Cell[580, 22, 70737, 1669, 3708, "Input", "ExpressionUUID" -> \
 "26e9d8c5-86f2-479c-808b-e5913e9f655c"],
-Cell[71512, 1699, 13492, 258, 551, "Output", "ExpressionUUID" -> \
-"ad0bd627-9ff5-4fa7-8fb9-daeb7c8590c8"],
-Cell[85007, 1959, 13462, 257, 626, "Output", "ExpressionUUID" -> \
-"c7baef60-8f49-47ef-8e73-22a781a79c70"],
-Cell[98472, 2218, 13294, 255, 455, "Output", "ExpressionUUID" -> \
-"c5a0f83e-9704-4e74-8fbc-fc44316cc158"]
+Cell[71320, 1693, 12565, 244, 603, "Output", "ExpressionUUID" -> \
+"3b81823f-6e5c-482c-b0d9-f97012f8d8ec"],
+Cell[83888, 1939, 12556, 244, 505, "Output", "ExpressionUUID" -> \
+"97d531e4-b972-473a-bd77-b83e1a03c7b3"],
+Cell[96447, 2185, 12393, 242, 455, "Output", "ExpressionUUID" -> \
+"7e694ccc-4640-4a52-bf0c-6d2bb3f4d1e1"]
 }, Open  ]]
 }
 ]
