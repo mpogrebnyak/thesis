@@ -30,6 +30,10 @@
 \newcommand{\eps}{\varepsilon}
 \newcommand{\re}{\operatorname{Re}}
 \newcommand{\im}{\operatorname{Im}}
+
+\newcommand{\lb}{\textquotedblleft}
+\newcommand{\rb}{\textquotedblright}
+
 \DeclareMathOperator{\sgn}{sgn}
 \renewcommand{\labelitemi}{$-$}
 \renewenvironment{itemize}[1][{---\hfil}]{\begin{list}{#1}{\topsep=0pt\parsep=0pt plus 1pt\itemsep=\parsep\leftmargin=0pt \itemindent=\parindent}\addtolength{\itemindent}{\labelwidth}}{\end{list}}
@@ -140,7 +144,7 @@
 Используя теоретические подходы исследования движения транспортных потоков, составить математическую модель для описания движения транспортных потоков. Данная модель должна представлять из себя набор дифференциальных уравнений и иметь практическую значимость. Полученную модель необходимо исследовать, используя компьютерные технологии.   
 
 \newpage
-\section{????}
+\section{Общие положения моделирования движения транспортных потоков}
 Научное исследование транспортных потоков началось в 1910-х годах прошлого века и продолжает развиваться в наши дни. В условиях стремительного расширения городов и развития их инфраструктуры становится всё более актуальным моделирование потоков автомобильного транспорта. За более чем вековую историю исследований было создано и применено множество различных теорий и методов, а так же было создано множество различных моделей. Всё множество таких моделей можно разделить на три группы, в зависимости от основного подхода, используемого при моделировании.
 
 Первая группа - это \textbf{вероятностные} модели. В этих моделях транспортный поток рассматривается как результат взаимодействия транспортных средств на элементах транспортной сети.
@@ -152,7 +156,11 @@
 
 В данной работе рассматриваются различные модели, построенные с использованием микроскопических методов, а именно подход, основанный на движении транспортных средств друг за другом {\it(follow the leader)}.
 
-Под \textbf{транспортным потоком} будем понимать {\it количество единиц транспортных средств одного вида транспорта, проследовавших определённый участок пути в течение установленного промежутка времени} \cite{TrafficFlow}. В качестве транспортного средства рассмотрим автомобиль и будем называть его \textbf{лидером}, если за ним есть другой автомобиль, или \textbf{преследователем}, если перед ним есть другой автомобиль. Причём, один и тот же автомобиль может являться одновременно и преследователем для впереди идущего, и лидером для позади идущего (рис. \ref{car_following}). 
+Под \textbf{транспортным средством} будем понимать {\it техническое устройство для перевозки людей и/или грузов} \cite{TrafficFlow}.
+
+Под \textbf{транспортным потоком} будем понимать {\it количество единиц транспортных средств одного вида транспорта, проследовавших определённый участок пути в течение установленного промежутка времени} \cite{TrafficFlow}.
+
+В качестве транспортного средства рассмотрим автомобиль и будем называть его \textbf{лидером}, если за ним есть другой автомобиль, или \textbf{преследователем}, если перед ним есть другой автомобиль. Причём, один и тот же автомобиль может являться одновременно и преследователем для впереди идущего, и лидером для позади идущего (рис. \ref{car_following}). 
 
 \begin{figure}[h!]  
 	\begin{center}
@@ -176,7 +184,7 @@ v_f(t) = \min(v_f^d(t), v_f^s(t)),
 Для начала рассмотрим простую ситуацию, когда на дороге есть всего один автомобиль, для которого нет никаких ограничений, за исключением технических характеристик транспортного средства. В такой ситуации парадигму автомобиля \eqref{following_paradigm} можно записать следующим образом:
 
 \begin{equation} \label{following_paradigm_alone}
-v_f(t) = \min(v_f^d(t), 0),
+v_f(t) = v_f^d(t),
 \end{equation}
 то есть автомобиль свободно разгонится до максимально желаемой скорости и будет продолжать с ней движение. Такое поведение будем называть свободным движением. 
 
@@ -184,8 +192,8 @@ v_f(t) = \min(v_f^d(t), 0),
 \begin{equation} \label{free_drive_with_initial_conditions}
 \begin{cases}
 \begin{split}
-\ddot{x}(t) = a\left( 1-\left( \dfrac{\dot{x}(t)}{v_{max}}\right)^\delta \right) \\
-x(0)=x_0, \quad \dot{x}(0)=v_{0}
+\ddot{x}&(t) = a\left( 1-\left( \dfrac{\dot{x}(t)}{v_{max}}\right)^\delta \right) \\
+&x(0)=x_0, \quad \dot{x}(0)=v_{0}
 \end{split}
 \end{cases}.
 \end{equation}
@@ -193,7 +201,11 @@ x(0)=x_0, \quad \dot{x}(0)=v_{0}
 
 Без потери общности можно рассматривать модель \eqref{free_drive_with_initial_conditions} при линейном уменьшении ускорения с ростом скорости, что соответствует $\delta=1$.
 
-ЯВНО ВЫЧИСЛИТЬ РЕШЕНИЕ НУЖНО ЛИ ?
+У системы \eqref{free_drive_with_initial_conditions} существует решение в явном виде:
+\begin{equation*}
+x(t) = \dfrac{1}{a}\left(av_{max}t+v_{max}^2e^{-\frac{at}{v_{max}}}-v_{max}^2-v_{max}v_0e^{-\frac{at}{v_{max}}}+v_{max}v_0+ax_0\right). 
+\end{equation*}
+Из точного решения хорошо видна динамика автомобиля в нулевой момент времени $t=0$ в случаях, когда $v_0=v_{max}$ и $v_0=0$. Ускорение в начальный момент времени описывает равенство $x''(0)=a-\dfrac{av_0}{v_{max}}$, из которого видно, что при $v_0=v_{max}$ ускорения нет, а при $v_0=0$ автомобиль начинает движение с максимальным ускорением. Такое поведение полностью согласуется с динамикой реального транспортного средства.
 
 На рисунке \eqref{free_drive_without_stop} изображены графики скорости и расстояния для свободно двигающегося автомобиля.
 \begin{figure}[h!]
@@ -207,25 +219,31 @@ x(0)=x_0, \quad \dot{x}(0)=v_{0}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
 			{Images/free_drive_distance.png}
 		\end{minipage}
-		\caption{Графики изменения скорости (слева) и расстояния (справа) для автомобиля при свободном движении без остановки с параметрами: $a=2$, $v_{max}=40$, $x_0=0$, $v_0=0$.}
+		\caption{Графики изменения скорости (слева) и расстояния (справа) для автомобиля при свободном движении без остановки с параметрами: $a=8$, $v_{max}=40$, $x_0=0$, $v_0=0$.}
 		\label{free_drive_without_stop}
 	\end{center}
 \end{figure}
 
-Как видно из графиков, автомобиль, разогнавшись до максимальной допустимой (желаемой) скорости, бесконечно двигается вперёд. Данная модель отлично описывает момент старта автомобиля, его разгон и движение с постоянной скоростью. В более жизненных ситуациях присутствуют процессы обратные разгону и старту - торможение и остановка.
+Как видно из графиков, автомобиль, разогнавшись до максимальной допустимой (желаемой) скорости, бесконечно двигается вперёд. Данная модель отлично описывает момент старта автомобиля, его разгон и движение с постоянной скоростью. Под стартом автомобиля будем понимать момент начала разгона. В более жизненных ситуациях присутствуют процессы обратные разгону и старту - торможение и остановка.
 
-Для описания остановки автомобиля рассмотрим следующее уравнение: 
+Для описания остановки автомобиля рассмотрим следующее дифференциальное уравнение: 
 \begin{equation} \label{stop_drive_with_initial_conditions}
 \begin{cases}
 \begin{split}
-\ddot{x}(t) = \dfrac{1}{q}\left( v_{min} - \dot{x}(t)\right) \\
-x(0)=x_0, \quad \dot{x}(0)=v_0
+\ddot{x}&(t) = q\left( v_{min} - \dot{x}(t)\right) \\
+&x(0)=x_0, \quad \dot{x}(0)=v_0
 \end{split}
 \end{cases}.
 \end{equation}
-Из уравнения \eqref{stop_drive_with_initial_conditions} видно, что остановка характеризуется минимальной (желаемой) скоростью $v_{min}$, начальной скоростью $v_{0}$, начальным положением транспортного средства $x_0$, коэффициентом торможения $q$. Под минимальной скоростью будем понимать ту скорость до которой водитель транспортного средства хочет снизить свою текущую скорость. Это не обязательно нулевая величина, в некоторых случаях водитель не хочет останавливаться полностью, а хочет лишь снизить скорость.
+Из уравнения \eqref{stop_drive_with_initial_conditions} видно, что остановка характеризуется минимальной (желаемой) скоростью $v_{min}$, начальной скоростью $v_{0}$, начальным положением транспортного средства $x_0$, коэффициентом торможения $q$. Под минимальной скоростью будем понимать такую скорость до которой водитель транспортного средства хочет снизить свою текущую скорость. Это не обязательно нулевая величина, в некоторых случаях водитель не хочет останавливаться полностью, а хочет лишь снизить скорость.
 
-Уравнения \eqref{free_drive_with_initial_conditions} и  \eqref{stop_drive_with_initial_conditions} описывают два разных вида движения. Для того что бы получить полную модель свободного движения необходимо объединить полученные модели. Для этого введём две релейные функции $R_{a}(t)$ и $R_{b}(t)$.  
+Аналогично системе, описывающей ускорение, система \eqref{stop_drive_with_initial_conditions} также имеет решение в явном виде:
+\begin{equation*}
+x(t) = \dfrac{1}{q}\left(av_{min}t+v_{min}e^{-qt}-v_{min}-v_0e^{-qt}+v_0+qx_0\right) 
+\end{equation*}
+Ускорение в начальный момент времени описывает равенство $x''(0)=q(v_{min}-v_0)$, из которого видно, что при $v_0=v_{min}$ торможения нет, а при $v_0=0$ автомобиль начинает тормозить с к коэффициентом $-qv_0$. Данное поведение также согласуется с динамикой реального транспортного средства.
+
+Уравнения \eqref{free_drive_with_initial_conditions} и  \eqref{stop_drive_with_initial_conditions} описывают два разных вида движения. Для получения общей модели, описывающей оба этих вида движения, необходимо объединить их в одну. Предположим, что в нулевой момент времени происходит первая фаза движения - старт автомобиля и его разгон. Затем с некоторого момента времени $t_s$ (stop time) происходит вторая фаза движения - автомобиль начинает тормозить. Введём две релейные функции $R_{a}(t)$ и $R_{b}(t)$, вида:  
 
 \begin{equation*} 
 R_{a}(t)=
@@ -242,12 +260,11 @@ R_{b}(t)=
 &0, \quad t<t_{s} \\
 &1, \quad t\geq t_{s}
 \end{split}
-\end{cases}.
+\end{cases},
 \end{equation*}
+Релейная функция $R_{a}(t)$ "включается"{}, когда автомобиль находится в фазе разгона (acceleration phase) и "выключается"{}, когда автомобиль переходит в фазу торможения (braking phase). Функция $R_{b}(t)$ наоборот - "выключается"\ в фазе разгона и "включается"\ в фазе торможения. Функцию $R_{a}(t)$ можно выразить через $R_{b}(t)$ следующим образом $R_{a}(t) = (1-R_{b}(t))$. Обозначим $R_{a}(t)$ как $R(t)$ и получим релейную функцию, которая объединяет два вида движения.
 
-$R_{a}(t) = (1-R_{b}(t))$ и обозначим как $R(t)$
-
-\begin{equation*} 
+\begin{equation} \label{relay_function}
 R(t)=
 \begin{cases}
 \begin{split}
@@ -255,19 +272,20 @@ R(t)=
 &0, \quad t\geq t_{s}
 \end{split}
 \end{cases}.
-\end{equation*}
+\end{equation}
 
+С помощью полученной релейной функции \eqref{relay_function} объединим модели \eqref{free_drive_with_initial_conditions} и  \eqref{stop_drive_with_initial_conditions} и получим полную модель свободного движения:
 \begin{equation} \label{free_drive_model}
 \begin{cases}
 \begin{split}
-\ddot{x}(t) = &R(t) \left[ a\left( 1-\left( \dfrac{\dot{x}(t)}{v_{max}}\right) \right)\right] + (1-R(t))\left[  \dfrac{1}{q}\left( v_{min} - \dot{x}(t)\right) \right]  \\
+\ddot{x}(t) = &R(t) \left[ a\left(\dfrac{v_{max}-\dot{x}(t)}{v_{max}} \right)\right] + (1-R(t)) \bigg[ q\left( v_{min} - \dot{x}(t)\right) \bigg]  \\
 &x(0)=x_0, \quad \dot{x}(0)=v_{0}
 \end{split}
 \end{cases}.
 \end{equation}
-
+Обозначения, используемые в модели \eqref{free_drive_model}, приведены в таблице \ref{free_drive_parameters}.
 \begin{table}[h!]
-	\caption{Физическое значение параметров уравнения \eqref{free_drive_model}}
+	\caption{Физическое значение параметров модели \eqref{free_drive_model}}
 	\label{free_drive_parameters}
 	\begin{center}
 		\begin{tabularx}{\textwidth}{p{0.15\linewidth}p{0.85\linewidth}}			
@@ -275,34 +293,39 @@ R(t)=
 			\rule{0cm}{0,5cm}
 			Параметр &  Физическое значение \\ 
 			[3pt]\hline
-			$a$ &\\
-			$q$ &\\ 
-			$v_{max}$ &\\
-			$v_{min}$ &\\ 
-			$x_0$ &\\
-			$v_0$ &\\ 
+			$a$ & коэффициент максимального ускорения\\
+			$q$ & коэффициент торможения\\ 
+			$v_{max}$ & максимальная скорость\\
+			$v_{min}$ & минимальная скорость\\ 
+			$x_0$ & начальное положение\\
+			$v_0$ & начальная скорость\\ 
+			$R(t)$ & релейная функция, переключающая фазы движения  \\ 
 			\hline
 		\end{tabularx}
 	\end{center}
 \end{table}
 
+На рисунке \eqref{free_drive_with_stop} изображены графики скорости и расстояния для свободно двигающегося автомобиля с остановкой.
+
 \begin{figure}[h!]
 	\begin{center}
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test12.png}
+			{Images/free_drive_speed_with_stop.png}
 		\end{minipage}
 		\hfill 
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test22.png}
+			{Images/free_drive_distance_with_stop.png}
 		\end{minipage}
-		\caption{ПЕРЕДЕЛАТЬ}
+		\caption{Графики изменения скорости (слева) и расстояния (справа) для автомобиля при свободном движении без остановки с параметрами: $a=8$, $q=0.2$, $v_{max}=40$, $v_{min}=0$, $t_s=40$, $x_0=0$, $v_0=0$.}
 		\label{free_drive_with_stop}
 	\end{center}
 \end{figure}
 
-Полученная модель \eqref{free_drive_model} полностью описывает движение одного автомобиля на пустой дороге. 
+Из графиков видно, что автомобиль, разогнавшись до максимальной допустимой (желаемой) скорости, двигается с ней до наступления времени торможения. Затем автомобиль начинает тормозить до минимальной желаемой скорости и продолжает с ней движение или же, если минимальная скорость равна нулю ($v_{min}=0$), как на графиках \eqref{free_drive_with_stop}, останавливается.
+ 
+Таким образом была получена модель \eqref{free_drive_model}, которая описывает все значимые фазы движения одного автомобиля, а именно разгон, само движение и торможение. Даная модель не учитывает внешних факторов, которые оказывают влияние на движение автомобиля, она зависит лишь от технических характеристик транспортного средства и от самого водителя. Эта модель подходит для описания динамики первого автомобиля в потоке. На остальные автомобили большое влияние оказывают впереди идущие транспортные средства, поэтому они вынуждены двигаться учитывая движение лидера.
 
 \section{Модель следования за лидером}
 
@@ -311,180 +334,113 @@ R(t)=
 Первая модель, основанная на принципе следования за лидером была разработана в 50-х годах прошлого века и предполагала, что каждый водитель адаптирует свою скорость к скорости лидирующего автомобиля:
 
 \begin{equation} \label{follow_the_leader_first_model}
-\ddot{x}_n(t) = \dfrac{1}{\gamma} (\dot{x}_{n-1}(t) - \dot{x}_{n}(t)), \\ 
+\ddot{x}_n(t) = \dfrac{1}{\gamma} (\dot{x}_{n-1}(t) - \dot{x}_{n}(t)), 
 \end{equation}
 где $\gamma$ - время адаптации водителя.
 
-Уравнение \eqref{follow_the_leader_first_model} было получено в работе  \cite{FirstFollowTheLeaderModel}. Эта модель является простой и плохо описывает свойства реального транспортного потока.
+Данное уравнение было получено в работе Пайпса (Pipes) \cite{FirstFollowTheLeaderModel}. Модель, построенная на основе данного уравнения, является простой и плохо описывает свойства реального транспортного потока.
 
-Произведём ряд модификаций модели \eqref{follow_the_leader_first_model}, которые позволят её улучшить. Введём в правую часть уравнения задержку аргумента по времени $\tau$, отражающую время реакции водителей на изменение скорости лидирующего автомобиля.  
+В работе \cite{RefineFirstFollowTheLeaderModel} была предложена модификация уравнения \eqref{follow_the_leader_first_model}. В левую часть уравнения была введена задержка аргумента по времени $\tau$, которая отражает время реакции водителей на изменение скорости лидирующего автомобиля. 
 
-
-
-\subsection{Модель следования за лидером без остановки}
-
-Рассмотрим дифференциальное уравнение, которое описывает ускорение транспортного средства:
-
-\begin{equation} \label{equation_for_acceleration}
-\ddot{x}(t) = d (\dot{x}(t-\tau)-\dot{x}(t)),
-\end{equation}
-где $d$ - мощность двигателя, а $\tau$ - время реакции водителя.
-
-Уравнение \eqref{equation_for_acceleration} зависит от скорости движения двух соседних автомобилей, то есть водитель автомобиля должен смотреть только на впереди идущий автомобиль. Конечно, в реальной жизни, водитель следит за движем большего количества транспортных средств, окружающих его, например, справа и слева, но при движении по прямой и без перестроений их влияние минимально.
-
-Проинтегрировав уравнение \eqref{equation_for_acceleration} получаем следующее уравнение: 
-
-\begin{equation} \label{equation_for_speed}
-\dot{x}(t) = d(x(t-\tau) - x(t) - \lambda),
-\end{equation}
-где под $\lambda$ будем понимать безопасное расстояние между автомобилями.
-
-Уравнение \eqref{equation_for_speed} служит для описания скорости транспортного средства и зависит от положения самого транспортного средства, положения впереди идущего транспортного средства и расстояния между ними. 
-
-Дифференциальное уравнение \eqref{equation_for_speed} описывает лишь одно транспортное средство. Для описания всего потока запишем \eqref{equation_for_speed} в виде разностного уравнения:
-
-\begin{equation} \label{difference_equation_for_speed}
-\dot{x}_n(t) = d_n(x_{n-1}(t-\tau_n) - x_n(t) - \lambda_n).
+\begin{equation*}
+\ddot{x}_n(t+\tau) = \dfrac{1}{\gamma} (\dot{x}_{n-1}(t) - \dot{x}_{n}(t)).
+\end{equation*}
+Произведя замену времени получим следующие уравнение:
+\begin{equation} \label{follow_the_leader_with_two_delay}
+\ddot{x}_n(t) = \dfrac{1}{\gamma} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)).
 \end{equation}
 
-Без потери общности считаем, что все автомобили имеют одинаковые технические характеристики, а все водители одинаково оценивают дорожную ситуацию и реагируют на её изменения с одинаковой скоростью. Таким образом считаем, что $d_n = d$, $\tau_n = \tau$, $\lambda_n = \lambda$. Перепишем разностное уравнение \eqref{difference_equation_for_speed} в виде развёрнутой системы разностных уравнений:
+Уравнение \eqref{follow_the_leader_with_two_delay} содержит два запаздывания в правой части, то есть ускорение автомобиля зависит от разности скоростей, которые были у текущего и впереди идущего автомобилей $\tau$ времени назад.
 
-\begin{equation} \label{equation_without_stopping}
+Упростим уравнение \eqref{follow_the_leader_with_two_delay}, оставив в правой части только одно запаздывание у уменьшаемого, таким образом ускорение автомобиля будет зависеть от его текущей скорости и скорости впереди идущего автомобиля $\tau$ времени назад. Множитель $\dfrac{1}{\gamma}$ будем интерпретировать как коэффициент мощности $d$, характеризующий мощность двигателя автомобиля. С учётом проведённых модификаций уравнение примет вид:
+
+\begin{equation} \label{follow_the_leader_with_delay}
+\ddot{x}_n(t) = d_{n} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t)).
+\end{equation}
+
+Без потери общности будем считать, что все автомобили имеют одинаковые технические характеристики $d_n = d$, а все водители одинаково оценивают дорожную ситуацию и реагируют на её изменения с одинаковой скоростью $\tau = const$.
+
+Уравнение \eqref{follow_the_leader_with_delay} можно проинтегрировать и рассматривать модель, которая описывает скорость и зависит от положения самого автомобиля и положения лидера. Данный подход подробно описан в \cite{Course}, в данной работе будем рассматривать уравнение в исходном виде. 
+
+Запишем общую модель движения транспортного потока. Движение первого автомобиля будет описывать ранее выведенное уравнение \eqref{free_drive_model}, остальные автомобили будет двигаться согласно разностному уравнению \eqref{follow_the_leader_with_delay}.
+
+\begin{equation} \label{follow_the_leader_full_model}
 \begin{cases}
 \begin{split}
-&\dot{x}_1(t) = d (v_{\max} t - x_1(t) - \lambda), \\ 
-&\qquad x_1(0) = 0, \\
-&\dot{x}_2(t) = d (x_1(t-\tau)-x_2(t) - \lambda), \\
-&\qquad x_2(t) = -\lambda \quad t \in [-\tau, 0], \\
-&\dot{x}_3(t) = d (x_2(t-\tau)-x_3(t) - \lambda), \\
-&\qquad x_3(t) = -2\lambda \quad t \in [-2\tau, 0], \\
-&\ldots \\
-&\dot{x}_n(t) = d ({x}_{n-1}(t-\tau)-x_n(t) - \lambda), \\
-&\qquad x_n(t) = -(n-1)\lambda \quad t \in [-(n-1)\tau, 0], \\
-&\ldots \\
+\ddot{x}_{1}(t) = &R(t) \left[ a\left( 1-\left( \dfrac{\dot{x}_{1}(t)}{v_{max}}\right) \right)\right] + (1-R(t))\left[  \dfrac{1}{q}\left( v_{min} - \dot{x}_{1}(t)\right) \right]  \\
+&x_{1}(0)=x_0, \quad \dot{x}_{1}(0)=v_{0}\\
+\ddot{x}_{n}(t) = &d(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t)) \\
+&x_n(0)=x_0-(n-1)\lambda, \quad \dot{x}_n(0)=v_{n}, \quad t \in [-(n-1)\tau,0]
 \end{split}
-\end{cases}
+\end{cases}.
 \end{equation}
-
-Обозначения, использующиеся в системе \eqref{equation_without_stopping}, приведены в таблице \ref{parameters}.
-
+Обозначения, использующиеся в системе \eqref{follow_the_leader_full_model}, приведены в таблице \ref{follow_the_leader_full_model_parameters}.
 \begin{table}[h!]
-	\caption{Физическое значение параметров уравнения \eqref{equation_without_stopping}}
-	\label{parameters}
+	\caption{Физическое значение параметров уравнения \eqref{follow_the_leader_full_model}}
+	\label{follow_the_leader_full_model_parameters}
 	\begin{center}
 		\begin{tabularx}{\textwidth}{p{0.15\linewidth}p{0.85\linewidth}}			
 			\hline
 			\rule{0cm}{0,5cm}
 			Параметр &  Физическое значение \\ 
 			[3pt]\hline
-			$n$ & порядковый номер автомобиля в потоке\\
-			$d$ & мощность двигателя автомобиля \\
-			$v_{max}$ & максимальная возможная (допустимая) скорость \\
-			$\tau$ & время реакции водителя \\
-			$\lambda $ & безопасное расстояние между автомобилями \\ 
+			$a$ & коэффициент максимального ускорения\\
+			$q$ & коэффициент торможения\\ 
+			$v_{max}$ & максимальная скорость\\
+			$v_{min}$ & минимальная скорость\\ 
+			$x_0$ & начальное положение\\
+			$v_0$ & начальная скорость\\ 
 			\hline
 		\end{tabularx}
 	\end{center}
 \end{table}
 
-Каждое отдельное уравнение системы \eqref{equation_without_stopping} соответствует автомобилю в потоке. На графиках (\ref{without_stop_d=0,122_tau=1}) и (\ref{without_stop_d=0,122_tau=5}) изображены графики длинны пути и скорости для нескольких автомобилей.
+
+На рисунке \eqref{follow_the_leader} изображены графики скорости и расстояния для нескольких автомобилей, движущихся друг за другом.
 
 \begin{figure}[h!]
 	\begin{center}
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/distance_without_stop_d=0,122_tau=1.png}
+			{Images/test.png}
 		\end{minipage}
 		\hfill 
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/speed_without_stop_d=0,122_tau=1.png}
+			{Images/test.png}
 		\end{minipage}
-		\caption{Графики изменения длин путей (слева) и скоростей (справа) для нескольких автомобилей при движении без остановки с параметрами: $\tau=1$, $\lambda=15$, $d=0,122$.}
-		\label{without_stop_d=0,122_tau=1}
+		\caption{ПЕРЕДЕЛАТЬ}
+		\label{follow_the_leader}
 	\end{center}
 \end{figure}
 
-\begin{figure}[h!]
-	\begin{center}
-		\begin{minipage}[h!]{0.48\linewidth}
-			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/distance_without_stop_d=0,122_tau=5.png}
-		\end{minipage}
-		\hfill 
-		\begin{minipage}[h!]{0.48\linewidth}
-			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/speed_without_stop_d=0,122_tau=5.png}
-		\end{minipage}	
-		\caption{Графики изменения длин путей (слева) и скоростей (справа) для нескольких автомобилей при движении без остановки с параметрами: $\tau=5$, $\lambda=15$, $d=0,122$.}
-		\label{without_stop_d=0,122_tau=5}
-	\end{center}
-\end{figure}
+Из графиков видно, что автомобили, разгоняются до максимальной желаемой скорости и двигаются до момента времени $t_s$, начиная с которого, первый автомобиль тормозит и останавливается. Остальные автомобили, повторяя динамику первого автомобиля, так же останавливаются. Все движение происходит с сохранением безопасной дистанции между автомобилями, что соответствует реальному транспортному потоку, так как сокращение безопасного расстояния подразумевает появление аварийной ситуации.
 
-Как видно из графиков, автомобили, разогнавшись до максимальной допустимой скорости, бесконечно едут на безопасном расстоянии друг от друга. Данная модель отлично подходит, если важен сам момент старта и разгон транспортных средств. В более жизненных ситуациях присутствуют процессы обратные разгону и движению - торможение и остановка. 
-
-\subsection{Модель следования за лидером с остановкой}
-
-Рассмотрим более реалистичную ситуацию, учитывающую торможение и остановку транспортного средства. Транспортные средства аналогично системе \eqref{equation_without_stopping} разгоняются и выходят на свою максимальную допустимую скорость, но через какое-то время им необходимо начать торможение и, в последствии, остановится. Так как все транспортные средства, кроме самого первого являются преследователями, то торможение стоит рассматривать лишь для первого, остальные сами отрегулируют свою скорость, относительно него. Математически это можно записать следующим образом:
-  
-\begin{equation} \label{stop_equation}
- S(t) = 
- \begin{cases}
- \begin{split}
- &v_{max} t \qquad &t \leqslant t_s \\
- &v_{max} t_s \qquad &t > t_s
- \end{split}
- \end{cases},
-\end{equation}
-где $t_s$ - время начала остановки.
-
-Так как начало движения и набор скорости происходят аналогично предыдущему случаю, подставим  \eqref{stop_equation} в \eqref{equation_without_stopping} и получим модель движения транспортных средств с учётом начала торможения в момент времени $t_s$ и с последующей их остановкой. 
-  
-\begin{equation} \label{equation_with_stopping}
-\begin{cases}
-\begin{split}
-&\dot{x}_1(t) = d (S(t) - x_1(t) - \lambda), \\ 
-&\qquad x_1(0) = 0, \\
-&\dot{x}_2(t) = d (x_1(t-\tau)-x_2(t) - \lambda), \\
-&\qquad x_2(t) = -\lambda \quad t \in [-\tau, 0], \\
-&\dot{x}_3(t) = d (x_2(t-\tau)-x_3(t) - \lambda), \\
-&\qquad x_3(t) = -2\lambda \quad t \in [-2\tau, 0], \\
-&\ldots \\
-&\dot{x}_n(t) = d ({x}_{n-1}(t-\tau)-x_n(t) - \lambda), \\
-&\qquad x_n(t) = -(n-1)\lambda \quad t \in [-(n-1)\tau, 0], \\
-&\ldots \\
-\end{split}
-\end{cases}
-\end{equation}
-
-В модели \eqref{equation_with_stopping} скорость не зануляет полностью. Конечно, она близка к нулю, но всё же остаётся всегда положительной. При необходимости её можно занулить явно, когда она станет меньше какой-то наперёд заданной минимальной скорости транспортного средства, обусловленной техническими характеристиками. 
- 
-На графиках \eqref{with_stop_d=0,122_tau=1} изображены графики длинны пути и скорости для нескольких автомобилей. 
- \begin{figure}[h!]
- 	\begin{center}
- 		\begin{minipage}[h!]{0.48\linewidth}
- 			\includegraphics[width=1\linewidth,height=0.2\textheight]
- 			{Images/distance_with_stop_d=0,122_tau=1.png}
- 		\end{minipage}
- 		\hfill 
- 		\begin{minipage}[h!]{0.48\linewidth}
- 			\includegraphics[width=1\linewidth,height=0.2\textheight]
- 			{Images/speed_with_stop_d=0,122_tau=1.png}
- 		\end{minipage}
- 		\caption{Графики изменения длин путей (слева) и скоростей (справа) для нескольких автомобилей при движении с остановкой с параметрами: $\tau=1$, $\lambda=15$, $d=0,122$.}
- 		\label{with_stop_d=0,122_tau=1}
- 	\end{center}
- \end{figure}
-
-Как видно из графиков, автомобили, в определённой момент времени $t_s$, начинают тормозить и останавливаются на безопасном расстоянии друг от друга. 
-
-Данная модель отлично подходит, если важен не только момент старта и разгон, но так же торможение и остановка.
+Результаты исследования модели \eqref{follow_the_leader_full_model} совпадают с  результатами исследований моделей \eqref{follow_the_leader_with_two_delay} и проинтегрированной \eqref{follow_the_leader_full_model} из работ \cite{RefineFirstFollowTheLeaderModel} и \cite{Course} соответственно. С помощью регулировки коэффициентов в моделях можно добиться полной идентичности решений. Из этого можно сделать вывод, что все три модели одинаково описывают динамику движения транспортных средств и могут быть в равной мере использованы для моделирования движения транспортных потоков.
 
 \section{Модель Газиса}
 
+Группа инженеров из компании «Дженерал моторс» (General Motors) в своей работе \cite{GazisModel} предложила ряд модификаций для уравнения  \eqref{follow_the_leader_with_two_delay}
+
+подход. В уравнение \eqref{follow_the_leader_first_model} было введено 
+Ранее рассматриваемая модель  \eqref{follow_the_leader_with_delay} предполагает, что коэффициент $d$, интерпретируемый как мощность, является константой. Группа инженеров из компании Дженерал моторс (General Motors) предложила альтернативный вариант 
+
+Рассмотрим другую модификацию ранее рассматриваемой модели \eqref{follow_the_leader_first_model}. В правую часть уравнения введём аналогичную задержку аргумента по времени, а коэффициент $\dfrac{1}{\gamma}$, ранее предполагаемый константой и интерпретируемый как мощность, будем интерпретировать как динамический коэффициент чувствительности $S$. Таким образом получим следующее уравнение: 
 \begin{equation} \label{gazis_model}
-\ddot{x}_n(t) = \dfrac{\lambda_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t))
+\ddot{x}_n(t) = S (\dot{x}_{n-1}(t-\tau_{n}) - \dot{x}_{n}(t)).
 \end{equation}
+
+Коэффициент чувствительности $S$ характеризует скорость реакции водителя к изменению скорости лидера и зависит от скорости и текущей дистанции до лидера. Чувствительность возрастает при уменьшении дистанции до лидера, таким образом коэффициент $S$ можно представить в виде:
+
+\begin{equation*}
+S = \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}
+\end{equation*}
+
+Таким образом модель будет выглядеть следующим образом:
+\begin{equation} \label{full_gazis_model}
+\ddot{x}_n(t) = \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t))
+\end{equation} 
+ 
 
 \begin{table}[h!]
 	\caption{Физическое значение параметров уравнения \eqref{gazis_model}}
@@ -502,6 +458,85 @@ R(t)=
 		\end{tabularx}
 	\end{center}
 \end{table} 
+
+
+\begin{equation} \label{}
+\begin{cases}
+\begin{split}
+\ddot{x}_{1}(t) = &R(t) \left[ a\left( 1-\left( \dfrac{\dot{x}_{1}(t)}{v_{max}}\right) \right)\right] + (1-R(t))\left[  \dfrac{1}{q}\left( v_{min} - \dot{x}_{1}(t)\right) \right]  \\
+&x_{1}(0)=x_0, \quad \dot{x}_{1}(0)=v_{0}\\
+\ddot{x}_n(t) = & \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t)) \\
+&x_n(0)=x_0-(n-1)\lambda, \quad \dot{x}_n(0)=v_{n}, \quad t \in [-(n-1)\tau,0]
+\end{split}
+\end{cases}.
+\end{equation}
+
+\begin{figure}[h!]
+	\begin{center}
+		\begin{minipage}[h!]{0.48\linewidth}
+			\includegraphics[width=1\linewidth,height=0.2\textheight]
+			{Images/test.png}
+		\end{minipage}
+		\hfill 
+		\begin{minipage}[h!]{0.48\linewidth}
+			\includegraphics[width=1\linewidth,height=0.2\textheight]
+			{Images/test.png}
+		\end{minipage}
+		\caption{ПЕРЕДЕЛАТЬ ХОРОШАЯ СИТУАЦИЯ}
+		\label{gazis_model_img}
+	\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\begin{minipage}[h!]{0.48\linewidth}
+			\includegraphics[width=1\linewidth,height=0.2\textheight]
+			{Images/test.png}
+		\end{minipage}
+		\hfill 
+		\begin{minipage}[h!]{0.48\linewidth}
+			\includegraphics[width=1\linewidth,height=0.2\textheight]
+			{Images/test.png}
+		\end{minipage}
+		\caption{ПЕРЕДЕЛАТЬ ПЛОХАЯ СИТУАЦИЯ}
+		\label{gazis_model_img_2}
+	\end{center}
+\end{figure}
+
+\section{Модель Трайбера}
+
+\subsection{Классическая модель Трайбера}
+\begin{equation*}
+\begin{cases}
+\begin{split}
+&\dot{x}_n(t) = v_n(t), \\
+&\dot{v}_n(t)=f(t, v_n,v_{n-1},x_{n-1}-x_n)
+\end{split}
+\end{cases}.
+\end{equation*}
+
+\begin{equation*}
+\begin{cases}
+\begin{split}
+&\dot{x}_n(t) = v_n(t), \\
+&\dot{v}_n(t)=\left[ a\left( 1-\left( \dfrac{v_n(t)}{v_{max}}\right) \right)\right] - a\left( \dfrac{s^*(v_n,\Delta v_n)}{s_n}\right)^2
+\end{split}
+\end{cases}.
+\end{equation*}
+
+
+\begin{equation*}
+\begin{cases}
+\begin{split}
+&\dot{x}_n(t) = v_n(t), \\
+&\dot{v}_n(t)=\left[ a\left( 1-\left( \dfrac{v_n(t)}{v_{max}}\right) \right)\right]-a\left( \dfrac{\sigma_0+\sigma_1\sqrt{\frac{v_n}{v_{max}}}+Tv_n+\frac{v_n(v_n-v_{n-1})}{2\sqrt{ab}}}{x_{n-1}-x_n}\right)^2
+\end{split}
+\end{cases}.
+\end{equation*}
+
+
+\subsection{Улучшенная модель Трайбера}
 
 \section{Практическое применение} 
 
@@ -590,12 +625,24 @@ R(t)=
 \begin{thebibliography}{**}
 	\bibitem{Street}
 	Дубелиръ Г.Д. "Городскiя улицы и мостовыя". 1912.
+	
 	\bibitem{TrafficFlow}
 	https://spravochnick.ru/logistika/logisticheskie\_potoki/transportnyy\_potok/
+	
 	\bibitem{GippsModel}
 	Wilson R. E. Gipps’ Model of Highway Traffic. 2002.
+	
 	\bibitem{FirstFollowTheLeaderModel}
-	Pipes L.A. An operational analysis of traffic dynamics. 1953. 
+	Pipes L.A. An operational analysis of traffic dynamics. 1953. 
+	
+	\bibitem{RefineFirstFollowTheLeaderModel}
+	Chandler R.E., Herman R., Montroll E.W. Traffic dynamics: Studies in car following. 1958.
+	
+	\bibitem{Course}
+	Погребняк М.А. Курсовая работа по теме "Математическое моделирование движения транспортных потоков". 2019.
+	
+	\bibitem{GazisModel}
+	Gazis D.C., Herman R., Rothery R.W. Nonlinear follow the leader models of trafficflow. 1961.
 %	\bibitem{Polygon}
 %	Выгодский М.Я. Справочник по элементарной математике. 2001.
 % 	\bibitem{Runge_Kutta}
