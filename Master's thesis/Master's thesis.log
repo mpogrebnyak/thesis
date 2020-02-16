@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  8 FEB 2020 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  16 FEB 2020 19:48
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -1092,128 +1092,139 @@ Overfull \hbox (23.99998pt too wide) in alignment at lines 394--394
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/test.png, id=62, 790.152pt x 379.4175pt>
-File: Images/test.png Graphic file (type png)
- <use Images/test.png>
-Package pdftex.def Info: Images/test.png used on input line 405.
-(pdftex.def)             Requested size: 218.51622pt x 133.72441pt.
-File: Images/test.png Graphic file (type png)
+<Images/simple_model_speed.png, id=62, 398.08725pt x 213.1965pt>
+File: Images/simple_model_speed.png Graphic file (type png)
 
-<use Images/test.png>
-Package pdftex.def Info: Images/test.png used on input line 410.
-(pdftex.def)             Requested size: 218.51622pt x 133.72441pt.
- [12] [13 <./Images/test.png>]
-Overfull \hbox (23.99998pt too wide) in alignment at lines 458--458
-[][] 
- []
+<use Images/simple_model_speed.png>
+Package pdftex.def Info: Images/simple_model_speed.png used on input line 405.
+(pdftex.def)             Requested size: 218.51738pt x 133.72893pt.
 
+<Images/simple_model_distance.png, id=63, 398.08725pt x 257.16075pt>
+File: Images/simple_model_distance.png Graphic file (type png)
+
+<use Images/simple_model_distance.png>
+Package pdftex.def Info: Images/simple_model_distance.png used on input line 41
+0.
+(pdftex.def)             Requested size: 218.51738pt x 133.72435pt.
+ [12] [13 <./Images/simple_model_speed.png> <./Images/simple_model_distance.png
+>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 470.
+(amsmath)                trying to recover with `aligned' on input line 446.
 
-File: Images/test.png Graphic file (type png)
-<use Images/test.png>
-Package pdftex.def Info: Images/test.png used on input line 478.
-(pdftex.def)             Requested size: 218.51622pt x 133.72441pt.
-File: Images/test.png Graphic file (type png)
- <use Images/test.png>
-Package pdftex.def Info: Images/test.png used on input line 483.
-(pdftex.def)             Requested size: 218.51622pt x 133.72441pt.
+<Images/gazis_model_good_speed.png, id=72, 396.88275pt x 212.59425pt>
+File: Images/gazis_model_good_speed.png Graphic file (type png)
+
+<use Images/gazis_model_good_speed.png>
+Package pdftex.def Info: Images/gazis_model_good_speed.png used on input line 4
+55.
+(pdftex.def)             Requested size: 218.51631pt x 133.73395pt.
+
+<Images/gazis_model_good_distance.png, id=73, 398.08725pt x 255.95625pt>
+File: Images/gazis_model_good_distance.png Graphic file (type png)
+
+<use Images/gazis_model_good_distance.png>
+Package pdftex.def Info: Images/gazis_model_good_distance.png used on input lin
+e 460.
+(pdftex.def)             Requested size: 218.51738pt x 133.7268pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: Images/test.png Graphic file (type png)
-<use Images/test.png>
-Package pdftex.def Info: Images/test.png used on input line 495.
-(pdftex.def)             Requested size: 218.51622pt x 133.72441pt.
-File: Images/test.png Graphic file (type png)
- <use Images/test.png>
-Package pdftex.def Info: Images/test.png used on input line 500.
-(pdftex.def)             Requested size: 218.51622pt x 133.72441pt.
+<Images/gazis_model_bad_speed.png, id=74, 398.08725pt x 212.59425pt>
+File: Images/gazis_model_bad_speed.png Graphic file (type png)
+
+<use Images/gazis_model_bad_speed.png>
+Package pdftex.def Info: Images/gazis_model_bad_speed.png used on input line 47
+1.
+(pdftex.def)             Requested size: 218.51738pt x 133.73395pt.
+
+<Images/gazis_model_bad_distance.png, id=75, 398.08725pt x 255.95625pt>
+File: Images/gazis_model_bad_distance.png Graphic file (type png)
+
+<use Images/gazis_model_bad_distance.png>
+Package pdftex.def Info: Images/gazis_model_bad_distance.png used on input line
+ 476.
+(pdftex.def)             Requested size: 218.51738pt x 133.7268pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 515.
 
 [14]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 524.
+(amsmath)                trying to recover with `aligned' on input line 495.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 534.
+(amsmath)                trying to recover with `aligned' on input line 504.
 
-[15]
+[15 <./Images/gazis_model_good_speed.png> <./Images/gazis_model_good_distance.p
+ng> <./Images/gazis_model_bad_speed.png> <./Images/gazis_model_bad_distance.png
+>]
 
-LaTeX Warning: Reference `equation_without_stopping' on page 16 undefined on in
-put line 552.
-
-
-LaTeX Warning: Reference `equation_with_stopping' on page 16 undefined on input
- line 552.
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 514.
 
 
 LaTeX Warning: Reference `equation_without_stopping' on page 16 undefined on in
-put line 554.
+put line 532.
 
 
 LaTeX Warning: Reference `equation_with_stopping' on page 16 undefined on input
- line 554.
+ line 532.
 
-<Images/car's_start_position.png, id=79, 904.1278pt x 256.70906pt>
+
+LaTeX Warning: Reference `equation_without_stopping' on page 16 undefined on in
+put line 534.
+
+
+LaTeX Warning: Reference `equation_with_stopping' on page 16 undefined on input
+ line 534.
+
+[16] <Images/car's_start_position.png, id=91, 904.1278pt x 256.70906pt>
 File: Images/car's_start_position.png Graphic file (type png)
 
 <use Images/car's_start_position.png>
-Package pdftex.def Info: Images/car's_start_position.png used on input line 558
+Package pdftex.def Info: Images/car's_start_position.png used on input line 538
 .
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `equation_without_stopping' on page 17 undefined on in
+put line 544.
 
 
-LaTeX Warning: Reference `equation_without_stopping' on page 16 undefined on in
-put line 564.
+LaTeX Warning: Reference `equation_without_stopping' on page 17 undefined on in
+put line 547.
 
 
-LaTeX Warning: Reference `equation_without_stopping' on page 16 undefined on in
-put line 567.
+LaTeX Warning: Reference `equation_with_stopping' on page 17 undefined on input
+ line 568.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `equation_with_stopping' on page 16 undefined on input
- line 588.
-
-
-LaTeX Warning: Reference `equation_with_stopping' on page 16 undefined on input
- line 591.
+LaTeX Warning: Reference `equation_with_stopping' on page 17 undefined on input
+ line 571.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `equation_without_stopping' on page 16 undefined on in
-put line 612.
+LaTeX Warning: Reference `equation_without_stopping' on page 17 undefined on in
+put line 592.
 
 
-LaTeX Warning: Reference `equation_with_stopping' on page 16 undefined on input
- line 612.
+LaTeX Warning: Reference `equation_with_stopping' on page 17 undefined on input
+ line 592.
 
-[16] [17 <./Images/car's_start_position.png>] [18]
+[17 <./Images/car's_start_position.png>] [18]
 
 LaTeX Warning: Reference `equation_without_stopping' on page 19 undefined on in
-put line 621.
+put line 601.
 
 
 LaTeX Warning: Reference `equation_with_stopping' on page 19 undefined on input
- line 621.
+ line 601.
 
 [19] [20] ("Master's thesis.aux")
 
@@ -1221,13 +1232,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5536 strings out of 493333
- 73178 string characters out of 3139198
- 161797 words of memory out of 3000000
- 8874 multiletter control sequences out of 15000+200000
- 17258 words of font info for 47 fonts, out of 3000000 for 9000
+ 5593 strings out of 493333
+ 74553 string characters out of 3139198
+ 161803 words of memory out of 3000000
+ 8908 multiletter control sequences out of 15000+200000
+ 20027 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,19n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,18n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lab
 x1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
 600\lati1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
@@ -1236,19 +1247,22 @@ t2a\dpi600\lati1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \ljfour\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\f
 onts\pk\ljfour\unknown\unknown\dpi600\larm1200.pk> <C:\Users\User\AppData\Local
 \MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on "Master's thesis.pdf" (20 pages, 383268 bytes).
+eX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/latxfont/line10.pfb>
+Output written on "Master's thesis.pdf" (20 pages, 807991 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
+ 517 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

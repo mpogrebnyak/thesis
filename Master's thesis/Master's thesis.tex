@@ -367,7 +367,7 @@ R(t)=
 \begin{equation} \label{follow_the_leader_full_model}
 \begin{cases}
 \begin{split}
-\ddot{x}_{1}(t) = &R(t) \left[ a\left( 1-\left( \dfrac{\dot{x}_{1}(t)}{v_{max}}\right) \right)\right] + (1-R(t))\left[  \dfrac{1}{q}\left( v_{min} - \dot{x}_{1}(t)\right) \right]  \\
+\ddot{x}_1(t) = &R(t) \left[ a\left(\dfrac{v_{max}-\dot{x}_1(t)}{v_{max}} \right)\right] + (1-R(t)) \bigg[ q\left( v_{min} - \dot{x}_1(t)\right) \bigg]  \\
 &x_{1}(0)=x_0, \quad \dot{x}_{1}(0)=v_{0}\\
 \ddot{x}_{n}(t) = &d(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t)) \\
 &x_n(0)=x_0-(n-1)\lambda, \quad \dot{x}_n(0)=v_{n}, \quad t \in [-(n-1)\tau,0]
@@ -402,14 +402,14 @@ R(t)=
 	\begin{center}
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test.png}
+			{Images/simple_model_speed.png}
 		\end{minipage}
 		\hfill 
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test.png}
+			{Images/simple_model_distance.png}
 		\end{minipage}
-		\caption{ПЕРЕДЕЛАТЬ}
+		\caption{Графики изменения скорости (слева) и расстояния (справа) для транспортного потока с остановкой с параметрами: $\tau=1$, $a=8$, $q=0.2$, $v_{max}=40$, $v_{min}=0$, $\lambda=40$, $d=0.2$, $t_s=40$, $x_0=0$, $v_0=0$.}
 		\label{follow_the_leader}
 	\end{center}
 \end{figure}
@@ -420,89 +420,69 @@ R(t)=
 
 \section{Модель Газиса}
 
-Группа инженеров из компании «Дженерал моторс» (General Motors) в своей работе \cite{GazisModel} предложила ряд модификаций для уравнения  \eqref{follow_the_leader_with_two_delay}
+Группа инженеров из компании «Дженерал моторс» (General Motors) в своей работе \cite{GazisModel} предложила дополнительную модификацию для уравнения  \eqref{follow_the_leader_with_two_delay}. Основной этой модификации является идея рассмотреть вместо постоянного коэффициента $\dfrac{1}{\gamma}$ динамическую величину $S(t)$, которую можно интерпретировать как коэффициент чувствительности. 
 
-подход. В уравнение \eqref{follow_the_leader_first_model} было введено 
-Ранее рассматриваемая модель  \eqref{follow_the_leader_with_delay} предполагает, что коэффициент $d$, интерпретируемый как мощность, является константой. Группа инженеров из компании Дженерал моторс (General Motors) предложила альтернативный вариант 
-
-Рассмотрим другую модификацию ранее рассматриваемой модели \eqref{follow_the_leader_first_model}. В правую часть уравнения введём аналогичную задержку аргумента по времени, а коэффициент $\dfrac{1}{\gamma}$, ранее предполагаемый константой и интерпретируемый как мощность, будем интерпретировать как динамический коэффициент чувствительности $S$. Таким образом получим следующее уравнение: 
-\begin{equation} \label{gazis_model}
-\ddot{x}_n(t) = S (\dot{x}_{n-1}(t-\tau_{n}) - \dot{x}_{n}(t)).
-\end{equation}
-
-Коэффициент чувствительности $S$ характеризует скорость реакции водителя к изменению скорости лидера и зависит от скорости и текущей дистанции до лидера. Чувствительность возрастает при уменьшении дистанции до лидера, таким образом коэффициент $S$ можно представить в виде:
+Коэффициент чувствительности $S(t)$ характеризует скорость реакции водителя к изменению скорости лидера и зависит от скорости и текущей дистанции до лидера. Чувствительность возрастает при уменьшении дистанции до лидера, таким образом коэффициент $S(t)$ можно представить в виде:
 
 \begin{equation*}
-S = \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}
+S(t) = \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}},
 \end{equation*}
+где $\eta$ - константа, характеризующая движение, а $m_1$ и $m_2$ - эмпирически подбираемые константы, характеризующие движение. Данный коэффициент был получен в работе Газиса \cite{GazisModel}, в честь которого и была названа модель, полученная с учётом сделанных преобразований:   
+\begin{equation} \label{gazis_model}
+\ddot{x}_n(t) = \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)).
+\end{equation}
 
-Таким образом модель будет выглядеть следующим образом:
+Изучение модели, полученной Газисом, в исходном виде описано в работах \cite{StudyingGazisModel_1},  \cite{StudyingGazisModel_2} и  \cite{StudyingGazisModel_3}. При значениях параметров $m_1 \approx 0.8$, $m_2 \approx 2.8$ \cite{StudyingGazisModel_1} или $m_1 = 0.953$, $m_2 = 3.05$ \cite{StudyingGazisModel_2}, \cite{StudyingGazisModel_3} получаются результаты наиболее схожие с реальными данными.
+
+Дополним уравнение Газиса \eqref{gazis_model} уравнением первого автомобиля \eqref{free_drive_model} и рассмотрим полученную модель движения транспортного потока:
+
 \begin{equation} \label{full_gazis_model}
-\ddot{x}_n(t) = \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t))
-\end{equation} 
- 
-
-\begin{table}[h!]
-	\caption{Физическое значение параметров уравнения \eqref{gazis_model}}
-	\label{gazis_parameters}
-	\begin{center}
-		\begin{tabularx}{\textwidth}{p{0.15\linewidth}p{0.85\linewidth}}			
-			\hline
-			\rule{0cm}{0,5cm}
-			Параметр &  Физическое значение \\ 
-			[3pt]\hline
-			$\tau$ & время реакции водителя \\
-			$m, l$ & параметры скорости и расстояния движения \\
-			$\lambda_{l,m} $ & константа, характеризующая движение  \\ 
-			\hline
-		\end{tabularx}
-	\end{center}
-\end{table} 
-
-
-\begin{equation} \label{}
 \begin{cases}
 \begin{split}
-\ddot{x}_{1}(t) = &R(t) \left[ a\left( 1-\left( \dfrac{\dot{x}_{1}(t)}{v_{max}}\right) \right)\right] + (1-R(t))\left[  \dfrac{1}{q}\left( v_{min} - \dot{x}_{1}(t)\right) \right]  \\
+\ddot{x}_1(t) = &R(t) \left[ a\left(\dfrac{v_{max}-\dot{x}_1(t)}{v_{max}} \right)\right] + (1-R(t)) \bigg[ q\left( v_{min} - \dot{x}_1(t)\right) \bigg]  \\
 &x_{1}(0)=x_0, \quad \dot{x}_{1}(0)=v_{0}\\
-\ddot{x}_n(t) = & \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}(\dot{x}_{n-1}(t-\tau)-\dot{x}_{n}(t)) \\
+\ddot{x}_n(t) = & \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)) \\
 &x_n(0)=x_0-(n-1)\lambda, \quad \dot{x}_n(0)=v_{n}, \quad t \in [-(n-1)\tau,0]
 \end{split}
 \end{cases}.
 \end{equation}
 
+Полученные модели \eqref{gazis_model} и \eqref{full_gazis_model} очень сильно зависят от эмпирически подбираемых констант $m_1$ и $m_2$. При неудачном выборе данных констант решения не согласуются с реальными данными. На рисунках \ref{gazis_model_good} и \ref{gazis_model_bad} изображены графики решений для "удачного" и "неудачного" выбора параметров. 
 \begin{figure}[h!]
 	\begin{center}
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test.png}
+			{Images/gazis_model_good_speed.png}
 		\end{minipage}
 		\hfill 
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test.png}
+			{Images/gazis_model_good_distance.png}
 		\end{minipage}
-		\caption{ПЕРЕДЕЛАТЬ ХОРОШАЯ СИТУАЦИЯ}
-		\label{gazis_model_img}
+		\caption{Графики изменения скорости (слева) и расстояния (справа) для модели Газиса с "удачным" выбором параметров: $\tau=1$, $a=8$, $q=0.2$, $v_{max}=40$, $v_{min}=0$, $\lambda=40$, $t_s=40$, $x_0=0$, $v_0=0$, $\eta=0.4$, $\boldsymbol{m_1=0.4}$, $\boldsymbol{m_2=0.3}$}
+		\label{gazis_model_good}
 	\end{center}
 \end{figure}
-
 
 \begin{figure}[h!]
 	\begin{center}
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test.png}
+			{Images/gazis_model_bad_speed.png}
 		\end{minipage}
 		\hfill 
 		\begin{minipage}[h!]{0.48\linewidth}
 			\includegraphics[width=1\linewidth,height=0.2\textheight]
-			{Images/test.png}
+			{Images/gazis_model_bad_distance.png}
 		\end{minipage}
-		\caption{ПЕРЕДЕЛАТЬ ПЛОХАЯ СИТУАЦИЯ}
-		\label{gazis_model_img_2}
+		\caption{Графики изменения скорости (слева) и расстояния (справа) для модели Газиса с "неудачным" выбором параметров: $\tau=1$, $a=8$, $q=0.2$, $v_{max}=40$, $v_{min}=0$, $\lambda=40$, $t_s=40$, $x_0=0$, $v_0=0$, $\eta=0.4$, $\boldsymbol{m_1=0.7}$, $\boldsymbol{m_2=0.3}$}
+		\label{gazis_model_bad}
 	\end{center}
 \end{figure}
+
+Графики на рисунке \ref{gazis_model_good} демонстрируют хорошую ситуацию, когда решения согласуются с реальным поведением транспортных средств на дороге. Графики на рисунке \ref{gazis_model_bad} показывают плохую ситуацию. Скорость некоторых автомобилей с некоторого момента времени начинает сильно колебаться с большой амплитудой и не только превышает допустимую скорость, но и в некоторых случаях падает почти до нуля. Такое поведение невозможно в реальной жизни.
+
+Из результатов исследования можно сделать вывод, что ни "частая" модель Трайбера \eqref{gazis_model} ни модель Трайбера, дополненная уравнением движения первого автомобиля \eqref{full_gazis_model}, не подходят для моделирования движения автомобилей. Большая зависимость от правильного выбора параметров $m_1$ и $m_2$ и несвязанность этих параметров с каким-то физическими величинами очень усложняет моделирование и не гарантирует получение правильной динамики движения транспортных потоков. 
 
 \section{Модель Трайбера}
 
@@ -642,7 +622,18 @@ S = \dfrac{\eta_{l,m}\dot{x}_n^m(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^l}
 	Погребняк М.А. Курсовая работа по теме "Математическое моделирование движения транспортных потоков". 2019.
 	
 	\bibitem{GazisModel}
-	Gazis D.C., Herman R., Rothery R.W. Nonlinear follow the leader models of trafficflow. 1961.
+	Gazis D.C., Herman R., Rothery R.W. Nonlinear follow the leader models of trafficflow. 1961.
+	
+	\bibitem{StudyingGazisModel_1}
+	May, Jr. A.D., Kel ler H.E.M. Non-integer car-following models. 1967.
+	
+	\bibitem{StudyingGazisModel_2}
+	K\"{u}hne R.D., R\"{o}diger M.B. Marosopi simulation model for freeway traffic with jams
+	and stop-start waves. 1991.
+	
+	\bibitem{StudyingGazisModel_3}
+	K\"{u}hne R.D., Kroen A. Knowledge-based optimization of line ontrol systems for freeways. 1992.
+
 %	\bibitem{Polygon}
 %	Выгодский М.Я. Справочник по элементарной математике. 2001.
 % 	\bibitem{Runge_Kutta}
