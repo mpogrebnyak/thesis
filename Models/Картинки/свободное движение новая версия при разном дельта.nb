@@ -1,0 +1,1134 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     50916,       1126]
+NotebookOptionsPosition[     50365,       1106]
+NotebookOutlinePosition[     50708,       1121]
+CellTagsIndexPosition[     50665,       1118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"speed", " ", "=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "e", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"tt", "=", "150"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmax", " ", "=", "150"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["V", "max"], " ", "=", "40"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"vm", "=", "0"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"R", "[", "t_", "]"}], " ", ":=", " ", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"t", " ", "<=", " ", "tt"}], ",", " ", "1", ",", "0"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"RR", "[", "t_", "]"}], " ", ":=", " ", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"t", " ", "<=", " ", "tt"}], ",", " ", "0", ",", "1"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "solF", ",", " ", "solS", ",", " ", "solT", ",", " ", "u", ",", 
+           "  ", "v", ",", "  ", "w"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"solF1", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u1", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u1", "'"}], "[", "t", "]"}]}], ",", "0.8"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u1", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u1", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u1", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF2", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u2", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u2", "'"}], "[", "t", "]"}]}], ",", "0.9"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u2", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u2", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u2", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF3", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u3", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u3", "'"}], "[", "t", "]"}]}], ",", "1"}], "]"}],
+                   ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u3", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u3", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u3", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF4", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u4", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u4", "'"}], "[", "t", "]"}]}], ",", "1.1"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u4", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u4", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u4", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF5", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u5", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u5", "'"}], "[", "t", "]"}]}], ",", "1.3"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u5", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u5", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u5", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF6", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u6", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u6", "'"}], "[", "t", "]"}]}], ",", "2"}], "]"}],
+                   ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u6", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u6", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u6", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"ParametricPlot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u1", "'"}], "[", "t", "]"}]}], "}"}], " ", "/.", 
+                " ", "solF1"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u2", "'"}], "[", "t", "]"}]}], "}"}], " ", "/.", 
+                " ", "solF2"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u3", "'"}], "[", "t", "]"}]}], "}"}], " ", "/.", 
+                " ", "solF3"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u4", "'"}], "[", "t", "]"}]}], "}"}], " ", "/.", 
+                " ", "solF4"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u5", "'"}], "[", "t", "]"}]}], "}"}], " ", "/.", 
+                " ", "solF5"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u6", "'"}], "[", "t", "]"}]}], "}"}], " ", "/.", 
+                " ", "solF6"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+            RowBox[{"PlotStyle", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "Automatic", ",", "Automatic", ",", "Automatic", ",", 
+               "Automatic", ",", "Automatic"}], "}"}]}], ",", " ", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "100"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "50"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"AxesLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"t", ",", "15"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 OverscriptBox["x", "."], ",", "15"}], "]"}]}], "}"}]}], ",", 
+            RowBox[{"FormatType", "\[Rule]", "StandardForm"}], ",", 
+            RowBox[{"PlotLegends", "\[Rule]", 
+             RowBox[{"Placed", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<\[Delta]=0.8\>\"", ",", "\"\<\[Delta]=0.9\>\"", ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<\[Delta]=1\>\"", ",", "Bold"}], "]"}], ",", 
+                 "\"\<\[Delta]=1.1\>\"", ",", "\"\<\[Delta]=1.3\>\"", ",", 
+                 "\"\<\[Delta]=2\>\""}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"Right", ",", "Center"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+            RowBox[{"Ticks", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "0", ",", "20", ",", "40", ",", "60", ",", "80", ",", "100"}],
+                 "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "0", ",", "10", ",", "20", ",", "30", ",", "40", ",", "50", 
+                 ",", "60"}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"TicksStyle", "\[Rule]", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Automatic", ",", "15"}], "]"}]}]}], "]"}]}]}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\[Lambda]", ",", "0"}], "}"}], ",", "0", ",", "30", ",", 
+         "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a", ",", "0.15"}], "}"}], ",", "0", ",", "1", ",", 
+         "0.01"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"q", ",", "0.2"}], "}"}], ",", "0", ",", "2", ",", "0.1"}], 
+        "}"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"path", " ", "=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "e", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"tt", "=", "150"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmax", " ", "=", "150"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["V", "max"], " ", "=", "40"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"vm", "=", "0"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"R", "[", "t_", "]"}], " ", ":=", " ", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"t", " ", "<=", " ", "tt"}], ",", " ", "1", ",", "0"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"RR", "[", "t_", "]"}], " ", ":=", " ", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"t", " ", "<=", " ", "tt"}], ",", " ", "0", ",", "1"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "solF", ",", " ", "solS", ",", " ", "solT", ",", " ", "u", ",", 
+           "  ", "v", ",", "  ", "w"}], "}"}], ",", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"solF1", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u1", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u1", "'"}], "[", "t", "]"}]}], ",", "0.8"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u1", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u1", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u1", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF2", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u2", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u2", "'"}], "[", "t", "]"}]}], ",", "0.9"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u2", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u2", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u2", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF3", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u3", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u3", "'"}], "[", "t", "]"}]}], ",", "1"}], "]"}],
+                   ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u3", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u3", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u3", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF4", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u4", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u4", "'"}], "[", "t", "]"}]}], ",", "1.1"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u4", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u4", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u4", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF5", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u5", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u5", "'"}], "[", "t", "]"}]}], ",", "1.3"}], 
+                   "]"}], ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u5", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u5", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u5", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"solF6", "=", " ", 
+           RowBox[{"NDSolve", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u6", "''"}], "[", "t", "]"}], "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"R", "[", "t", "]"}], "*", "a", "*", 
+                 RowBox[{"(", 
+                  RowBox[{"Power", "[", 
+                   RowBox[{
+                    RowBox[{
+                    SubscriptBox["V", "max"], "-", 
+                    RowBox[{
+                    RowBox[{"u6", "'"}], "[", "t", "]"}]}], ",", "2"}], "]"}],
+                   ")"}]}]}], ",", " ", 
+               RowBox[{
+                RowBox[{"u6", "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", 
+                RowBox[{
+                 RowBox[{"-", "0"}], "*", "\[Lambda]"}]}], ",", " ", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"u6", "'"}], "[", 
+                 RowBox[{"t", " ", "/;", " ", 
+                  RowBox[{"t", "\[LessEqual]", " ", "0"}]}], "]"}], " ", 
+                "\[Equal]", " ", "0"}]}], "}"}], ",", "u6", ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", " ", ",", "tmax"}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"ParametricPlot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u1", "[", "t", "]"}], "/", "40"}]}], "}"}], " ", "/.",
+                 " ", "solF1"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u2", "[", "t", "]"}], "/", "40"}]}], "}"}], " ", "/.",
+                 " ", "solF2"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u3", "[", "t", "]"}], "/", "40"}]}], "}"}], " ", 
+                "/.", " ", "solF3"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u4", "[", "t", "]"}], "/", "40"}]}], "}"}], " ", "/.",
+                 " ", "solF4"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u5", "[", "t", "]"}], "/", "40"}]}], "}"}], " ", "/.",
+                 " ", "solF5"}], "]"}], ",", 
+              RowBox[{"Evaluate", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"t", ",", 
+                  RowBox[{
+                   RowBox[{"u6", "[", "t", "]"}], "/", "40"}]}], "}"}], " ", "/.",
+                 " ", "solF6"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+            RowBox[{"PlotStyle", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "Automatic", ",", "Automatic", ",", "Automatic", ",", 
+               "Automatic", ",", "Automatic"}], "}"}]}], ",", " ", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "100"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "50"}], "}"}]}], "}"}]}], ",", 
+            RowBox[{"AxesLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"t", ",", "15"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"x", ",", "15"}], "]"}]}], "}"}]}], ",", 
+            RowBox[{"FormatType", "\[Rule]", "StandardForm"}], ",", 
+            RowBox[{"PlotLegends", "\[Rule]", 
+             RowBox[{"Placed", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<\[Delta]=0.8\>\"", ",", "\"\<\[Delta]=0.9\>\"", ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<\[Delta]=1\>\"", ",", "Bold"}], "]"}], ",", 
+                 "\"\<\[Delta]=1.1\>\"", ",", "\"\<\[Delta]=1.3\>\"", ",", 
+                 "\"\<\[Delta]=2\>\""}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"Right", ",", "Center"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+            RowBox[{"Ticks", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "0", ",", "20", ",", "40", ",", "60", ",", "80", ",", "100"}],
+                 "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"10", ",", "400"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"20", ",", "800"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"30", ",", "1200"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"40", ",", "1600"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"50", ",", "2000"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"60", ",", "2400"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"80", ",", "3200"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"100", ",", "4000"}], "}"}]}], "}"}]}], "}"}]}], 
+            ",", 
+            RowBox[{"TicksStyle", "\[Rule]", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Automatic", ",", "15"}], "]"}]}]}], "]"}]}]}], "]"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\[Lambda]", ",", "0"}], "}"}], ",", "0", ",", "30", ",", 
+         "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a", ",", "0.15"}], "}"}], ",", "0", ",", "15", ",", 
+         "0.1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"q", ",", "0.2"}], "}"}], ",", "0", ",", "2", ",", "0.1"}], 
+        "}"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7920697338142138`*^9, 3.792069841526882*^9}, {
+   3.792069902364873*^9, 3.792069904857544*^9}, {3.7920700313579545`*^9, 
+   3.792070036700331*^9}, {3.7920701589470515`*^9, 3.792070244142914*^9}, {
+   3.7920702872255497`*^9, 3.792070420180967*^9}, {3.7920704611024027`*^9, 
+   3.7920705414573956`*^9}, {3.7920706805762105`*^9, 3.792070683255573*^9}, {
+   3.7920707555984354`*^9, 3.7920707979143085`*^9}, {3.7920708403862867`*^9, 
+   3.7920708543532715`*^9}, {3.792070888178646*^9, 3.792070955168219*^9}, {
+   3.792071016012784*^9, 3.7920710161206455`*^9}, {3.7920710728799896`*^9, 
+   3.792071133350483*^9}, {3.7920712653456163`*^9, 3.7920713172112675`*^9}, {
+   3.792071356784316*^9, 3.792071363189146*^9}, {3.792071398467207*^9, 
+   3.792071398600244*^9}, {3.792071469860716*^9, 3.792071506934123*^9}, {
+   3.79207156257006*^9, 3.7920715857146845`*^9}, {3.7920716406292295`*^9, 
+   3.7920716525626163`*^9}, {3.792071913228896*^9, 3.792071943420392*^9}, {
+   3.7920719754175673`*^9, 3.7920720161209044`*^9}, {3.7920720848706684`*^9, 
+   3.7920721747432723`*^9}, {3.792072232901106*^9, 3.7920723440375404`*^9}, 
+   3.792072388542424*^9, 3.7920724260158033`*^9, {3.7920725091218405`*^9, 
+   3.792072512292224*^9}, {3.792072710849351*^9, 3.7920727143526287`*^9}, {
+   3.792072772079632*^9, 3.7920728478631086`*^9}, {3.792072984891527*^9, 
+   3.792073002432248*^9}, {3.7920732213605185`*^9, 3.792073246230765*^9}, {
+   3.7920733626641254`*^9, 3.792073408986928*^9}, {3.7920734402952642`*^9, 
+   3.7920734570668783`*^9}, 3.7920734902385345`*^9, {3.792073688554179*^9, 
+   3.7920736912734632`*^9}, {3.7920737753415403`*^9, 
+   3.7920737835865364`*^9}, {3.792073815127754*^9, 3.7920738685714445`*^9}, {
+   3.792073900475771*^9, 3.7920739017016344`*^9}, {3.7920739465276585`*^9, 
+   3.792073946850135*^9}, {3.7920739786609497`*^9, 3.79207406271327*^9}, {
+   3.792074095888889*^9, 3.792074096542741*^9}, {3.7922537799473352`*^9, 
+   3.792253791834298*^9}, {3.792253848584128*^9, 3.79225395419456*^9}, {
+   3.792253997744732*^9, 
+   3.792254183128958*^9}},ExpressionUUID->"415ed6e0-8811-4757-9aff-\
+9961e1895138"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.15, $CellContext`q$$ = 
+    0.2, $CellContext`\[Lambda]$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Lambda]$$], 0}, 0, 30, 1}, {{
+       Hold[$CellContext`a$$], 0.15}, 0, 1, 0.01}, {{
+       Hold[$CellContext`q$$], 0.2}, 0, 2, 0.1}}, Typeset`size$$ = {
+    500., {137., 143.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$44252$$ = 
+    0, $CellContext`a$44253$$ = 0, $CellContext`q$44254$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 0.15, $CellContext`q$$ = 
+        0.2, $CellContext`\[Lambda]$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$44252$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$44253$$, 0], 
+        Hold[$CellContext`q$$, $CellContext`q$44254$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$}, $CellContext`solF1 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u1][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u1][$CellContext`t])^0.8, $CellContext`u1[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u1][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u1, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF2 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u2][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u2][$CellContext`t])^0.9, $CellContext`u2[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u2][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u2, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF3 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u3][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u3][$CellContext`t])^1, $CellContext`u3[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u3][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u3, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF4 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u4][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u4][$CellContext`t])^1.1, $CellContext`u4[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u4][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u4, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF5 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u5][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u5][$CellContext`t])^1.3, $CellContext`u5[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u5][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u5, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF6 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u6][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u6][$CellContext`t])^2, $CellContext`u6[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u6][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u6, {$CellContext`t, 0, $CellContext`tmax}]; 
+        ParametricPlot[{
+           Evaluate[
+            ReplaceAll[{$CellContext`t, 
+              Derivative[
+              1][$CellContext`u1][$CellContext`t]}, $CellContext`solF1]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t, 
+              Derivative[
+              1][$CellContext`u2][$CellContext`t]}, $CellContext`solF2]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t, 
+              Derivative[
+              1][$CellContext`u3][$CellContext`t]}, $CellContext`solF3]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t, 
+              Derivative[
+              1][$CellContext`u4][$CellContext`t]}, $CellContext`solF4]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t, 
+              Derivative[
+              1][$CellContext`u5][$CellContext`t]}, $CellContext`solF5]], 
+           Evaluate[
+            ReplaceAll[{$CellContext`t, 
+              Derivative[
+              1][$CellContext`u6][$CellContext`t]}, $CellContext`solF6]]}, \
+{$CellContext`t, 0, $CellContext`tmax}, 
+          PlotStyle -> {
+           Automatic, Automatic, Automatic, Automatic, Automatic}, 
+          PlotRange -> {{0, 100}, {0, 50}}, AxesLabel -> {
+            Style[$CellContext`t, 15], 
+            Style[
+             OverDot[$CellContext`x, 1], 15]}, FormatType -> StandardForm, 
+          PlotLegends -> Placed[{"\[Delta]=0.8", "\[Delta]=0.9", 
+             Style["\[Delta]=1", Bold], "\[Delta]=1.1", "\[Delta]=1.3", 
+             "\[Delta]=2"}, {Right, Center}], ImageSize -> 500, 
+          Ticks -> {{0, 20, 40, 60, 80, 100}, {0, 10, 20, 30, 40, 50, 60}}, 
+          TicksStyle -> Directive[Automatic, 15]]], 
+      "Specifications" :> {{{$CellContext`\[Lambda]$$, 0}, 0, 30, 
+         1}, {{$CellContext`a$$, 0.15}, 0, 1, 0.01}, {{$CellContext`q$$, 0.2},
+          0, 2, 0.1}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{551., {212., 218.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.792070165310811*^9, {3.7920702183951826`*^9, 3.7920702475690813`*^9}, {
+   3.7920703091495132`*^9, 3.792070510146701*^9}, 3.7920705424894457`*^9, 
+   3.792070684687806*^9, {3.7920707617977076`*^9, 3.792070799751405*^9}, {
+   3.792070842073823*^9, 3.792070855556322*^9}, {3.7920708972728195`*^9, 
+   3.792070956100828*^9}, 3.792071017147318*^9, {3.792071074344965*^9, 
+   3.792071134139632*^9}, {3.792071266818161*^9, 3.7920713182893314`*^9}, 
+   3.792071364134778*^9, {3.792071399617751*^9, 3.7920714152750053`*^9}, 
+   3.792071471295549*^9, 3.7920715125512505`*^9, 3.7920715869266214`*^9, {
+   3.7920716458826246`*^9, 3.7920716535933743`*^9}, 3.7920719444006042`*^9, {
+   3.792071978142828*^9, 3.792072017356732*^9}, 3.792072086358159*^9, {
+   3.7920721332890854`*^9, 3.792072158620006*^9}, 3.79207218972323*^9, {
+   3.7920722264221907`*^9, 3.792072345295825*^9}, 3.792072427401163*^9, 
+   3.792072513215*^9, 3.792072715862608*^9, {3.792072776182156*^9, 
+   3.792072850067749*^9}, 3.7920730038750806`*^9, 3.7920732474814215`*^9, {
+   3.7920733798154707`*^9, 3.7920734097648096`*^9}, 3.7920734582691984`*^9, 
+   3.7920734934224296`*^9, 3.7920737920046463`*^9, 3.7920738446862717`*^9, 
+   3.7920739029443183`*^9, 3.7920739494392853`*^9, {3.7920739821787477`*^9, 
+   3.7920740650095773`*^9}, 3.792074098802503*^9, 3.7922525051307096`*^9, 
+   3.792253792557499*^9, 3.792253955096151*^9, 3.7922540018646836`*^9, {
+   3.7922540386991034`*^9, 3.792254116522068*^9}, 
+   3.7922541853709955`*^9},ExpressionUUID->"a1172b97-9540-4159-8336-\
+e9b8da6c9a7a"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.15, $CellContext`q$$ = 
+    0.2, $CellContext`\[Lambda]$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Lambda]$$], 0}, 0, 30, 1}, {{
+       Hold[$CellContext`a$$], 0.15}, 0, 15, 0.1}, {{
+       Hold[$CellContext`q$$], 0.2}, 0, 2, 0.1}}, Typeset`size$$ = {
+    500., {132., 138.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Lambda]$44287$$ = 
+    0, $CellContext`a$44288$$ = 0, $CellContext`q$44289$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 0.15, $CellContext`q$$ = 
+        0.2, $CellContext`\[Lambda]$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Lambda]$$, $CellContext`\[Lambda]$44287$$, 0], 
+        Hold[$CellContext`a$$, $CellContext`a$44288$$, 0], 
+        Hold[$CellContext`q$$, $CellContext`q$44289$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`solF$, $CellContext`solS$, $CellContext`solT$, \
+$CellContext`u$, $CellContext`v$, $CellContext`w$}, $CellContext`solF1 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u1][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u1][$CellContext`t])^0.8, $CellContext`u1[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u1][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u1, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF2 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u2][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u2][$CellContext`t])^0.9, $CellContext`u2[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u2][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u2, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF3 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u3][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u3][$CellContext`t])^1, $CellContext`u3[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u3][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u3, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF4 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u4][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u4][$CellContext`t])^1.1, $CellContext`u4[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u4][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u4, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF5 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u5][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u5][$CellContext`t])^1.3, $CellContext`u5[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u5][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u5, {$CellContext`t, 
+            0, $CellContext`tmax}]; $CellContext`solF6 = 
+         NDSolve[{
+           Derivative[
+             2][$CellContext`u6][$CellContext`t] == \
+$CellContext`R[$CellContext`t] $CellContext`a$$ (
+               Subscript[$CellContext`V, $CellContext`max] - Derivative[
+               1][$CellContext`u6][$CellContext`t])^2, $CellContext`u6[
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0 $CellContext`\[Lambda]$$, Derivative[1][$CellContext`u6][
+              Condition[$CellContext`t, $CellContext`t <= 0]] == 
+            0}, $CellContext`u6, {$CellContext`t, 0, $CellContext`tmax}]; 
+        ParametricPlot[{
+           Evaluate[
+            
+            ReplaceAll[{$CellContext`t, $CellContext`u1[$CellContext`t]/
+              40}, $CellContext`solF1]], 
+           Evaluate[
+            
+            ReplaceAll[{$CellContext`t, $CellContext`u2[$CellContext`t]/
+              40}, $CellContext`solF2]], 
+           Evaluate[
+            
+            ReplaceAll[{$CellContext`t, $CellContext`u3[$CellContext`t]/
+              40}, $CellContext`solF3]], 
+           Evaluate[
+            
+            ReplaceAll[{$CellContext`t, $CellContext`u4[$CellContext`t]/
+              40}, $CellContext`solF4]], 
+           Evaluate[
+            
+            ReplaceAll[{$CellContext`t, $CellContext`u5[$CellContext`t]/
+              40}, $CellContext`solF5]], 
+           Evaluate[
+            
+            ReplaceAll[{$CellContext`t, $CellContext`u6[$CellContext`t]/
+              40}, $CellContext`solF6]]}, {$CellContext`t, 
+           0, $CellContext`tmax}, 
+          PlotStyle -> {
+           Automatic, Automatic, Automatic, Automatic, Automatic}, 
+          PlotRange -> {{0, 100}, {0, 50}}, AxesLabel -> {
+            Style[$CellContext`t, 15], 
+            Style[$CellContext`x, 15]}, FormatType -> StandardForm, 
+          PlotLegends -> Placed[{"\[Delta]=0.8", "\[Delta]=0.9", 
+             Style["\[Delta]=1", Bold], "\[Delta]=1.1", "\[Delta]=1.3", 
+             "\[Delta]=2"}, {Right, Center}], ImageSize -> 500, 
+          Ticks -> {{0, 20, 40, 60, 80, 100}, {{0, 0}, {10, 400}, {20, 800}, {
+            30, 1200}, {40, 1600}, {50, 2000}, {60, 2400}, {80, 3200}, {100, 
+            4000}}}, TicksStyle -> Directive[Automatic, 15]]], 
+      "Specifications" :> {{{$CellContext`\[Lambda]$$, 0}, 0, 30, 
+         1}, {{$CellContext`a$$, 0.15}, 0, 15, 0.1}, {{$CellContext`q$$, 0.2},
+          0, 2, 0.1}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{551., {207., 213.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.792070165310811*^9, {3.7920702183951826`*^9, 3.7920702475690813`*^9}, {
+   3.7920703091495132`*^9, 3.792070510146701*^9}, 3.7920705424894457`*^9, 
+   3.792070684687806*^9, {3.7920707617977076`*^9, 3.792070799751405*^9}, {
+   3.792070842073823*^9, 3.792070855556322*^9}, {3.7920708972728195`*^9, 
+   3.792070956100828*^9}, 3.792071017147318*^9, {3.792071074344965*^9, 
+   3.792071134139632*^9}, {3.792071266818161*^9, 3.7920713182893314`*^9}, 
+   3.792071364134778*^9, {3.792071399617751*^9, 3.7920714152750053`*^9}, 
+   3.792071471295549*^9, 3.7920715125512505`*^9, 3.7920715869266214`*^9, {
+   3.7920716458826246`*^9, 3.7920716535933743`*^9}, 3.7920719444006042`*^9, {
+   3.792071978142828*^9, 3.792072017356732*^9}, 3.792072086358159*^9, {
+   3.7920721332890854`*^9, 3.792072158620006*^9}, 3.79207218972323*^9, {
+   3.7920722264221907`*^9, 3.792072345295825*^9}, 3.792072427401163*^9, 
+   3.792072513215*^9, 3.792072715862608*^9, {3.792072776182156*^9, 
+   3.792072850067749*^9}, 3.7920730038750806`*^9, 3.7920732474814215`*^9, {
+   3.7920733798154707`*^9, 3.7920734097648096`*^9}, 3.7920734582691984`*^9, 
+   3.7920734934224296`*^9, 3.7920737920046463`*^9, 3.7920738446862717`*^9, 
+   3.7920739029443183`*^9, 3.7920739494392853`*^9, {3.7920739821787477`*^9, 
+   3.7920740650095773`*^9}, 3.792074098802503*^9, 3.7922525051307096`*^9, 
+   3.792253792557499*^9, 3.792253955096151*^9, 3.7922540018646836`*^9, {
+   3.7922540386991034`*^9, 3.792254116522068*^9}, 
+   3.79225418665692*^9},ExpressionUUID->"841437a4-c9d5-4873-9ebf-\
+b8d9c6fe2e65"]
+}, Open  ]]
+},
+WindowSize->{1534, 781},
+WindowMargins->{{Automatic, -6}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 31709, 745, 1519, "Input", "ExpressionUUID" -> \
+"415ed6e0-8811-4757-9aff-9961e1895138"],
+Cell[32292, 769, 9033, 166, 480, "Output", "ExpressionUUID" -> \
+"a1172b97-9540-4159-8336-e9b8da6c9a7a"],
+Cell[41328, 937, 9021, 166, 437, "Output", "ExpressionUUID" -> \
+"841437a4-c9d5-4873-9ebf-b8d9c6fe2e65"]
+}, Open  ]]
+}
+]
+*)
+
