@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  3 MAR 2020 23:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  9 APR 2020 23:07
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -987,325 +987,324 @@ hesis.toc")
 \openout3 = `"Master's thesis.toc"'.
 
 
-[2] [3] [4] [5] [6]
-Overfull \hbox (2.48662pt too wide) in paragraph at lines 147--147
-[]\T2A/cmr/bx/n/17.28 Общие по-ло-же-ния мо-де-ли-ро-ва-ния дви-же-ния транс-
+[2]
+Overfull \hbox (4.35791pt too wide) in paragraph at lines 135--136
+[]\T2A/cmr/m/n/12 Активное раз-ви-тие ком-пью-тер-ной тех-ни-ки, по-сто-ян-ное 
+со-вер-шен-ство-ва-ние про-
  []
 
-<Images/car_following.png, id=30, 904.1278pt x 256.70906pt>
+[3] <Images/car_following.png, id=22, 904.1278pt x 256.70906pt>
 File: Images/car_following.png Graphic file (type png)
 
 <use Images/car_following.png>
-Package pdftex.def Info: Images/car_following.png used on input line 167.
+Package pdftex.def Info: Images/car_following.png used on input line 156.
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7]
+ [4 <./Images/car_following.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 197.
+(amsmath)                trying to recover with `aligned' on input line 187.
 
-[8 <./Images/car_following.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 210.
+(amsmath)                trying to recover with `aligned' on input line 201.
 
 
-<Images/free_drive_speed_with_different_delta.pdf, id=47, 361.35pt x 202.7575pt
+<Images/free_drive_speed_with_different_delta.pdf, id=31, 361.35pt x 202.7575pt
 >
 File: Images/free_drive_speed_with_different_delta.pdf Graphic file (type pdf)
  <use Images/free_drive_speed_with_different_delta.pdf>
 Package pdftex.def Info: Images/free_drive_speed_with_different_delta.pdf used 
-on input line 220.
+on input line 211.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
-
-<Images/free_drive_speed.pdf, id=48, 361.35pt x 202.7575pt>
-File: Images/free_drive_speed.pdf Graphic file (type pdf)
-
-<use Images/free_drive_speed.pdf>
-Package pdftex.def Info: Images/free_drive_speed.pdf used on input line 240.
-(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
-
-<Images/free_drive_distance.pdf, id=49, 361.35pt x 194.7275pt>
-File: Images/free_drive_distance.pdf Graphic file (type pdf)
-
-<use Images/free_drive_distance.pdf>
-Package pdftex.def Info: Images/free_drive_distance.pdf used on input line 245.
-
-(pdftex.def)             Requested size: 218.51543pt x 133.72922pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<Images/free_drive_speed.pdf, id=32, 361.35pt x 202.7575pt>
+File: Images/free_drive_speed.pdf Graphic file (type pdf)
+
+<use Images/free_drive_speed.pdf>
+Package pdftex.def Info: Images/free_drive_speed.pdf used on input line 231.
+(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
+
+<Images/free_drive_distance.pdf, id=33, 501.875pt x 271.0125pt>
+File: Images/free_drive_distance.pdf Graphic file (type pdf)
+
+<use Images/free_drive_distance.pdf>
+Package pdftex.def Info: Images/free_drive_distance.pdf used on input line 236.
+
+(pdftex.def)             Requested size: 218.52061pt x 133.72772pt.
+ [5]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 260.
+(amsmath)                trying to recover with `aligned' on input line 251.
 
-[9 <./Images/free_drive_speed_with_different_delta.pdf>]
+[6 <./Images/free_drive_speed_with_different_delta.pdf> <./Images/free_drive_sp
+eed.pdf
 
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 280.
-
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 288.
-
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 299.
-
-[10 <./Images/free_drive_speed.pdf> <./Images/free_drive_distance.pdf
+pdfTeX warning: pdflatex.exe (file ./Images/free_drive_speed.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Images/free_drive_distance.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Images/free_drive_distance.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 309.
-
-
-Overfull \hbox (23.99998pt too wide) in alignment at lines 330--330
-[][] 
- []
+(amsmath)                trying to recover with `aligned' on input line 271.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 341.
+(amsmath)                trying to recover with `aligned' on input line 279.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 351.
+(amsmath)                trying to recover with `aligned' on input line 290.
 
-<Images/free_drive_speed_with_stop.pdf, id=158, 361.35pt x 202.7575pt>
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 300.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 311.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 321.
+
+[7] <Images/free_drive_speed_with_stop.pdf, id=152, 361.35pt x 202.7575pt>
 File: Images/free_drive_speed_with_stop.pdf Graphic file (type pdf)
 
 <use Images/free_drive_speed_with_stop.pdf>
 Package pdftex.def Info: Images/free_drive_speed_with_stop.pdf used on input li
-ne 363.
+ne 333.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
-<Images/free_drive_distance_with_stop.pdf, id=159, 361.35pt x 194.7275pt>
+<Images/free_drive_distance_with_stop.pdf, id=153, 501.875pt x 271.0125pt>
 File: Images/free_drive_distance_with_stop.pdf Graphic file (type pdf)
 
 <use Images/free_drive_distance_with_stop.pdf>
 Package pdftex.def Info: Images/free_drive_distance_with_stop.pdf used on input
- line 368.
-(pdftex.def)             Requested size: 218.51543pt x 133.72922pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11] [12 <./Images/free_drive_speed_with_stop.pdf> <./Images/free_drive_distanc
-e_with_stop.pdf
+ line 338.
+(pdftex.def)             Requested size: 218.52061pt x 133.72772pt.
+ [8 <./Images/free_drive_speed_with_stop.pdf> <./Images/free_drive_distance_wit
+h_stop.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Images/free_drive_distance_with_stop.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 423.
+(amsmath)                trying to recover with `aligned' on input line 393.
 
+<Images/simple_model_speed.pdf, id=206, 361.35pt x 202.7575pt>
+File: Images/simple_model_speed.pdf Graphic file (type pdf)
 
-Overfull \hbox (23.99998pt too wide) in alignment at lines 443--443
-[][] 
+<use Images/simple_model_speed.pdf>
+Package pdftex.def Info: Images/simple_model_speed.pdf used on input line 403.
+(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
+
+<Images/simple_model_distance.pdf, id=207, 361.35pt x 225.84375pt>
+File: Images/simple_model_distance.pdf Graphic file (type pdf)
+
+<use Images/simple_model_distance.pdf>
+Package pdftex.def Info: Images/simple_model_distance.pdf used on input line 40
+8.
+(pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
+ [9] [10 <./Images/simple_model_speed.pdf> <./Images/simple_model_distance.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Images/simple_model_distance.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (1.5772pt too wide) in paragraph at lines 433--434
+[]\T2A/cmr/m/n/12 Изучение мо-де-ли, по-лу-чен-ной Газисом-Херманом-Ротери, в и
+с-ход-ном ви-де опи-
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Images/simple_model_speed.png, id=214, 398.08725pt x 213.1965pt>
-File: Images/simple_model_speed.png Graphic file (type png)
-
-<use Images/simple_model_speed.png>
-Package pdftex.def Info: Images/simple_model_speed.png used on input line 454.
-(pdftex.def)             Requested size: 218.51738pt x 133.72893pt.
-
-<Images/simple_model_distance.png, id=215, 398.08725pt x 257.16075pt>
-File: Images/simple_model_distance.png Graphic file (type png)
-
-<use Images/simple_model_distance.png>
-Package pdftex.def Info: Images/simple_model_distance.png used on input line 45
-9.
-(pdftex.def)             Requested size: 218.51738pt x 133.72435pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13] [14 <./Images/simple_model_speed.png> <./Images/simple_model_distance.png>
-]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 495.
+(amsmath)                trying to recover with `aligned' on input line 444.
 
-<Images/gazis_model_good_speed.png, id=225, 396.88275pt x 212.59425pt>
-File: Images/gazis_model_good_speed.png Graphic file (type png)
+<Images/gazis_model_good_speed.pdf, id=269, 361.35pt x 202.7575pt>
+File: Images/gazis_model_good_speed.pdf Graphic file (type pdf)
 
-<use Images/gazis_model_good_speed.png>
-Package pdftex.def Info: Images/gazis_model_good_speed.png used on input line 5
-04.
-(pdftex.def)             Requested size: 218.51631pt x 133.73395pt.
+<use Images/gazis_model_good_speed.pdf>
+Package pdftex.def Info: Images/gazis_model_good_speed.pdf used on input line 4
+53.
+(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
-<Images/gazis_model_good_distance.png, id=226, 398.08725pt x 255.95625pt>
-File: Images/gazis_model_good_distance.png Graphic file (type png)
+<Images/gazis_model_good_distance.pdf, id=270, 361.35pt x 225.84375pt>
+File: Images/gazis_model_good_distance.pdf Graphic file (type pdf)
 
-<use Images/gazis_model_good_distance.png>
-Package pdftex.def Info: Images/gazis_model_good_distance.png used on input lin
-e 509.
-(pdftex.def)             Requested size: 218.51738pt x 133.7268pt.
+<use Images/gazis_model_good_distance.pdf>
+Package pdftex.def Info: Images/gazis_model_good_distance.pdf used on input lin
+e 458.
+(pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
-<Images/gazis_model_bad_speed.png, id=227, 398.08725pt x 212.59425pt>
-File: Images/gazis_model_bad_speed.png Graphic file (type png)
+<Images/gazis_model_bad_speed.pdf, id=271, 361.35pt x 202.7575pt>
+File: Images/gazis_model_bad_speed.pdf Graphic file (type pdf)
 
-<use Images/gazis_model_bad_speed.png>
-Package pdftex.def Info: Images/gazis_model_bad_speed.png used on input line 52
-0.
-(pdftex.def)             Requested size: 218.51738pt x 133.73395pt.
+<use Images/gazis_model_bad_speed.pdf>
+Package pdftex.def Info: Images/gazis_model_bad_speed.pdf used on input line 46
+9.
+(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
-<Images/gazis_model_bad_distance.png, id=228, 398.08725pt x 255.95625pt>
-File: Images/gazis_model_bad_distance.png Graphic file (type png)
+<Images/gazis_model_bad_distance.pdf, id=272, 361.35pt x 225.84375pt>
+File: Images/gazis_model_bad_distance.pdf Graphic file (type pdf)
 
-<use Images/gazis_model_bad_distance.png>
-Package pdftex.def Info: Images/gazis_model_bad_distance.png used on input line
- 525.
-(pdftex.def)             Requested size: 218.51738pt x 133.7268pt.
+<use Images/gazis_model_bad_distance.pdf>
+Package pdftex.def Info: Images/gazis_model_bad_distance.pdf used on input line
+ 474.
+(pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15 <./Images/gazis_model_good_speed.png> <./Images/gazis_model_good_distance.p
-ng>]
-Overfull \hbox (5.65724pt too wide) in paragraph at lines 537--538
-\T2A/cmr/m/n/12 транс-порт-ных по-то-ков яв-ля-ет-ся мо-дель "ра-зум-но-го во-д
-и-те-ля"(Intelligent Driver Model,
+[11 <./Images/gazis_model_good_speed.pdf> <./Images/gazis_model_good_distance.p
+df
+
+pdfTeX warning: pdflatex.exe (file ./Images/gazis_model_good_distance.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (5.33095pt too wide) in paragraph at lines 486--487
+\T2A/cmr/m/n/12 транс-порт-ных по-то-ков яв-ля-ет-ся мо-дель ``ра-зум-но-го во-
+ди-те-ля'' (Intelligent Driver Model,
  []
 
-[16 <./Images/gazis_model_bad_speed.png> <./Images/gazis_model_bad_distance.png
+[12 <./Images/gazis_model_bad_speed.pdf> <./Images/gazis_model_bad_distance.pdf
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/gazis_model_bad_distance.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 572.
+(amsmath)                trying to recover with `aligned' on input line 521.
 
-<Images/treiber_model_speed.png, id=238, 398.08725pt x 213.1965pt>
-File: Images/treiber_model_speed.png Graphic file (type png)
+<Images/treiber_model_speed.pdf, id=390, 361.35pt x 202.7575pt>
+File: Images/treiber_model_speed.pdf Graphic file (type pdf)
 
-<use Images/treiber_model_speed.png>
-Package pdftex.def Info: Images/treiber_model_speed.png used on input line 582.
+<use Images/treiber_model_speed.pdf>
+Package pdftex.def Info: Images/treiber_model_speed.pdf used on input line 531.
 
-(pdftex.def)             Requested size: 218.51738pt x 133.72893pt.
+(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
-<Images/treiber_model_distance.png, id=239, 397.485pt x 257.16075pt>
-File: Images/treiber_model_distance.png Graphic file (type png)
+<Images/treiber_model_distance.pdf, id=391, 361.35pt x 225.84375pt>
+File: Images/treiber_model_distance.pdf Graphic file (type pdf)
 
-<use Images/treiber_model_distance.png>
-Package pdftex.def Info: Images/treiber_model_distance.png used on input line 5
-87.
-(pdftex.def)             Requested size: 218.52037pt x 133.72435pt.
+<use Images/treiber_model_distance.pdf>
+Package pdftex.def Info: Images/treiber_model_distance.pdf used on input line 5
+36.
+(pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 562.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 576.
+
+[14 <./Images/treiber_model_speed.pdf> <./Images/treiber_model_distance.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Images/treiber_model_distance.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 612.
+
+[15] <Images/new_model_speed.pdf, id=458, 361.35pt x 202.7575pt>
+File: Images/new_model_speed.pdf Graphic file (type pdf)
+
+<use Images/new_model_speed.pdf>
+Package pdftex.def Info: Images/new_model_speed.pdf used on input line 622.
+(pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
+
+<Images/new_model_distanse.pdf, id=459, 361.35pt x 225.84375pt>
+File: Images/new_model_distanse.pdf Graphic file (type pdf)
+
+<use Images/new_model_distanse.pdf>
+Package pdftex.def Info: Images/new_model_distanse.pdf used on input line 627.
+(pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
+
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 644.
+
+[16 <./Images/new_model_speed.pdf> <./Images/new_model_distanse.pdf
+
+pdfTeX warning: pdflatex.exe (file ./Images/new_model_distanse.pdf): PDF inclus
+ion: multiple pdfs with page group included in a single page
+>]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 655.
 
 [17]
-
-LaTeX Warning: Reference `equation_without_stopping' on page 18 undefined on in
-put line 608.
-
-
-LaTeX Warning: Reference `equation_with_stopping' on page 18 undefined on input
- line 608.
+Overfull \hbox (3.99367pt too wide) in paragraph at lines 703--703
+[]|\T2A/cmr/m/n/12 безразмерная| 
+ []
 
 
-LaTeX Warning: Reference `equation_without_stopping' on page 18 undefined on in
-put line 610.
+Overfull \hbox (2.47278pt too wide) in alignment at lines 703--703
+[][][][] 
+ []
 
-
-LaTeX Warning: Reference `equation_with_stopping' on page 18 undefined on input
- line 610.
-
-<Images/car's_start_position.png, id=244, 904.1278pt x 256.70906pt>
-File: Images/car's_start_position.png Graphic file (type png)
-
-<use Images/car's_start_position.png>
-Package pdftex.def Info: Images/car's_start_position.png used on input line 614
-.
-(pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `equation_without_stopping' on page 18 undefined on in
-put line 620.
-
-
-LaTeX Warning: Reference `equation_without_stopping' on page 18 undefined on in
-put line 623.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `equation_with_stopping' on page 18 undefined on input
- line 644.
-
-[18 <./Images/treiber_model_speed.png> <./Images/treiber_model_distance.png>]
-
-LaTeX Warning: Reference `equation_with_stopping' on page 19 undefined on input
- line 647.
-
+[18]
 
 LaTeX Warning: Reference `equation_without_stopping' on page 19 undefined on in
-put line 668.
+put line 724.
 
 
 LaTeX Warning: Reference `equation_with_stopping' on page 19 undefined on input
- line 668.
+ line 724.
 
-[19 <./Images/car's_start_position.png>] [20]
-
-LaTeX Warning: Reference `equation_without_stopping' on page 21 undefined on in
-put line 677.
-
-
-LaTeX Warning: Reference `equation_with_stopping' on page 21 undefined on input
- line 677.
-
-[21] [22] ("Master's thesis.aux")
+[19] [20] ("Master's thesis.aux")
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5611 strings out of 493333
- 75236 string characters out of 3139198
- 159886 words of memory out of 3000000
- 8927 multiletter control sequences out of 15000+200000
- 18403 words of font info for 54 fonts, out of 3000000 for 9000
+ 5655 strings out of 493333
+ 75825 string characters out of 3139198
+ 159905 words of memory out of 3000000
+ 8944 multiletter control sequences out of 15000+200000
+ 24935 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,43p,4326b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lat
-i1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
-600\lati1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
-t2a\dpi600\labx1728.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\unknown\unknown\dpi600\larm1200.pk> <C:\Users\User\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/latxfont/line10.pfb>
-Output written on "Master's thesis.pdf" (22 pages, 1000057 bytes).
+ 40i,21n,43p,1654b,345s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lar
+m1000.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
+600\larm0700.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
+t2a\dpi600\larm0800.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\lh\lh-t2a\dpi600\lati1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\lh\lh-t2a\dpi600\lati1095.pk> <C:\Users\User\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\User\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\User\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi600\larm1200.pk> <C:\Use
+rs\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Master's thesis.pdf" (20 pages, 948024 bytes).
 PDF statistics:
- 646 PDF objects out of 1000 (max. 8388607)
+ 1005 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
