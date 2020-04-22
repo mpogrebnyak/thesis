@@ -2,6 +2,7 @@ import numpy as np
 from DrawCarHelper import drawCar
 from Solver import Solver
 from OptionsModel import Options
+from OptionsModel import Mode
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
@@ -10,8 +11,8 @@ class AnimationTypes(object):
     animateDistance = 'animateDistance'
 
 class Animation(object):
-    def __init__(self, figure, ax, animationType=None):
-        self.calculate()
+    def __init__(self, figure, ax, options, animationType=None):
+        self.calculate(options)
 
         self.animationType = animationType
 
@@ -36,8 +37,8 @@ class Animation(object):
             car, = plt.plot([], [], marker=carIm, lw=2, color=colors[i], markersize=20)
             self.cars.append(car)
 
-    def calculate(self):
-        self.options = Options()
+    def calculate(self, options):
+        self.options = options
         sol = Solver(self.options)
         self.t, self.x, self.y = sol.solve()
 
@@ -66,30 +67,71 @@ class Animation(object):
     def animateCars(self):
         t, x, y = self.t, self.x, self.y
 
+        self.annotate= []
+        self.timerTime = self.options.timer
         def init():
+            self.timeAnnotate = self.createTimeAnnotate(t[0])
+
+            if (self.options.mode == Mode.secondMode):
+                self.timer = self.createTimer(self.timerTime)
+
             for index in range(self.options.n):
-                self.cars[index].set_data(x[index, 0]-24, 1)
+                self.cars[index].set_data(x[index, 0]-40, 1)
+                self.annotate.append(self.createAnnotate(index, x[index, 0]-40, y[index, 0],  x[index, 0]))
 
         def animate(time):
+            self.timeAnnotate.remove()
+            self.timeAnnotate = self.createTimeAnnotate(t[time])
+
+            if (self.options.mode == Mode.secondMode):
+                self.timer = self.createTimer(self.timerTime-t[time]-self.options.tau)
+
             for index in range(self.options.n):
-                self.cars[index].set_data(x[index, time]-24, 1)
-                #self.createAnnotate(index, x[index, 0] - 24, y[index, 0], x[index, 0])
+                self.cars[index].set_data(x[index, time]-38, 1)
+                self.annotate[index].remove()
+                self.annotate[index] = self.createAnnotate(index, x[index, time]-38, y[index, time], x[index, time])
 
 
         return animation.FuncAnimation(self.figure, animate, init_func=init, frames=1000, interval=1, repeat=False)
 
     def initCars(self):
         t, x, y = self.t, self.x, self.y
+        self.createTimeAnnotate(t[0])
+
+        if (self.options.mode == Mode.secondMode):
+            self.timer = self.createTimer(self.options.timer)
 
         for index in range(self.options.n):
-            self.cars[index].set_data(x[index, 0]-24, 1)
-            self.createAnnotate(index, x[index, 0]-24, y[index, 0],  x[index, 0])
+            self.cars[index].set_data(x[index, 0]-38, 1)
+            self.ann = self.createAnnotate(index, x[index, 0]-38, y[index, 0],  x[index, 0])
+
+
+    def createTimeAnnotate(self, time):
+
+        return self.ax.annotate(
+            "Время:\n " + str(round(time+Options.tau,0)),
+            xy=(0, 1), xycoords='data',
+            xytext=(0, 1.8), textcoords='data',
+            size=10, va="center", ha="center",
+            bbox=dict(boxstyle="round4", fc="w"),
+           )
+
+    def createTimer(self, time):
+
+        return self.ax.annotate(
+            "Время:\n " + str(round(time, 0)),
+            xy=(0, 1), xycoords='data',
+            xytext=(0, 0.2), textcoords='data',
+            size=10, va="center", ha="center",
+            bbox=dict(boxstyle="round4", fc="w"),
+        )
 
     def createAnnotate(self, number, x, speed, distance):
-        y = 1.5
+        y = 1.35
         if (number % 2 == 0):
-            y = 0.5
-        return self.ax.annotate("car " + str(number+1) + ": \n V = " + str(speed) + "\n S =" + str(distance),
+            y = 0.65
+
+        return self.ax.annotate("car " + str(number+1) + ": \n V = " + str(round(speed,1)) + "\n S =" + str( round(distance,1)),
                           xy=(x, 1), xycoords='data',
                           xytext=(5+x, y), textcoords='data',
                           size=8, va="center", ha="center",

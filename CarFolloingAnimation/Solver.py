@@ -19,6 +19,9 @@ class Solver:
         self.l = options.l
         self.vmax = options.vmax
         self.vmin = options.vmin
+
+        self.timer = options.timer
+
         for i in range(n):
             for j in range(self.N):
                 self.x[i, j] = options.lambd0 - i * options.lambd
