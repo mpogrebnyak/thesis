@@ -68,28 +68,34 @@ class Animation(object):
         t, x, y = self.t, self.x, self.y
 
         self.annotate= []
-        self.timerTime = self.options.timer
+        self.currentTime = -self.options.tau
+        self.prevTime = 0
         def init():
             self.timeAnnotate = self.createTimeAnnotate(t[0])
 
             if (self.options.mode == Mode.secondMode):
-                self.timer = self.createTimer(self.timerTime)
+                self.timer = self.createTimer(self.options.timer, True)
 
             for index in range(self.options.n):
-                self.cars[index].set_data(x[index, 0]-40, 1)
-                self.annotate.append(self.createAnnotate(index, x[index, 0]-40, y[index, 0],  x[index, 0]))
+                self.cars[index].set_data(x[index, 0]-3.5, 1)
+                self.annotate.append(self.createAnnotate(index, x[index, 0]-3.5, y[index, 0],  x[index, 0]))
 
         def animate(time):
             self.timeAnnotate.remove()
             self.timeAnnotate = self.createTimeAnnotate(t[time])
 
             if (self.options.mode == Mode.secondMode):
-                self.timer = self.createTimer(self.timerTime-t[time]-self.options.tau)
+                self.timeRound(t[time])
+                self.timer.remove()
+                if self.currentTime >= 0:
+                    self.timer = self.createTimer(self.options.timer-self.currentTime, True)
+                else:
+                    self.timer = self.createTimer(-self.currentTime, False)
 
             for index in range(self.options.n):
-                self.cars[index].set_data(x[index, time]-38, 1)
+                self.cars[index].set_data(x[index, time]-3.5, 1)
                 self.annotate[index].remove()
-                self.annotate[index] = self.createAnnotate(index, x[index, time]-38, y[index, time], x[index, time])
+                self.annotate[index] = self.createAnnotate(index, x[index, time]-3.5, y[index, time], x[index, time])
 
 
         return animation.FuncAnimation(self.figure, animate, init_func=init, frames=1000, interval=1, repeat=False)
@@ -99,11 +105,11 @@ class Animation(object):
         self.createTimeAnnotate(t[0])
 
         if (self.options.mode == Mode.secondMode):
-            self.timer = self.createTimer(self.options.timer)
+            self.timer = self.createTimer(self.options.timer, True)
 
         for index in range(self.options.n):
-            self.cars[index].set_data(x[index, 0]-38, 1)
-            self.ann = self.createAnnotate(index, x[index, 0]-38, y[index, 0],  x[index, 0])
+            self.cars[index].set_data(x[index, 0]-3.5, 1)
+            self.ann = self.createAnnotate(index, x[index, 0]-3.5, y[index, 0],  x[index, 0])
 
 
     def createTimeAnnotate(self, time):
@@ -116,14 +122,18 @@ class Animation(object):
             bbox=dict(boxstyle="round4", fc="w"),
            )
 
-    def createTimer(self, time):
+    def createTimer(self, time, move):
+        color = "r"
+        if move:
+            color = "g"
 
         return self.ax.annotate(
             "Время:\n " + str(round(time, 0)),
             xy=(0, 1), xycoords='data',
             xytext=(0, 0.2), textcoords='data',
             size=10, va="center", ha="center",
-            bbox=dict(boxstyle="round4", fc="w"),
+            bbox=dict(boxstyle="round4", fc=color, ec=color),
+
         )
 
     def createAnnotate(self, number, x, speed, distance):
@@ -131,7 +141,7 @@ class Animation(object):
         if (number % 2 == 0):
             y = 0.65
 
-        return self.ax.annotate("car " + str(number+1) + ": \n V = " + str(round(speed,1)) + "\n S =" + str( round(distance,1)),
+        return self.ax.annotate("car " + str(number+1) + ": \n V = " + str(round(speed,1)) + "\n S =" + str(int(round(distance,0))),
                           xy=(x, 1), xycoords='data',
                           xytext=(5+x, y), textcoords='data',
                           size=8, va="center", ha="center",
@@ -140,3 +150,12 @@ class Animation(object):
                                           connectionstyle="arc3,rad=-0.2",
                                           fc="w"),)
 
+    def timeRound(self, time):
+        t = round(time, 0)
+
+        if t > self.prevTime:
+            self.currentTime = self.currentTime + 1
+            self.prevTime = t
+
+        if self.currentTime == self.options.timer:
+            self.currentTime = -self.options.stopTime

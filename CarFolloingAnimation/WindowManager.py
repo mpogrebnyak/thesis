@@ -112,7 +112,8 @@ class Window(Frame):
 
     def initCarAnimation(self):
         self.figureC = plt.figure(figsize=(8, 3))
-        self.axC = plt.axes([0.03,0.1,0.93,0.8],xlim=(-200, 1600), ylim=(0, 2))
+        #self.axC = plt.axes([0.03,0.1,0.93,0.8],xlim=(-400, 1100), ylim=(0, 2))
+        self.axC = plt.axes([0.03, 0.1, 0.93, 0.8], xlim=(-20, 140), ylim=(0, 2))
         self.axC.spines['top'].set_visible(False)
         self.axC.spines['right'].set_visible(False)
         self.axC.spines['left'].set_visible(False)
@@ -120,8 +121,8 @@ class Window(Frame):
 
         self.axC.vlines(0, 0.4, 1.6, color='r')
         self.axC.vlines(self.options.L, 0.4, 1.6, color='r')
-        self.axC.hlines(0.4, -200, 1600)
-        self.axC.hlines(1.6, -200, 1600)
+        self.axC.hlines(0.4, -400, 1100)
+        self.axC.hlines(1.6, -400, 1100)
         self.axC.set_title('Движение')
         self.axC.grid()
 
@@ -141,7 +142,7 @@ class Window(Frame):
         self.axS.grid()
 
         self.canvas = FigureCanvasTkAgg(self.figureS, master=self)
-        self.canvas.get_tk_widget().grid(column=4, row=7, rowspan=6)
+        self.canvas.get_tk_widget().grid(column=4, row=7, rowspan=6, columnspan = 2)
 
     def initDistanceDiagram(self):
         self.figureD = plt.figure(figsize=(4,3))
@@ -151,7 +152,7 @@ class Window(Frame):
         self.axD.grid()
 
         self.canvas = FigureCanvasTkAgg(self.figureD, master=self)
-        self.canvas.get_tk_widget().grid(column=5, row=7, rowspan=6)
+        self.canvas.get_tk_widget().grid(column=6, row=7, rowspan=6, columnspan = 2)
 
     def startAnimate(self):
         distanceAnimation = Animation(self.figureD, self.axD, self.options, AnimationTypes.animateDistance)
