@@ -7,11 +7,11 @@ class Options(object):
     h = 0.1
     tau = 1
     lambd0 = 0
-    lambd = 6.5#60
-    n = 30
+    lambd = 6#60
+    n = 10
     mu = 0.6
     g = 9.8
-    L = 140
+    L = 100
     a = 1
     q = 1
     l = 4
@@ -24,7 +24,8 @@ class Options(object):
     stopTime = 15
 
     # для третьего мода
-    timerF = 10
-    timerS = 10
+    timerF = 5
+    timerS = 15
     stopTimeF = 5
-    stopTimeS = 5
+    stopTimeS = 10
+    stopL = 60

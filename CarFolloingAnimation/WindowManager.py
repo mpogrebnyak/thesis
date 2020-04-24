@@ -113,21 +113,24 @@ class Window(Frame):
     def initCarAnimation(self):
         self.figureC = plt.figure(figsize=(8, 3))
         #self.axC = plt.axes([0.03,0.1,0.93,0.8],xlim=(-400, 1100), ylim=(0, 2))
-        self.axC = plt.axes([0.03, 0.1, 0.93, 0.8], xlim=(-20, 140), ylim=(0, 2))
+        self.axC = plt.axes([0.03, 0.1, 0.93, 0.8], xlim=(-40, 120), ylim=(0, 2))
         self.axC.spines['top'].set_visible(False)
         self.axC.spines['right'].set_visible(False)
         self.axC.spines['left'].set_visible(False)
         self.axC.get_yaxis().set_ticks([])
 
-        self.axC.vlines(0, 0.4, 1.6, color='r')
-        self.axC.vlines(self.options.L, 0.4, 1.6, color='r')
-        self.axC.hlines(0.4, -400, 1100)
-        self.axC.hlines(1.6, -400, 1100)
+        self.axC.vlines(0, 0.4, 1.6, color='r', lw=2)
+        if self.options.mode == Mode.firstMode:
+            self.axC.vlines(self.options.L, 0.4, 1.6, color='r', lw=2)
+        if self.options.mode == Mode.thirdMode:
+            self.axC.vlines(self.options.stopL, 0.4, 1.6, color='r', lw=2)
+        self.axC.hlines(0.4, -40, 120)
+        self.axC.hlines(1.6, -40, 120)
         self.axC.set_title('Движение')
         self.axC.grid()
 
         self.canvas = FigureCanvasTkAgg(self.figureC, master=self)
-        self.canvas.get_tk_widget().grid(column=4, row=0, columnspan=8, rowspan=7)
+        self.canvas.get_tk_widget().grid(column=4, row=0, columnspan=8, rowspan=10)
 
     def initCars(self):
         init = Animation(self.figureC, self.axC, self.options)
@@ -142,17 +145,21 @@ class Window(Frame):
         self.axS.grid()
 
         self.canvas = FigureCanvasTkAgg(self.figureS, master=self)
-        self.canvas.get_tk_widget().grid(column=4, row=7, rowspan=6, columnspan = 2)
+        self.canvas.get_tk_widget().grid(column=4, row=10, rowspan=10, columnspan=2)
 
     def initDistanceDiagram(self):
         self.figureD = plt.figure(figsize=(4,3))
-        self.axD = plt.axes(xlim=(0, 100), ylim=(0, 1600))
-        self.axD.hlines(self.options.L, 0, 100, linestyles='dashed')
+        self.axD = plt.axes(xlim=(0, 100), ylim=(-50, 150))
+        self.axD.hlines(0, 0, 100, linestyles='dashed')
+        if self.options.mode == Mode.firstMode:
+            self.axD.hlines(self.options.L, 0, 100, linestyles='dashed')
+        if self.options.mode == Mode.thirdMode:
+            self.axD.hlines(self.options.stopL, 0, 100, linestyles='dashed')
         self.axD.set_title('График пройденного пути')
         self.axD.grid()
 
         self.canvas = FigureCanvasTkAgg(self.figureD, master=self)
-        self.canvas.get_tk_widget().grid(column=6, row=7, rowspan=6, columnspan = 2)
+        self.canvas.get_tk_widget().grid(column=6, row=10, rowspan=10, columnspan=2)
 
     def startAnimate(self):
         distanceAnimation = Animation(self.figureD, self.axD, self.options, AnimationTypes.animateDistance)
