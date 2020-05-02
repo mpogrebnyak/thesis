@@ -1,4 +1,5 @@
 class Mode(object):
+    offMode = 'offMode'
     firstMode = 'firstMode' #старт и стоп
     secondMode = 'secondMode' #один цикл светофора
     thirdMode = 'thirdMode' #работа светофора
@@ -8,7 +9,7 @@ class Options(object):
     tau = 1
     lambd0 = 0
     lambd = 6#60
-    n = 10
+    n = 40
     mu = 0.6
     g = 9.8
     L = 100
@@ -24,8 +25,8 @@ class Options(object):
     stopTime = 15
 
     # для третьего мода
-    timerF = 5
-    timerS = 15
-    stopTimeF = 5
-    stopTimeS = 10
-    stopL = 60
+    timerF = 45
+    timerS = 40
+    stopTimeF = 70
+    stopTimeS = 50
+    stopL = 120

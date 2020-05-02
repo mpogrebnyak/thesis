@@ -194,7 +194,7 @@ class Solver:
             return speed
 
     def solve(self):
-        for i in range(1000):
+        for i in range(2000):
             row1 = np.zeros((self.n, 1))
             row2 = np.zeros((self.n, 1))
             for j in range(self.n):

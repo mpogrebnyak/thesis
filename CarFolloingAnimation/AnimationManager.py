@@ -63,7 +63,7 @@ class Animation(object):
 
                 self.lines[index].set_data(self.xdata[index], self.ydata[index])
 
-        return animation.FuncAnimation(self.figure, animate, init_func=init, frames=1000, interval=1, repeat=False)
+        return animation.FuncAnimation(self.figure, animate, init_func=init, frames=2000, interval=1, repeat=False)
 
 
     def animateCars(self):
@@ -123,7 +123,7 @@ class Animation(object):
                 self.annotate[index].remove()
                 self.annotate[index] = self.createAnnotate(index, x[index, time]-3.5, y[index, time], x[index, time])
 
-        return animation.FuncAnimation(self.figure, animate, init_func=init, frames=1000, interval=1, repeat=False)
+        return animation.FuncAnimation(self.figure, animate, init_func=init, frames=2000, interval=1, repeat=False)
 
     def initCars(self):
         t, x, y = self.t, self.x, self.y
@@ -141,10 +141,15 @@ class Animation(object):
             self.ann = self.createAnnotate(index, x[index, 0]-3.5, y[index, 0],  x[index, 0])
 
     def createTimeAnnotate(self, time):
+
+        x = -30
+        if self.options.mode == Mode.thirdMode:
+            x = -10
+
         return self.ax.annotate(
             "Время:\n " + str(round(time+Options.tau,0)),
             xy=(0, 1), xycoords='data',
-            xytext=(-30, 1.8), textcoords='data',
+            xytext=(x, 1.8), textcoords='data',
             size=12, va="center", ha="center",
             bbox=dict(boxstyle="round4", fc="w"),
            )
