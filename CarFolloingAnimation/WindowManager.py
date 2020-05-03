@@ -61,7 +61,7 @@ class Window(Frame):
         self.initCars()
 
     def clear(self):
-        self.options.n = 30
+        self.options.n = 40
         self.options.vmax = 16.7
 
         if self.defaultAvailable:
@@ -226,10 +226,13 @@ class Window(Frame):
 
     def initSpeedDiagram(self):
         self.figureS = plt.figure(figsize=(4,3))
-        self.axS = plt.axes(xlim=(0, 100), ylim=(0, 20))
-        self.axS.hlines(self.options.vmax, 0, 100, linestyles='dashed')
+        if self.options.mode == Mode.secondMode or self.options.mode == Mode.thirdMode:
+            self.axS = plt.axes(xlim=(0, 150), ylim=(0, 20))
+        else:
+            self.axS = plt.axes(xlim=(0, 100), ylim=(0, 20))
+        self.axS.hlines(self.options.vmax, 0, 200, linestyles='dashed')
         if self.options.mode == Mode.firstMode:
-            self.axS.hlines(self.options.vmin, 0, 100, linestyles='dashed')
+            self.axS.hlines(self.options.vmin, 0, 1200, linestyles='dashed')
         self.axS.set_title('График изменения скорости')
         self.axS.grid()
 
@@ -238,12 +241,15 @@ class Window(Frame):
 
     def initDistanceDiagram(self):
         self.figureD = plt.figure(figsize=(4,3))
-        self.axD = plt.axes(xlim=(0, 100), ylim=(-50, 150))
-        self.axD.hlines(0, 0, 100, linestyles='dashed')
+        if self.options.mode == Mode.secondMode or self.options.mode == Mode.thirdMode:
+            self.axD = plt.axes(xlim=(0, 150), ylim=(-50, 150))
+        else:
+            self.axD = plt.axes(xlim=(0, 100), ylim=(-50, 150))
+        self.axD.hlines(0, 0, 200, linestyles='dashed')
         if self.options.mode == Mode.firstMode:
-            self.axD.hlines(self.options.L, 0, 100, linestyles='dashed')
+            self.axD.hlines(self.options.L, 0, 200, linestyles='dashed')
         if self.options.mode == Mode.thirdMode:
-            self.axD.hlines(self.options.stopL, 0, 100, linestyles='dashed')
+            self.axD.hlines(self.options.stopL, 0, 200, linestyles='dashed')
         self.axD.set_title('График пройденного пути')
         self.axD.grid()
 

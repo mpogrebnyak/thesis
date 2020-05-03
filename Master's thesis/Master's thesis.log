@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  2 MAY 2020 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  3 MAY 2020 23:46
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -831,7 +831,15 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count127
 \enitdp@description=\count128
 )
-\c@attachment=\count129
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count129
+\float@exts=\toks29
+\float@box=\box32
+\@float@everytoks=\toks30
+\@floatcapt=\box33
+)
+\c@attachment=\count130
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
@@ -862,8 +870,8 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cftbeforefigskip=\skip99
 \cftfigindent=\skip100
 \cftfignumwidth=\skip101
-\c@lofdepth=\count130
-\c@lotdepth=\count131
+\c@lofdepth=\count131
+\c@lotdepth=\count132
 \cftbeforelottitleskip=\skip102
 \cftafterlottitleskip=\skip103
 \cftbeforetabskip=\skip104
@@ -895,27 +903,28 @@ Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
 p \sbox \@tempboxa {#1. #2}\ifdim \wd \@tempboxa >\hsize #1. #2\par \else \glob
 al \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \bel
 owcaptionskip .
-\c@ContinuedFloat=\count132
+\c@ContinuedFloat=\count133
+Package caption Info: float package is loaded.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 )
 ("Master's thesis.aux")
 \openout1 = `"Master's thesis.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -953,17 +962,17 @@ LaTeX Font Info:    ... okay on input line 61.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count133
+\scratchcounter=\count134
 \scratchdimen=\dimen142
-\scratchbox=\box32
-\nofMPsegments=\count134
-\nofMParguments=\count135
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count136
+\scratchbox=\box34
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count137
 \MPscratchDim=\dimen143
-\MPnumerator=\count137
-\makeMPintoPDFobject=\count138
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks32
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1007,7 +1016,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 61.
+LaTeX Info: Redefining \selectfont on input line 62.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Incompatible package detected (regarding \@caption).
 (caption)             \@caption = \long macro:#1[#2]#3->\par \addcontentsline {
@@ -1023,43 +1032,47 @@ See the caption package documentation for explanation.
 
 Package caption Info: End \AtBeginDocument code.
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] ("Master
-'s thesis.toc")
+{C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (4.8468pt too wide) in paragraph at lines 137--138
+[]\T2A/cmr/m/n/12 ¬ ре-зуль-та-те ра-бо-ты бы-ли ис-сле-до-ва-ны су-ще-ству-ю-щ
+ие мо-де-ли дви-же-ни€ транс-
+ []
+
+[2] ("Master's thesis.toc")
 \tf@toc=\write3
 \openout3 = `"Master's thesis.toc"'.
 
-
-[2]
-Overfull \hbox (4.35791pt too wide) in paragraph at lines 153--154
+ [2]
+Overfull \hbox (4.35791pt too wide) in paragraph at lines 155--156
 []\T2A/cmr/m/n/12 јктивное раз-ви-тие ком-пью-тер-ной тех-ни-ки, по-сто-€н-ное 
 со-вер-шен-ство-ва-ние про-
  []
 
-[3] <Images/car_following.png, id=27, 904.1278pt x 256.70906pt>
+[3] <Images/car_following.png, id=26, 904.1278pt x 256.70906pt>
 File: Images/car_following.png Graphic file (type png)
 
 <use Images/car_following.png>
-Package pdftex.def Info: Images/car_following.png used on input line 174.
+Package pdftex.def Info: Images/car_following.png used on input line 176.
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
  [4 <./Images/car_following.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 202.
+(amsmath)                trying to recover with `aligned' on input line 204.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 216.
+(amsmath)                trying to recover with `aligned' on input line 218.
 
 
 <Images/free_drive_speed_with_different_delta.pdf, id=34, 361.35pt x 202.7575pt
@@ -1067,7 +1080,7 @@ Package amsmath Warning: Cannot use `split' here;
 File: Images/free_drive_speed_with_different_delta.pdf Graphic file (type pdf)
  <use Images/free_drive_speed_with_different_delta.pdf>
 Package pdftex.def Info: Images/free_drive_speed_with_different_delta.pdf used 
-on input line 226.
+on input line 228.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 
@@ -1077,20 +1090,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Images/free_drive_speed.pdf Graphic file (type pdf)
 
 <use Images/free_drive_speed.pdf>
-Package pdftex.def Info: Images/free_drive_speed.pdf used on input line 246.
+Package pdftex.def Info: Images/free_drive_speed.pdf used on input line 248.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 <Images/free_drive_distance.pdf, id=36, 501.875pt x 271.0125pt>
 File: Images/free_drive_distance.pdf Graphic file (type pdf)
 
 <use Images/free_drive_distance.pdf>
-Package pdftex.def Info: Images/free_drive_distance.pdf used on input line 251.
+Package pdftex.def Info: Images/free_drive_distance.pdf used on input line 253.
 
 (pdftex.def)             Requested size: 218.52061pt x 133.72772pt.
  [5]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 266.
+(amsmath)                trying to recover with `aligned' on input line 268.
 
 [6 <./Images/free_drive_speed_with_different_delta.pdf> <./Images/free_drive_sp
 eed.pdf
@@ -1104,34 +1117,34 @@ sion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 286.
+(amsmath)                trying to recover with `aligned' on input line 288.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 294.
+(amsmath)                trying to recover with `aligned' on input line 296.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 305.
+(amsmath)                trying to recover with `aligned' on input line 307.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 315.
+(amsmath)                trying to recover with `aligned' on input line 317.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 326.
+(amsmath)                trying to recover with `aligned' on input line 328.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 336.
+(amsmath)                trying to recover with `aligned' on input line 338.
 
 [7] <Images/free_drive_speed_with_stop.pdf, id=155, 361.35pt x 202.7575pt>
 File: Images/free_drive_speed_with_stop.pdf Graphic file (type pdf)
 
 <use Images/free_drive_speed_with_stop.pdf>
 Package pdftex.def Info: Images/free_drive_speed_with_stop.pdf used on input li
-ne 348.
+ne 350.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 <Images/free_drive_distance_with_stop.pdf, id=156, 501.875pt x 271.0125pt>
@@ -1139,7 +1152,7 @@ File: Images/free_drive_distance_with_stop.pdf Graphic file (type pdf)
 
 <use Images/free_drive_distance_with_stop.pdf>
 Package pdftex.def Info: Images/free_drive_distance_with_stop.pdf used on input
- line 353.
+ line 355.
 (pdftex.def)             Requested size: 218.52061pt x 133.72772pt.
  [8 <./Images/free_drive_speed_with_stop.pdf> <./Images/free_drive_distance_wit
 h_stop.pdf
@@ -1149,13 +1162,13 @@ pdfTeX warning: pdflatex.exe (file ./Images/free_drive_distance_with_stop.pdf):
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 408.
+(amsmath)                trying to recover with `aligned' on input line 410.
 
 [9] <Images/simple_model_speed.pdf, id=212, 361.35pt x 202.7575pt>
 File: Images/simple_model_speed.pdf Graphic file (type pdf)
 
 <use Images/simple_model_speed.pdf>
-Package pdftex.def Info: Images/simple_model_speed.pdf used on input line 418.
+Package pdftex.def Info: Images/simple_model_speed.pdf used on input line 420.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 <Images/simple_model_distance.pdf, id=213, 361.35pt x 225.84375pt>
@@ -1163,28 +1176,28 @@ File: Images/simple_model_distance.pdf Graphic file (type pdf)
 
 <use Images/simple_model_distance.pdf>
 Package pdftex.def Info: Images/simple_model_distance.pdf used on input line 42
-3.
+5.
 (pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
  [10 <./Images/simple_model_speed.pdf> <./Images/simple_model_distance.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Images/simple_model_distance.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (1.5772pt too wide) in paragraph at lines 448--449
+Overfull \hbox (1.5772pt too wide) in paragraph at lines 450--451
 []\T2A/cmr/m/n/12 »зучение мо-де-ли, по-лу-чен-ной √азисом-’ерманом-–отери, в и
 с-ход-ном ви-де опи-
  []
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 459.
+(amsmath)                trying to recover with `aligned' on input line 461.
 
 <Images/gazis_model_good_speed.pdf, id=271, 361.35pt x 202.7575pt>
 File: Images/gazis_model_good_speed.pdf Graphic file (type pdf)
 
 <use Images/gazis_model_good_speed.pdf>
 Package pdftex.def Info: Images/gazis_model_good_speed.pdf used on input line 4
-68.
+70.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 <Images/gazis_model_good_distance.pdf, id=272, 361.35pt x 225.84375pt>
@@ -1192,7 +1205,7 @@ File: Images/gazis_model_good_distance.pdf Graphic file (type pdf)
 
 <use Images/gazis_model_good_distance.pdf>
 Package pdftex.def Info: Images/gazis_model_good_distance.pdf used on input lin
-e 473.
+e 475.
 (pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
 
@@ -1203,7 +1216,7 @@ File: Images/gazis_model_bad_speed.pdf Graphic file (type pdf)
 
 <use Images/gazis_model_bad_speed.pdf>
 Package pdftex.def Info: Images/gazis_model_bad_speed.pdf used on input line 48
-4.
+6.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 <Images/gazis_model_bad_distance.pdf, id=274, 361.35pt x 225.84375pt>
@@ -1211,14 +1224,14 @@ File: Images/gazis_model_bad_distance.pdf Graphic file (type pdf)
 
 <use Images/gazis_model_bad_distance.pdf>
 Package pdftex.def Info: Images/gazis_model_bad_distance.pdf used on input line
- 489.
+ 491.
 (pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.33095pt too wide) in paragraph at lines 501--502
+Overfull \hbox (5.33095pt too wide) in paragraph at lines 503--504
 \T2A/cmr/m/n/12 транс-порт-ных по-то-ков €в-л€-ет-с€ мо-дель ``ра-зум-но-го во-
 ди-те-л€'' (Intelligent Driver Model,
  []
@@ -1239,13 +1252,13 @@ inclusion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 536.
+(amsmath)                trying to recover with `aligned' on input line 538.
 
 <Images/treiber_model_speed.pdf, id=393, 361.35pt x 202.7575pt>
 File: Images/treiber_model_speed.pdf Graphic file (type pdf)
 
 <use Images/treiber_model_speed.pdf>
-Package pdftex.def Info: Images/treiber_model_speed.pdf used on input line 546.
+Package pdftex.def Info: Images/treiber_model_speed.pdf used on input line 548.
 
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
@@ -1254,7 +1267,7 @@ File: Images/treiber_model_distance.pdf Graphic file (type pdf)
 
 <use Images/treiber_model_distance.pdf>
 Package pdftex.def Info: Images/treiber_model_distance.pdf used on input line 5
-51.
+53.
 (pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
 
@@ -1263,7 +1276,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [13]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 577.
+(amsmath)                trying to recover with `aligned' on input line 579.
 
 [14 <./Images/treiber_model_speed.pdf> <./Images/treiber_model_distance.pdf
 
@@ -1272,30 +1285,30 @@ clusion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 591.
+(amsmath)                trying to recover with `aligned' on input line 593.
 
 [15]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 627.
+(amsmath)                trying to recover with `aligned' on input line 629.
 
 <Images/new_model_speed.pdf, id=460, 361.35pt x 202.7575pt>
 File: Images/new_model_speed.pdf Graphic file (type pdf)
 
 <use Images/new_model_speed.pdf>
-Package pdftex.def Info: Images/new_model_speed.pdf used on input line 637.
+Package pdftex.def Info: Images/new_model_speed.pdf used on input line 639.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
 <Images/new_model_distanse.pdf, id=461, 361.35pt x 225.84375pt>
 File: Images/new_model_distanse.pdf Graphic file (type pdf)
 
 <use Images/new_model_distanse.pdf>
-Package pdftex.def Info: Images/new_model_distanse.pdf used on input line 642.
+Package pdftex.def Info: Images/new_model_distanse.pdf used on input line 644.
 (pdftex.def)             Requested size: 218.51543pt x 133.73254pt.
 
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 659.
+(amsmath)                trying to recover with `aligned' on input line 661.
 
 [16 <./Images/new_model_speed.pdf> <./Images/new_model_distanse.pdf
 
@@ -1304,15 +1317,15 @@ ion: multiple pdfs with page group included in a single page
 >]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 670.
+(amsmath)                trying to recover with `aligned' on input line 672.
 
 [17]
-Overfull \hbox (3.99367pt too wide) in paragraph at lines 718--718
+Overfull \hbox (3.99367pt too wide) in paragraph at lines 720--720
 []|\T2A/cmr/m/n/12 безразмерна€| 
  []
 
 
-Overfull \hbox (2.47278pt too wide) in alignment at lines 718--718
+Overfull \hbox (2.47278pt too wide) in alignment at lines 720--720
 [][][][] 
  []
 
@@ -1324,7 +1337,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/screens/empty_window.pdf Graphic file (type pdf)
 
 <use Images/screens/empty_window.pdf>
-Package pdftex.def Info: Images/screens/empty_window.pdf used on input line 733
+Package pdftex.def Info: Images/screens/empty_window.pdf used on input line 735
 .
 (pdftex.def)             Requested size: 334.81033pt x 199.1718pt.
  [19 <./Images/screens/empty_window.pdf>]
@@ -1335,7 +1348,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/screens/first_mode_1.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_1.pdf>
-Package pdftex.def Info: Images/screens/first_mode_1.pdf used on input line 769
+Package pdftex.def Info: Images/screens/first_mode_1.pdf used on input line 771
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
@@ -1346,7 +1359,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/screens/first_mode_2.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_2.pdf>
-Package pdftex.def Info: Images/screens/first_mode_2.pdf used on input line 776
+Package pdftex.def Info: Images/screens/first_mode_2.pdf used on input line 778
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
@@ -1357,7 +1370,7 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/screens/first_mode_3.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_3.pdf>
-Package pdftex.def Info: Images/screens/first_mode_3.pdf used on input line 783
+Package pdftex.def Info: Images/screens/first_mode_3.pdf used on input line 785
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
@@ -1368,126 +1381,232 @@ usion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Images/screens/first_mode_4.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_4.pdf>
-Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 790
+Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 792
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
  [20 <./Images/screens/first_mode_1.pdf> <./Images/screens/first_mode_2.pdf> <.
 /Images/screens/first_mode_3.pdf> <./Images/screens/first_mode_4.pdf>]
-File: Images/screens/first_mode_1.pdf Graphic file (type pdf)
- <use Images/screens/first_mode_1.pdf>
-Package pdftex.def Info: Images/screens/first_mode_1.pdf used on input line 816
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
-File: Images/screens/first_mode_2.pdf Graphic file (type pdf)
 
-<use Images/screens/first_mode_2.pdf>
-Package pdftex.def Info: Images/screens/first_mode_2.pdf used on input line 823
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
-File: Images/screens/first_mode_3.pdf Graphic file (type pdf)
- <use Images/screens/first_mode_3.pdf>
-Package pdftex.def Info: Images/screens/first_mode_3.pdf used on input line 830
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
-File: Images/screens/first_mode_4.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_1.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/second_mode_1.pdf, id=547, 799.788pt x 475.7775pt>
+File: Images/screens/second_mode_1.pdf Graphic file (type pdf)
 
-<use Images/screens/first_mode_4.pdf>
-Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 837
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
- [21]
-File: Images/screens/first_mode_1.pdf Graphic file (type pdf)
-
-<use Images/screens/first_mode_1.pdf>
-Package pdftex.def Info: Images/screens/first_mode_1.pdf used on input line 858
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
-File: Images/screens/first_mode_2.pdf Graphic file (type pdf)
- <use Images/screens/first_mode_2.pdf>
-Package pdftex.def Info: Images/screens/first_mode_2.pdf used on input line 865
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
-File: Images/screens/first_mode_3.pdf Graphic file (type pdf)
-
-<use Images/screens/first_mode_3.pdf>
-Package pdftex.def Info: Images/screens/first_mode_3.pdf used on input line 872
-.
-(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
-File: Images/screens/first_mode_4.pdf Graphic file (type pdf)
- <use Images/screens/first_mode_4.pdf>
-Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 879
-.
+<use Images/screens/second_mode_1.pdf>
+Package pdftex.def Info: Images/screens/second_mode_1.pdf used on input line 81
+7.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
-[22]
 
-LaTeX Warning: Reference `equation_without_stopping' on page 23 undefined on in
-put line 893.
+pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_2.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/second_mode_2.pdf, id=548, 799.788pt x 475.7775pt>
+File: Images/screens/second_mode_2.pdf Graphic file (type pdf)
+
+<use Images/screens/second_mode_2.pdf>
+Package pdftex.def Info: Images/screens/second_mode_2.pdf used on input line 82
+4.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
-LaTeX Warning: Reference `equation_with_stopping' on page 23 undefined on input
- line 893.
+pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_3.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/second_mode_3.pdf, id=549, 799.788pt x 475.7775pt>
+File: Images/screens/second_mode_3.pdf Graphic file (type pdf)
 
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 979--981
+<use Images/screens/second_mode_3.pdf>
+Package pdftex.def Info: Images/screens/second_mode_3.pdf used on input line 83
+4.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_4.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/second_mode_4.pdf, id=550, 799.788pt x 475.7775pt>
+File: Images/screens/second_mode_4.pdf Graphic file (type pdf)
+
+<use Images/screens/second_mode_4.pdf>
+Package pdftex.def Info: Images/screens/second_mode_4.pdf used on input line 84
+1.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_6.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/second_mode_6.pdf, id=551, 799.788pt x 475.7775pt>
+File: Images/screens/second_mode_6.pdf Graphic file (type pdf)
+
+<use Images/screens/second_mode_6.pdf>
+Package pdftex.def Info: Images/screens/second_mode_6.pdf used on input line 84
+8.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_9.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/second_mode_9.pdf, id=552, 799.788pt x 475.7775pt>
+File: Images/screens/second_mode_9.pdf Graphic file (type pdf)
+
+<use Images/screens/second_mode_9.pdf>
+Package pdftex.def Info: Images/screens/second_mode_9.pdf used on input line 85
+5.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21 <./Images/screens/second_mode_1.pdf> <./Images/screens/second_mode_2.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_1.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_1.pdf, id=560, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_1.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_1.pdf>
+Package pdftex.def Info: Images/screens/third_mode_1.pdf used on input line 878
+.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_2.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_2.pdf, id=561, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_2.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_2.pdf>
+Package pdftex.def Info: Images/screens/third_mode_2.pdf used on input line 885
+.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_3.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_3.pdf, id=562, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_3.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_3.pdf>
+Package pdftex.def Info: Images/screens/third_mode_3.pdf used on input line 892
+.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_4.pdf): PDF incl
+usion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_4.pdf, id=563, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_4.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_4.pdf>
+Package pdftex.def Info: Images/screens/third_mode_4.pdf used on input line 899
+.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_11.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_11.pdf, id=564, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_11.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_11.pdf>
+Package pdftex.def Info: Images/screens/third_mode_11.pdf used on input line 90
+6.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_12.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_12.pdf, id=565, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_12.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_12.pdf>
+Package pdftex.def Info: Images/screens/third_mode_12.pdf used on input line 91
+3.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_14.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_14.pdf, id=566, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_14.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_14.pdf>
+Package pdftex.def Info: Images/screens/third_mode_14.pdf used on input line 92
+0.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_15.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Images/screens/third_mode_15.pdf, id=567, 799.788pt x 475.7775pt>
+File: Images/screens/third_mode_15.pdf Graphic file (type pdf)
+
+<use Images/screens/third_mode_15.pdf>
+Package pdftex.def Info: Images/screens/third_mode_15.pdf used on input line 92
+7.
+(pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
+ [22 <./Images/screens/second_mode_3.pdf> <./Images/screens/second_mode_4.pdf> 
+<./Images/screens/second_mode_6.pdf> <./Images/screens/second_mode_9.pdf>]
+Overfull \vbox (23.30495pt too high) has occurred while \output is active []
+
+
+[23 <./Images/screens/third_mode_1.pdf> <./Images/screens/third_mode_2.pdf> <./
+Images/screens/third_mode_3.pdf> <./Images/screens/third_mode_4.pdf> <./Images/
+screens/third_mode_11.pdf> <./Images/screens/third_mode_12.pdf> <./Images/scree
+ns/third_mode_14.pdf> <./Images/screens/third_mode_15.pdf>] [24] [25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1028--1030
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1123
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1172
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1129
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1270
+Underfull \hbox (badness 10000) in paragraph at lines 1317--1319
 
  []
 
-[26] ("Master's thesis.aux")
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[28] [29] ("Master's thesis.aux") ) 
 Here is how much of TeX's memory you used:
- 7094 strings out of 493333
- 101861 string characters out of 3139198
- 189059 words of memory out of 3000000
- 10356 multiletter control sequences out of 15000+200000
+ 7218 strings out of 493333
+ 104796 string characters out of 3139198
+ 190389 words of memory out of 3000000
+ 10462 multiletter control sequences out of 15000+200000
  24935 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,21n,43p,1656b,389s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lar
-m1000.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi
-600\larm0700.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-
-t2a\dpi600\larm0800.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\lh\lh-t2a\dpi600\lati1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\lh\lh-t2a\dpi600\lati1095.pk> <C:\Users\User\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\User\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1095.pk> <C:\Users\User\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi600\larm1200.pk> <C:\Use
-rs\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1200.pk><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Master's thesis.pdf" (27 pages, 1488423 bytes).
+ 40i,21n,43p,1656b,395s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\User\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\lh\lh-t2a\dpi600\larm1000.pk> <C:\Users\User\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm0700.pk> <C:\Users\User\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm0800.pk> <C:\Users\User\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\User\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lati1200.pk> <C:\User
+s\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lati1095.pk> <
+C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx172
+8.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\
+larm1095.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\unknown\un
+known\dpi600\larm1200.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
+ur\lh\lh-t2a\dpi600\labx1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Master's thesis.pdf" (30 pages, 3022091 bytes).
 PDF statistics:
- 1066 PDF objects out of 1200 (max. 8388607)
+ 1129 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
