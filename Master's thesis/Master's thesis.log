@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  3 MAY 2020 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.1)  16 MAY 2020 20:06
 entering extended mode
 **"./Master's thesis.tex"
 ("Master's thesis.tex"
@@ -1059,13 +1059,17 @@ Overfull \hbox (4.35791pt too wide) in paragraph at lines 155--156
 со-вер-шен-ство-ва-ние про-
  []
 
-[3] <Images/car_following.png, id=26, 904.1278pt x 256.70906pt>
-File: Images/car_following.png Graphic file (type png)
+[3]
 
-<use Images/car_following.png>
-Package pdftex.def Info: Images/car_following.png used on input line 176.
+pdfTeX warning: pdflatex.exe (file ./Images/car_following.pdf): PDF inclusion: 
+found PDF version <1.7>, but at most version <1.5> allowed
+<Images/car_following.pdf, id=26, 904.1278pt x 256.70906pt>
+File: Images/car_following.pdf Graphic file (type pdf)
+
+<use Images/car_following.pdf>
+Package pdftex.def Info: Images/car_following.pdf used on input line 176.
 (pdftex.def)             Requested size: 455.23584pt x 129.25513pt.
- [4 <./Images/car_following.png>]
+ [4 <./Images/car_following.pdf>]
 
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 204.
@@ -1292,14 +1296,14 @@ Package amsmath Warning: Cannot use `split' here;
 Package amsmath Warning: Cannot use `split' here;
 (amsmath)                trying to recover with `aligned' on input line 629.
 
-<Images/new_model_speed.pdf, id=460, 361.35pt x 202.7575pt>
+<Images/new_model_speed.pdf, id=459, 361.35pt x 202.7575pt>
 File: Images/new_model_speed.pdf Graphic file (type pdf)
 
 <use Images/new_model_speed.pdf>
 Package pdftex.def Info: Images/new_model_speed.pdf used on input line 639.
 (pdftex.def)             Requested size: 218.51543pt x 133.72754pt.
 
-<Images/new_model_distanse.pdf, id=461, 361.35pt x 225.84375pt>
+<Images/new_model_distanse.pdf, id=460, 361.35pt x 225.84375pt>
 File: Images/new_model_distanse.pdf Graphic file (type pdf)
 
 <use Images/new_model_distanse.pdf>
@@ -1329,59 +1333,64 @@ Overfull \hbox (2.47278pt too wide) in alignment at lines 720--720
 [][][][] 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--724
+
+ []
+
 [18]
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/empty_window.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/empty_window.pdf, id=526, 799.788pt x 475.7775pt>
+<Images/screens/empty_window.pdf, id=525, 799.788pt x 475.7775pt>
 File: Images/screens/empty_window.pdf Graphic file (type pdf)
 
 <use Images/screens/empty_window.pdf>
-Package pdftex.def Info: Images/screens/empty_window.pdf used on input line 735
+Package pdftex.def Info: Images/screens/empty_window.pdf used on input line 734
 .
 (pdftex.def)             Requested size: 334.81033pt x 199.1718pt.
  [19 <./Images/screens/empty_window.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/first_mode_1.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/first_mode_1.pdf, id=532, 799.788pt x 475.7775pt>
+<Images/screens/first_mode_1.pdf, id=531, 799.788pt x 475.7775pt>
 File: Images/screens/first_mode_1.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_1.pdf>
-Package pdftex.def Info: Images/screens/first_mode_1.pdf used on input line 771
+Package pdftex.def Info: Images/screens/first_mode_1.pdf used on input line 770
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/first_mode_2.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/first_mode_2.pdf, id=533, 799.788pt x 475.7775pt>
+<Images/screens/first_mode_2.pdf, id=532, 799.788pt x 475.7775pt>
 File: Images/screens/first_mode_2.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_2.pdf>
-Package pdftex.def Info: Images/screens/first_mode_2.pdf used on input line 778
+Package pdftex.def Info: Images/screens/first_mode_2.pdf used on input line 777
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/first_mode_3.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/first_mode_3.pdf, id=534, 799.788pt x 475.7775pt>
+<Images/screens/first_mode_3.pdf, id=533, 799.788pt x 475.7775pt>
 File: Images/screens/first_mode_3.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_3.pdf>
-Package pdftex.def Info: Images/screens/first_mode_3.pdf used on input line 785
+Package pdftex.def Info: Images/screens/first_mode_3.pdf used on input line 784
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/first_mode_4.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/first_mode_4.pdf, id=535, 799.788pt x 475.7775pt>
+<Images/screens/first_mode_4.pdf, id=534, 799.788pt x 475.7775pt>
 File: Images/screens/first_mode_4.pdf Graphic file (type pdf)
 
 <use Images/screens/first_mode_4.pdf>
-Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 792
+Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 791
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
  [20 <./Images/screens/first_mode_1.pdf> <./Images/screens/first_mode_2.pdf> <.
@@ -1389,67 +1398,67 @@ Package pdftex.def Info: Images/screens/first_mode_4.pdf used on input line 792
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_1.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/second_mode_1.pdf, id=547, 799.788pt x 475.7775pt>
+<Images/screens/second_mode_1.pdf, id=546, 799.788pt x 475.7775pt>
 File: Images/screens/second_mode_1.pdf Graphic file (type pdf)
 
 <use Images/screens/second_mode_1.pdf>
 Package pdftex.def Info: Images/screens/second_mode_1.pdf used on input line 81
-7.
+6.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_2.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/second_mode_2.pdf, id=548, 799.788pt x 475.7775pt>
+<Images/screens/second_mode_2.pdf, id=547, 799.788pt x 475.7775pt>
 File: Images/screens/second_mode_2.pdf Graphic file (type pdf)
 
 <use Images/screens/second_mode_2.pdf>
 Package pdftex.def Info: Images/screens/second_mode_2.pdf used on input line 82
-4.
+3.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_3.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/second_mode_3.pdf, id=549, 799.788pt x 475.7775pt>
+<Images/screens/second_mode_3.pdf, id=548, 799.788pt x 475.7775pt>
 File: Images/screens/second_mode_3.pdf Graphic file (type pdf)
 
 <use Images/screens/second_mode_3.pdf>
 Package pdftex.def Info: Images/screens/second_mode_3.pdf used on input line 83
-4.
+3.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_4.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/second_mode_4.pdf, id=550, 799.788pt x 475.7775pt>
+<Images/screens/second_mode_4.pdf, id=549, 799.788pt x 475.7775pt>
 File: Images/screens/second_mode_4.pdf Graphic file (type pdf)
 
 <use Images/screens/second_mode_4.pdf>
 Package pdftex.def Info: Images/screens/second_mode_4.pdf used on input line 84
-1.
+0.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_6.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/second_mode_6.pdf, id=551, 799.788pt x 475.7775pt>
+<Images/screens/second_mode_6.pdf, id=550, 799.788pt x 475.7775pt>
 File: Images/screens/second_mode_6.pdf Graphic file (type pdf)
 
 <use Images/screens/second_mode_6.pdf>
 Package pdftex.def Info: Images/screens/second_mode_6.pdf used on input line 84
-8.
+7.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/second_mode_9.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/second_mode_9.pdf, id=552, 799.788pt x 475.7775pt>
+<Images/screens/second_mode_9.pdf, id=551, 799.788pt x 475.7775pt>
 File: Images/screens/second_mode_9.pdf Graphic file (type pdf)
 
 <use Images/screens/second_mode_9.pdf>
 Package pdftex.def Info: Images/screens/second_mode_9.pdf used on input line 85
-5.
+4.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
@@ -1459,89 +1468,89 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_1.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_1.pdf, id=560, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_1.pdf, id=559, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_1.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_1.pdf>
-Package pdftex.def Info: Images/screens/third_mode_1.pdf used on input line 878
+Package pdftex.def Info: Images/screens/third_mode_1.pdf used on input line 877
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_2.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_2.pdf, id=561, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_2.pdf, id=560, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_2.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_2.pdf>
-Package pdftex.def Info: Images/screens/third_mode_2.pdf used on input line 885
+Package pdftex.def Info: Images/screens/third_mode_2.pdf used on input line 884
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_3.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_3.pdf, id=562, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_3.pdf, id=561, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_3.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_3.pdf>
-Package pdftex.def Info: Images/screens/third_mode_3.pdf used on input line 892
+Package pdftex.def Info: Images/screens/third_mode_3.pdf used on input line 891
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_4.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_4.pdf, id=563, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_4.pdf, id=562, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_4.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_4.pdf>
-Package pdftex.def Info: Images/screens/third_mode_4.pdf used on input line 899
+Package pdftex.def Info: Images/screens/third_mode_4.pdf used on input line 898
 .
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_11.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_11.pdf, id=564, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_11.pdf, id=563, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_11.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_11.pdf>
 Package pdftex.def Info: Images/screens/third_mode_11.pdf used on input line 90
-6.
+5.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_12.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_12.pdf, id=565, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_12.pdf, id=564, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_12.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_12.pdf>
 Package pdftex.def Info: Images/screens/third_mode_12.pdf used on input line 91
-3.
+2.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_14.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_14.pdf, id=566, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_14.pdf, id=565, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_14.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_14.pdf>
-Package pdftex.def Info: Images/screens/third_mode_14.pdf used on input line 92
-0.
+Package pdftex.def Info: Images/screens/third_mode_14.pdf used on input line 91
+9.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Images/screens/third_mode_15.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/screens/third_mode_15.pdf, id=567, 799.788pt x 475.7775pt>
+<Images/screens/third_mode_15.pdf, id=566, 799.788pt x 475.7775pt>
 File: Images/screens/third_mode_15.pdf Graphic file (type pdf)
 
 <use Images/screens/third_mode_15.pdf>
 Package pdftex.def Info: Images/screens/third_mode_15.pdf used on input line 92
-7.
+6.
 (pdftex.def)             Requested size: 218.51521pt x 129.98619pt.
  [22 <./Images/screens/second_mode_3.pdf> <./Images/screens/second_mode_4.pdf> 
 <./Images/screens/second_mode_6.pdf> <./Images/screens/second_mode_9.pdf>]
@@ -1552,22 +1561,22 @@ Overfull \vbox (23.30495pt too high) has occurred while \output is active []
 Images/screens/third_mode_3.pdf> <./Images/screens/third_mode_4.pdf> <./Images/
 screens/third_mode_11.pdf> <./Images/screens/third_mode_12.pdf> <./Images/scree
 ns/third_mode_14.pdf> <./Images/screens/third_mode_15.pdf>] [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1029
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1172
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1171
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1317--1319
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1318
 
  []
 
@@ -1602,11 +1611,11 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2
 type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Master's thesis.pdf" (30 pages, 3022091 bytes).
+y8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on "Master's thesis.pdf" (30 pages, 3027033 bytes).
 PDF statistics:
- 1129 PDF objects out of 1200 (max. 8388607)
+ 1125 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
