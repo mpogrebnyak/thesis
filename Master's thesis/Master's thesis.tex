@@ -440,11 +440,11 @@ R_s(t)=
 Коэффициент чувствительности $S(t)$ характеризует скорость реакции водителя к изменению скорости лидера и зависит от его текущей скорости водителя и расстояния до лидера. Чувствительность возрастает при уменьшении дистанции до лидера, таким образом, коэффициент $S(t)$ можно представить в виде:
 
 \begin{equation} \label{gazis_coefficient}
-S(t) = \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}},
+S(t) = \dfrac{\eta_{m_1,m_2}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}},
 \end{equation}
 где $\eta$ - константа, характеризующая движение, а $m_1$ и $m_2$ - эмпирически подбираемые константы, также характеризующие движение. Коэффициент чувствительности был получен в работе Газиса, Хермана и Ротери (Gazis-Herman-Rothery, GHR)  \cite{GazisModel}. Модель, полученная с учётом этого коэффициента выглядит следующим образом:   
 \begin{equation} \label{gazis_model}
-\ddot{x}_n(t) = \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)).
+\ddot{x}_n(t) = \dfrac{\eta_{m_1,m_2}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)).
 \end{equation}
 
 Изучение модели, полученной Газисом-Херманом-Ротери, в исходном виде описано в работах \cite{StudyingGazisModel_1},  \cite{StudyingGazisModel_2} и  \cite{StudyingGazisModel_3}. При значениях параметров $m_1 \approx 0.8$, $m_2 \approx 2.8$ \cite{StudyingGazisModel_1} или $m_1 = 0.953$, $m_2 = 3.05$ \cite{StudyingGazisModel_2}, \cite{StudyingGazisModel_3} получаются результаты наиболее схожие с реальными данными.
@@ -456,7 +456,7 @@ S(t) = \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}}
 \begin{split}
 \ddot{x}_1(t)& = R(t) \left[ a\left(v_{max}-\dot{x}_1(t) \right)\right] + (1-R(t)) \left[ q\left( v_{min} - \dot{x}_1(t)\right) \right] \\
 &x_{1}(0)=x_0, \quad \dot{x}_{1}(0)=v_{0}\\
-\ddot{x}_n(t)& = \dfrac{\eta_{l,m}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)) \\
+\ddot{x}_n(t)& = \dfrac{\eta_{m_1,m_2}\dot{x}_n^{m_1}(t)}{(x_{n-1}(t-\tau)-x_n(t-\tau))^{m_2}} (\dot{x}_{n-1}(t-\tau) - \dot{x}_{n}(t-\tau)) \\
 &x_n(t)=x_0-(n-1)\lambda, \quad \dot{x}_n(t)=v_{n}, \quad \text{при } t \in [-\tau,0] \text{ и } n\geq2
 \end{split}
 \end{cases}.
@@ -713,9 +713,9 @@ F(\Delta x_{n}(t,\tau))=
 			$v_{min}$ & минимальная желаемая скорость& $[0,v_{max}]$&м/с\\ 
 			$\tau$ & время реакции водителя& 1&с\\
 			$\lambda$ & начальное расстояние между автомобилями& 3&м\\
-			$l$ & расстояние между автомобилями& 4&м\\
+			$l$ & расстояние между автомобилями& 2&м\\
 			$g$ & ускорение свободного падения& 9.8&$\text{м/с}^2$\\ 
-			$\mu$ &  коэффициент трения& 0.6& безразмерная\\ 
+			$\mu$ & коэффициент трения& 0.6& безразмерная\\ 
 			\hline
 		\end{tabularx}
 	\end{center}

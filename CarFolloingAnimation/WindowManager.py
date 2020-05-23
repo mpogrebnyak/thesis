@@ -200,6 +200,7 @@ class Window(Frame):
         #self.axC = plt.axes([0.03,0.1,0.93,0.8],xlim=(-400, 1100), ylim=(0, 2))
         if self.options.mode == Mode.thirdMode:
             self.axC = plt.axes([0.03, 0.1, 0.93, 0.8], xlim=(-20, 140), ylim=(0, 2))
+            #self.axC = plt.axes([0.03, 0.1, 0.93, 0.8], xlim=(-40, 120), ylim=(0, 2))
         else:
             self.axC = plt.axes([0.03, 0.1, 0.93, 0.8], xlim=(-40, 120), ylim=(0, 2))
         self.axC.spines['top'].set_visible(False)
@@ -228,8 +229,10 @@ class Window(Frame):
         self.figureS = plt.figure(figsize=(4,3))
         if self.options.mode == Mode.secondMode or self.options.mode == Mode.thirdMode:
             self.axS = plt.axes(xlim=(0, 150), ylim=(0, 20))
+            #self.axS = plt.axes(xlim=(0, 30), ylim=(0, 20))
         else:
             self.axS = plt.axes(xlim=(0, 100), ylim=(0, 20))
+            #self.axS = plt.axes(xlim=(0, 30), ylim=(0, 20))
         self.axS.hlines(self.options.vmax, 0, 200, linestyles='dashed')
         if self.options.mode == Mode.firstMode:
             self.axS.hlines(self.options.vmin, 0, 1200, linestyles='dashed')
@@ -243,7 +246,9 @@ class Window(Frame):
         self.figureD = plt.figure(figsize=(4,3))
         if self.options.mode == Mode.secondMode or self.options.mode == Mode.thirdMode:
             self.axD = plt.axes(xlim=(0, 150), ylim=(-50, 150))
+            #self.axD = plt.axes(xlim=(0, 30), ylim=(-50, 150))
         else:
+            #self.axD = plt.axes(xlim=(0, 30), ylim=(-50, 150))
             self.axD = plt.axes(xlim=(0, 100), ylim=(-50, 150))
         self.axD.hlines(0, 0, 200, linestyles='dashed')
         if self.options.mode == Mode.firstMode:

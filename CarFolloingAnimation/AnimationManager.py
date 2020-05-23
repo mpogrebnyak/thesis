@@ -147,6 +147,7 @@ class Animation(object):
         x = -30
         if self.options.mode == Mode.thirdMode:
             x = -10
+            #x = -30
 
         return self.ax.annotate(
             "Время:\n " + str(round(time,0)),
